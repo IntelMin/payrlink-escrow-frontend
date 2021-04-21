@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Table } from 'react-bootstrap';
 import asset1 from '../../../images/asset1.png';
 import asset2 from '../../../images/asset2.png';
@@ -62,7 +61,7 @@ export default function DashboardAssets(){
                     </tr>
                 </tbody>
             </Table>
-            <a href="#" className="tablereadmore">Read More > </a>
+            <a href="#" className="tablereadmore">Read More  </a>
         </Card>
     )
 }

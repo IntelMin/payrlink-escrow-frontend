@@ -1,18 +1,19 @@
 import React from 'react';
 import { Card, Table } from 'react-bootstrap';
 import asset3 from '../../images/asset3.png';
-import asset4 from '../../images/asset4.png';
-export default function ActiveEscrows(){
+export default function Disputes(){
     return(
-        <Card className="myassets activeescrows">
-            <h2>Active Escrows</h2>
+        <Card className="myassets activeescrows disputes">
+            <h2>Disputes</h2>
             <Table>
                 <thead>
                     <tr>
-                    <th>No.</th>
+                    <th>No</th>
                     <th>Amount</th>
                     <th></th>
-                    <th>To/From</th>
+                    <th>Votes</th>
+                    <th>Credited on</th>
+                    <th>Desputed on</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,23 +26,18 @@ export default function ActiveEscrows(){
                     </span>    
                     </td>
                     <td><span className="buy">Buy</span></td>
-                    <td><p>0x13*****58</p></td>
-                    </tr>
-                    <tr>
-                    <td><h3>2</h3></td>    
-                    <td className="amounticon"><img src={asset3}/>
-                    <span>
-                    <h3>15.2 USDT</h3>
-                    <small>US Dollar</small>
-                    </span>    
+                    <td><h3>14/21</h3></td>
+                    <td><h4>03/08/2021</h4>
+                    <small>03:45PM</small>
                     </td>
-                    <td><span className="sell">SELL</span></td>
-                    <td><p>0x45*****97</p></td>
+                    <td><h4>03/19/2021</h4>
+                    <small>10:10AM</small>
+                    </td>
                     </tr>
                     
                 </tbody>
             </Table>
-            <a href="#" className="tablereadmore">Read More </a>
+            <a href="#" className="tablereadmore">Read More  </a>
         </Card>
     )
 }

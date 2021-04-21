@@ -7,6 +7,7 @@ import ConnectModal from './components/modal/connectwallet';
 import IndexPage from './pages/index';
 import DashboardPage from './pages/dashboard.js';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import StakingPage from './pages/staking';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={IndexPage} />
         <Route exact path="/dashboard" component={DashboardPage} />
-        
+        <Route exact path="/staking" component={StakingPage} />
       </Switch>
       </BrowserRouter>
       <Footer/>
