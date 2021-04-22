@@ -268,7 +268,7 @@ body {	overflow-x: hidden;}
 .daipool {	width: 15px;	height: 15px;	display: inline-block;	margin-right: 5px;	border-radius: 100%;	border: 5px solid #F2A919;	background: none;}
 .doughchart .table {	max-width: 290px;	margin: 20px auto 0;}
 .doughchart.card {	width: 100%;	display: inline-block;	background: #484848;	border: none;	padding: 20px;	border-radius: 12px;}
-.stakingpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;}
+.stakingpage h2, .tarnstionpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;}
 .total_revenue_detail h3 {	font-size: 32px;	line-height: 40px;	margin-top: 12px;	margin-bottom: 30px;	color: #fff;	font-weight: bold;}
 .total_revenue_date {	width: 100%;	display: inline-block;margin-top: 70px;	color: #fff;	font-size: 22px;	line-height: 24px;	font-weight: bold;}
 .total_revenue_pools {	width: 100%;	display: flex;	align-items: center;	font-size: 28px;	line-height: 30px;	color: #fff;	font-weight: bold;	margin-top: 20px;}
@@ -276,7 +276,53 @@ body {	overflow-x: hidden;}
 .total_revenue_pools ul {	list-style: none;	padding-left: 0;	margin-bottom: 0;	margin-left: 15px;	margin-top: -6px;}
 .total_revenue_pools ul img {	width: 24px;}
 .total_revenue_pools ul li {	float: left;	width: 17px;}
-
+.pool_style_btn {	flex-direction: row !important;	align-items: center;	justify-content: flex-end;	background: none !important;	border: none !important;}
+.pool_style_btn a {	margin-left: 15px;}
+.pool_style_btn a:hover, .pool_style_btn a:focus {opacity: 0.5;}
+.poolsgrid .pools_grid_block_header.card {		padding-left: 10px; margin-bottom: 15px; flex-direction: row;	align-items: center;	background: none;	border: none;}
+.poolsgrid .pools_grid_block.card {	margin: 15px 0; width: 100%;	display: inline-block;	background: #484848;	border-radius: 10px;	border: 2px solid #707070;	padding: 15px 5px;}
+.poolsgrid .pools_grid_block_header.card img {	margin-right: 10px;}
+.pools_grid_block_header.card h3 {	font-size: 20px;	line-height: 22px;	margin-bottom: 0;	color: #fff;	font-weight: bold;}
+.pools_grid_block_header.card small {	font-size: 14px;	line-height: 16px;	font-weight: 600;	color: #fff;}
+.myassets.card .pools_grid_block .table tr td:first-child {width: auto;}
+.pools_grid_block table td {	border: none;	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: 600;}
+.myassets.card .pools_grid_block .table tr td:last-child {	text-align: left;}
+.pools_grid_block .form-group {	margin-bottom: 0;}
+.pools_grid_block .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative; background-position: right 10px center;  background-size: 15px;}
+.darkbg table td {	color: #fff; border: none ;}
+.darkbg table th {color: rgba(255, 255, 255, 0.7) !important; vertical-align: bottom;  border-bottom: none !important;  border-top: none;  font-size: 16px;  line-height: 18px;  font-weight: 600;}
+.pools_list_block.card {	padding: 15px; background: #484848 !important;	border-radius: 12px;	overflow: hidden;	border: 2px solid #707070;}
+.myassets.card .pools_list_block.card .table tr td:first-child {	width: 30px;}
+.pools_list_block.card .table tr td, .pools_list_block.card .table tr td h3 {	vertical-align: middle;	font-size: 18px;	line-height: 20px;	color: #fff;	margin-bottom: 0;	font-weight: bold;	text-align: center;}
+.pools_list_block.card .table tr td span {text-align: left;}
+.pools_list_block.card .table tr th {text-align: center;} 
+.pools_list_block.card .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px;}
+.create_new {	float: right;	background: #403894;	padding: 10px 20px;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;}
+.tarnstionpage .table td h4 {	margin-bottom: 0;	font-size: 15px;	line-height: 17px;	font-weight: bold;}
+.tarnstionpage .table td small {	font-size: 13px;	line-height: 15px;	font-weight: 600;}
+.tarnstionpage .table td {	vertical-align: middle;	border-top: none; text-align: center;}
+.tarnstionpage .table td h3, .tarnstionpage .table td {	font-size: 17px;	line-height: 19px;	margin-bottom: 0;	font-weight: bold;}
+.status_active {	display: inline-block;	padding: 5px 2px;	color: #2DD458;	background: rgba(45, 212, 88, .04);	width: 100%;	font-weight: 600;}
+.status_dispute {	display: inline-block;	padding: 5px 2px;	color: #F29F0F;	background: rgba(242,159,15, .04); 	width: 100%;	font-weight: 600;}
+.tarnstionpage .myassets.card .table tr td:first-child {	width: 30px;}
+.tarnstionpage .table th{text-align: center;}
+.tarnstionpage .table td:nth-child(6), .tarnstionpage .table th:nth-child(6) {	text-align: right;}
+.tarnstionpage {	padding: 55px 0;}
+.transation_active_escrows .form-group {	margin-bottom: 0;}
+.transation_active_escrows .form-group select {	background-color: transparent;	border: 1px solid #fff;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;}
+.transation_active_escrows .table {	margin-top: 20px;}
+.transation_history .buy, .transation_history .sell {	padding: 3px 20px;	color: #fff;	margin-right: 10px;}
+.transation_history_table.card {	background: #484848;	margin-top: 15px;	padding: 20px;	border-radius: 8px;}
+.myassets.card .transation_history_table .table thead th:last-child {	text-align: center;}
+.myassets.card .transation_history_table .table tr td:last-child {	text-align: center;}
+.nav.card-header-tabs.nav-tabs {	background: #484848;	margin: 0;	padding: 8px 15px;	border-radius: 6px;}
+.card-header-tabs .nav-link {	font-size: 16px;	text-transform: none;	line-height: 18px;	font-weight: 600;	color: #fff;	border: none;	padding: 4px 12px;	border-radius: 5px;}
+.card-header-tabs .nav-link.active {	color: #484848 !important;}
+.transation_history .row {	align-items: center;}
+.pagination .page-item a {	background: none;	border: none;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: bold;	padding: 3px 10px;	height: auto;}
+.pagination .page-item a:hover, .pagination .page-item a:focus {opacity: 0.5;}
+.pagination {	justify-content: center;	margin-top: 20px;	font-size: 16px;	line-height: 24px;	color: #fff;	font-weight: bold;}
+.create_new:hover {	text-decoration: none;	color: #fff;	opacity: 0.5;}
 
 @media screen and (max-width: 992px) {
   .container, .container-md, .container-sm {    max-width: 100%;  }

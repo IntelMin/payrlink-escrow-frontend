@@ -7,6 +7,12 @@ class LineChart extends React.Component {
   state = {
     dataLine: {
       labels: ["02/27/2021", "02/28/2021", "02/29/2021", "03/01/2021", "03/02/2021", "03/04/2021"],
+      options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+      },
       datasets: [
         {
           label: " ",
