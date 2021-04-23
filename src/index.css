@@ -121,7 +121,7 @@ code {
 .navbar.navbar-expand-lg.navbar-light.bg-dark {  background: #25224E !important;}
 .header.container-fluid {	background: #25224E;}
 .header .navbar-expand .navbar-nav {	margin-right: 0 !important;}
-.nav-link {	font-size: 18px;	line-height: 20px;	text-transform: uppercase;	color: #fff !important;	font-weight: normal;}
+.nav-link {	font-size: 16px;	line-height: 18px;	text-transform: uppercase;	color: #fff !important;	font-weight: normal;}
 .navbar-expand .navbar-collapse {	justify-content: center;}
 .navbar-text .connect-wallet {	text-decoration: none !important;	font-size: 16px;	line-height: 18px;	background: #fff;	padding: 9px 20px;	border-radius: 8px;	border: none;	color: #25224E;}
 .navbar-text .connect-wallet:hover, .navbar-text .connect-wallet:focus {	background: #fff !important;	color: #25224E !important; opacity: 0.5; border: none;}
@@ -364,6 +364,8 @@ body {	overflow-x: hidden;}
 .myassets.card.availableassets .table tr th:nth-child(4), .myassets.card.availableassets .table tr th:nth-child(5) {	text-align: right;}
 .deposit_withdraw.card {	margin-bottom: 40px;}
 .deposit_withdraw.card::before {	content: "";	background: #272727;	width: 100%;	display: inline-block;	position: absolute;	left: 0;	right: 0;	top: 41px;	bottom: 41px;}
+.header-notification-icon {	margin-right: 15px;}
+
 
 @media screen and (max-width: 992px) {
   .container, .container-md, .container-sm {    max-width: 100%;  }

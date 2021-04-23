@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import logo from '../../logo.png';
 import socialicon1 from '../../images/socialicon1.png';
 import socialicon2 from '../../images/socialicon2.png';
@@ -6,8 +6,10 @@ import socialicon3 from '../../images/socialicon3.png';
 import socialicon4 from '../../images/socialicon4.png';
 import socialicon5 from '../../images/socialicon5.png';
 import {Container, Row, Col, Card, Form, Button, ListGroup } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { NavItem} from 'react-bootstrap';
 
-function Footer(){
+function Footer(props){
  return(
     <Container fluid className="footermain">
             <Container>
@@ -36,14 +38,54 @@ function Footer(){
                     </Col>
                     <Col md={4}>
                     <Card className="footerblock footerlist">
+                    {props.changenavbar===false ?
                     <ListGroup as="ul" className="footerborderight">
                         <ListGroup.Item as="li"><a href="#">HOME</a></ListGroup.Item>
                         <ListGroup.Item as="li"><a href="#">ARBITRATION</a></ListGroup.Item>
                         </ListGroup>
+                        :
+                        <ListGroup as="ul" className="footerborderight">
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="/dashboard">
+                                    <NavItem eventKey={1}>HOME</NavItem>
+                                </LinkContainer></ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="/assets">
+                                    <NavItem eventKey={1}>ASSETS</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="/staking">
+                                    <NavItem eventKey={1}>STAKING</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="/transaction">
+                                    <NavItem eventKey={1}>TRANSACTION</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>ARBITRATION</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                        </ListGroup>
+                    }
                         <ListGroup as="ul">
-                        <ListGroup.Item as="li"><a href="#">OFFICIAL SITE</a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#">WHITEPAPER</a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#">VIDEO</a></ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>OFFICIAL SITE</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
+                                </LinkContainer></ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>VIDEO</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
                         </ListGroup>
                     </Card>
                     </Col>

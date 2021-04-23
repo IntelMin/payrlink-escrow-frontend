@@ -15,7 +15,10 @@ function ConnectModal(props){
         setShow(true)
         props.setStatus(false)
     };
-    
+    const CloseMe = () =>{
+        props.LogInStatus()
+        setShow(false);
+    }
     return (
         <>
           
@@ -36,7 +39,7 @@ function ConnectModal(props){
                         <Form.Control type="text" placeholder="WalletConnect" style={{backgroundImage: `url(${walletconnect})`}} />
                     </Form.Group>
                     <Card className="modalbutton">
-                    <Button variant="primary" onClick={props.LogInStatus}>
+                    <Button variant="primary" onClick={CloseMe}>
                     Connect
                     </Button>
                     <Button variant="secondary" onClick={handleClose}>
