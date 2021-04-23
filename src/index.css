@@ -268,7 +268,7 @@ body {	overflow-x: hidden;}
 .daipool {	width: 15px;	height: 15px;	display: inline-block;	margin-right: 5px;	border-radius: 100%;	border: 5px solid #F2A919;	background: none;}
 .doughchart .table {	max-width: 290px;	margin: 20px auto 0;}
 .doughchart.card {	width: 100%;	display: inline-block;	background: #484848;	border: none;	padding: 20px;	border-radius: 12px;}
-.stakingpage h2, .tarnstionpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;}
+.stakingpage h2, .tarnstionpage h2, .assetpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;}
 .total_revenue_detail h3 {	font-size: 32px;	line-height: 40px;	margin-top: 12px;	margin-bottom: 30px;	color: #fff;	font-weight: bold;}
 .total_revenue_date {	width: 100%;	display: inline-block;margin-top: 70px;	color: #fff;	font-size: 22px;	line-height: 24px;	font-weight: bold;}
 .total_revenue_pools {	width: 100%;	display: flex;	align-items: center;	font-size: 28px;	line-height: 30px;	color: #fff;	font-weight: bold;	margin-top: 20px;}
@@ -294,7 +294,7 @@ body {	overflow-x: hidden;}
 .pools_list_block.card {	padding: 15px; background: #484848 !important;	border-radius: 12px;	overflow: hidden;	border: 2px solid #707070;}
 .myassets.card .pools_list_block.card .table tr td:first-child {	width: 30px;}
 .pools_list_block.card .table tr td, .pools_list_block.card .table tr td h3 {	vertical-align: middle;	font-size: 18px;	line-height: 20px;	color: #fff;	margin-bottom: 0;	font-weight: bold;	text-align: center;}
-.pools_list_block.card .table tr td span {text-align: left;}
+.pools_list_block.card .table tr td span, .pools_list_block.card .table tr td span h3 {	text-align: left;}
 .pools_list_block.card .table tr th {text-align: center;} 
 .pools_list_block.card .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px;}
 .create_new {	float: right;	background: #403894;	padding: 10px 20px;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;}
@@ -323,6 +323,47 @@ body {	overflow-x: hidden;}
 .pagination .page-item a:hover, .pagination .page-item a:focus {opacity: 0.5;}
 .pagination {	justify-content: center;	margin-top: 20px;	font-size: 16px;	line-height: 24px;	color: #fff;	font-weight: bold;}
 .create_new:hover {	text-decoration: none;	color: #fff;	opacity: 0.5;}
+.create_new_modal .modal-body form {	max-width: 100%;}
+.create_new_modal .form-group {	display: flex;	align-items: center;}
+.create_new_modal .form-group .form-label { margin-bottom: 0;	width: 100%;	max-width: 100px;	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: bold;}
+.connectmodal.create_new_modal .modal-body form input {	background: none;	box-shadow: none;	border: 1px solid #fff;	color: #fff;	padding: 10px;}
+.connectmodal.create_new_modal .form-group select {	background-color: transparent;	border: 1px solid #fff;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: bold;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;	width: 100%;	max-width: 100px;	margin-right: 15px;}
+.max_value {	color: #fff;	width: 100%;	display: inline-block;	text-align: right;	font-size: 16px;	line-height: 18px;	font-weight: 600;	opacity: 0.7;	position: relative;	top: -10px;}
+.connectmodal.create_new_modal .modalbutton.card {	max-width: 320px;	margin: 35px auto 0;}
+.pools_list_block.card {	margin-top: 15px;}
+.table .form-group {	margin-bottom: 0;}
+.assetpage {	padding: 55px 0;}
+.deposit_withdraw.card {	border: none;	background: none;	padding: 0 55px;	position: relative;}
+.deposit_block.card {	background: #333333;	border: none;	border-radius: 10px;	overflow: hidden;}
+.deposit_block.card form {	padding: 20px;	width: 100%;	display: inline-block;}
+.deposit_block.card form .form-label {	font-size: 16px;	line-height: 18px;	text-align: center;	width: 100%;	color: #fff;	font-weight: 600;	opacity: 0.7;}
+.deposit_block.card form .form-group:first-child {	width: 32%;	float: left;	margin-right: 3%;}
+.deposit_block.card form .form-group {	width: 65%;	float: left;}
+.deposit_block .form-group select {	background-color: transparent;	border: 1px solid #403894;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;  width: 100%;}
+.deposit_block  form input {	background: none;	box-shadow: none;	border:  1px solid #403894;	color: #fff;	padding: 10px;}
+.deposit_block  .max_value{top: 0;}
+.deposit_bottom.card {	background-color: transparent;	background-repeat: no-repeat;	border: none;	width: 100%;	background-size: cover;	padding: 15px 5px;	border-radius: 12px;}
+.deposit_bottom table td {	font-size: 18px;	line-height: 20px;	padding: 10px;	font-weight: normal;}
+.deposit_bottom table tr td:last-child {	text-align: right;}
+.deposit_block.card form p {	margin-bottom: 10px;	color: #fff;	text-align: center;	font-size: 12px;	line-height: 14px;	font-weight: 300;}
+.deposit_block.card form .btn.btn-primary {	width: 100%;	max-width: 250px;	background: #333333;	border: none;	margin: 0 auto;	display: block;	border-radius: 5px;	font-size: 20px;	line-height: 22px;	padding: 8px 10px;	font-weight: bold;}
+.deposit_block.card form .btn.btn-primary:hover{opacity: 0.7;}
+.hide_text {	visibility: hidden;	opacity: 0;}
+.deposit_bottom .table {	margin-bottom: 20px;}
+.deposit_block h2 {	font-size: 20px;	font-weight: bold;	text-align: center;	line-height: 22px;	background: #403894;	color: #fff;	padding: 10px;}
+
+.myassets.card.availableassets .table tr td:first-child {	width: 30px;}
+.myassets.card.availableassets .table tr td, .myassets.card.availableassets .table tr td h3 {	vertical-align: middle;	font-size: 18px;	line-height: 20px;	color: #fff;	margin-bottom: 0;	font-weight: bold;	text-align: center;}
+.myassets.card.availableassets .table tr td span {text-align: left;}
+.myassets.card.availableassets .table tr th {text-align: center;} 
+.myassets.card.availableassets .form-group select {	width: 100%;	max-width: 160px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff;}
+.myassets.card.availableassets .table td h4 {	margin-bottom: 0;	font-size: 15px;	line-height: 17px;	font-weight: bold;}
+.myassets.card.availableassets .table td small {	font-size: 13px;	line-height: 15px;	font-weight: 600;}
+.myassets.card.availableassets .table tr th:nth-child(2) {	text-align: left;}
+.myassets.card.availableassets .table tr td:nth-child(4), .myassets.card.availableassets .table tr td:nth-child(5) {	text-align: right;}
+.myassets.card.availableassets .table tr th:nth-child(4), .myassets.card.availableassets .table tr th:nth-child(5) {	text-align: right;}
+.deposit_withdraw.card {	margin-bottom: 40px;}
+.deposit_withdraw.card::before {	content: "";	background: #272727;	width: 100%;	display: inline-block;	position: absolute;	left: 0;	right: 0;	top: 41px;	bottom: 41px;}
 
 @media screen and (max-width: 992px) {
   .container, .container-md, .container-sm {    max-width: 100%;  }

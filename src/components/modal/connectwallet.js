@@ -27,24 +27,23 @@ function ConnectModal(props){
                 <Card className="modalwarning">
                 <p><img src={warningicon}/>You are about to input highly sensitive information, please DO NOT expose to strangers.</p>
                 </Card>
-            <Form>
-                                
-                                    <Form.Group controlId="formBasicMetamask">
-                                        <Form.Control type="text" placeholder="Metamask" style={{ backgroundImage: `url(${metamask})` }} />
-                                        </Form.Group>
+                <Form>           
+                    <Form.Group controlId="formBasicMetamask">
+                        <Form.Control type="text" placeholder="Metamask" style={{ backgroundImage: `url(${metamask})` }} />
+                        </Form.Group>
 
-                                        <Form.Group controlId="formBasicWalletconnect">
-                                        <Form.Control type="text" placeholder="WalletConnect" style={{backgroundImage: `url(${walletconnect})`}} />
-                                        </Form.Group>
-                                    <Card className="modalbutton">
-                                    <Button variant="primary" type="submit">
-                                    Connect
-                                    </Button>
-                                    <Button variant="secondary" onClick={handleClose}>
-                                    Cancel
-                                    </Button>   
-                                    </Card>
-                            </Form>
+                        <Form.Group controlId="formBasicWalletconnect">
+                        <Form.Control type="text" placeholder="WalletConnect" style={{backgroundImage: `url(${walletconnect})`}} />
+                    </Form.Group>
+                    <Card className="modalbutton">
+                    <Button variant="primary" onClick={props.LogInStatus}>
+                    Connect
+                    </Button>
+                    <Button variant="secondary" onClick={handleClose}>
+                    Cancel
+                    </Button>   
+                    </Card>
+                </Form>
             </Modal.Body>
             
         </Modal>
