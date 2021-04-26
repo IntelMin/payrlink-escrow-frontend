@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import authoricon from '../../images/authoricon.png';
 import testimonialbg from '../../images/testimonialbg.png';
 import {Container, Col, Card, Row} from 'react-bootstrap';
-
+/* Anil Test */
 
 export default class SimpleSlider extends Component {
   render() {
