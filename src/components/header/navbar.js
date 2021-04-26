@@ -16,7 +16,7 @@ function NavBar(props){
           <Container>
             <Navbar>
               <Navbar.Brand href="#home"><img src={logo}/></Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              
               <Navbar.Collapse id="basic-navbar-nav">
               {props.changenavbar===false ?
                 <Nav className="mr-auto">
@@ -26,19 +26,19 @@ function NavBar(props){
                 :
                 <Nav className="mr-auto">
                   <LinkContainer to="/dashboard">
-                    <NavItem eventKey={1}>DASHBOARD</NavItem>
+                    <Nav.Link eventKey={1}>DASHBOARD</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/assets">
-                    <NavItem eventKey={1}>ASSETS</NavItem>
+                    <Nav.Link eventKey={1}>ASSETS</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/staking">
-                    <NavItem eventKey={1}>STAKING</NavItem>
+                    <Nav.Link eventKey={1}>STAKING</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/transaction">
-                    <NavItem eventKey={1}>TRANSACTION</NavItem>
+                    <Nav.Link eventKey={1}>TRANSACTION</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/dashboard">
-                    <NavItem eventKey={1}>ARBITRATION</NavItem>
+                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
                   </LinkContainer>
                     {/* <Nav.Link as={Link} href="/dashboard">DASHBOARD</Nav.Link> */}
                     {/* <Nav.Link as={Link} to="/dashboard">DASHBOARD</Nav.Link>
@@ -55,6 +55,7 @@ function NavBar(props){
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)
                 }}>Connect Wallet</Button>
+                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
               </Navbar.Text>
               :
               <Navbar.Text>
@@ -63,8 +64,10 @@ function NavBar(props){
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)
                 }}><img src={walleticon}/> 0X13484****79 <img src={downblue}/></Button>
+                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
               </Navbar.Text>
               }
+             
             </Navbar> 
             {status===true?
             <ConnectModal status={status} setStatus={setStatus} LogInStatus={props.LoginFun}/>
