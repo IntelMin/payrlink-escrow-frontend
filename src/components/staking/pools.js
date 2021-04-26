@@ -16,8 +16,8 @@ export default function Pools(){
         }
     }
 return (
-    <Card className="myassets">
-        <Row>
+    <Card className="myassets pools_main">
+        <Row className="pools_header">
         <Col md={6}>
             <h2>Pools</h2>
         </Col>

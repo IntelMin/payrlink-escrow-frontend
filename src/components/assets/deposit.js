@@ -23,7 +23,7 @@ export default function Deposit(){
                                     <Form.Group controlId="To">
                                     <Form.Label>Amount</Form.Label>
                                     <Form.Control type="text" />
-                                    <span className="max_value">Max: 2.2 ETH</span>
+                                    <span className="max_value">Max: 2.2</span>
                                     </Form.Group>
                                     
                                     <Card className="deposit_bottom" style={{ backgroundImage: `url(${depositbg})` }}>

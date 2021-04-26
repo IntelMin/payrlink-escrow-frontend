@@ -11,6 +11,16 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom'
 function NavBar(props){
   const[status,setStatus]=useState(false)
+  const[bodyClass, setBodyClass] = useState(false)
+  const toggleClass = () =>{
+      if(!bodyClass){
+        document.body.classList.add('whitebg');
+      } else {
+        document.body.classList.remove('whitebg');
+      }
+      setBodyClass(!bodyClass);
+  }
+  
     return(
         <Container fluid className="header">
           <Container>
@@ -51,7 +61,7 @@ function NavBar(props){
               </Navbar.Collapse>
               {props.changenavbar===false ?
               <Navbar.Text>
-                <a href="#" className="header-setting-icon" ><img src={settingicon}/></a>
+                <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass}><img src={settingicon}/></a>
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)
                 }}>Connect Wallet</Button>
