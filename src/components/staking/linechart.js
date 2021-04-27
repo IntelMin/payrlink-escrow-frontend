@@ -16,9 +16,10 @@ class LineChart extends React.Component {
     },
     dataLine: {
       labels: ["02/27/2021", "02/28/2021", "02/29/2021", "03/01/2021", "03/02/2021", "03/04/2021"],
+      
       datasets: [
         {
-          label:"",
+          label: "",
           fill: true,
           lineTension: 0.3,
           backgroundColor: "rgba(68, 62, 159, .3)",

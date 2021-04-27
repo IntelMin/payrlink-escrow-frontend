@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Table } from "react-bootstrap"
 import {Doughnut} from 'react-chartjs-2';
 
-
 const data = {
   labels: ['ETH','DAI','USDT'],
   datasets: [
