@@ -47,7 +47,7 @@ export default function TransactionHistory (){
       <Table>
                 <thead>
                     <tr>
-                    <th>No</th>
+                    <th>No.</th>
                     <th>Name</th>
                     <th>Amount</th>
                     <th></th>

@@ -18,7 +18,7 @@ export default function WithDraw(){
     return(
         <Card className="deposit_block">
             <h2>Withdraw</h2>
-            <Form>            
+            <Form>                                          
                                   
                 <Form.Group controlId="Amount">
                 <Form.Label>Pool</Form.Label>
