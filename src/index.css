@@ -204,7 +204,7 @@ body {	overflow-x: hidden;}
 .footercopyright.row {	width: 100%;	justify-content: center;	margin: 50px 0 10px;}
 .footercopyright.row p {	margin-bottom: 0;	color: #fff;	font-weight: normal;	font-size: 14px;	line-height: 16px;}
 .connectmodal .close {	display: none;}
-.connectmodal .modal-content {	width: 100%;	display: inline-block;	background: #1F1F1F;	border-radius: 8px;	overflow: hidden;}
+.connectmodal .modal-content {	border: none; width: 100%;	display: inline-block;	background: #1F1F1F;	border-radius: 8px;	overflow: hidden;}
 .connectmodal .modal-header {	background: #403894;	color: #fff;	border: none;	padding: 5px 15px;}
 .connectmodal .modal-title.h4 {	font-size: 22px;	line-height: 26px;	font-weight: bold;	text-align: center;	width: 100%;}
 .connectmodal .modal-body {	padding: 35px 45px;}
@@ -334,7 +334,7 @@ body {	overflow-x: hidden;}
 .table .form-group {	margin-bottom: 0;}
 .assetpage {	padding: 55px 0;}
 .deposit_withdraw.card {	border: none;	background: none;	padding: 0 55px;	position: relative;}
-.deposit_block.card {	background: #333333;	border: none;	border-radius: 10px;	overflow: hidden;}
+.deposit_block.card {	background: #333333;	border: none;	border-radius: 10px;	overflow: hidden;	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);}
 .deposit_block.card form {	padding: 20px;	width: 100%;	display: inline-block;}
 .deposit_block.card form .form-label {	font-size: 16px;	line-height: 18px;	text-align: center;	width: 100%;	color: #fff;	font-weight: 600;	opacity: 0.7;}
 .deposit_block.card form .form-group:first-child {	width: 32%;	float: left;	margin-right: 3%;}
@@ -395,7 +395,64 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .card-header-tabs .nav-link {	color: #404040 !important;	}
 .whitebg .nav-tabs .nav-item.show .nav-link, .whitebg .nav-tabs .nav-link.active {	color: #fff !important;	background-color: #404040 !important;}
 .whitebg .create_new {background: #1d1b40 !important;}
-
+.whitebg .transation_active_escrows .form-group select { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
+.whitebg .doughchart.card {	background: #f8f7fc;}
+.whitebg .total_revenue_detail h3 {	color: #404040;}
+.whitebg .total_revenue_detail h3 {	color: #404040;}
+.whitebg .total_revenue_date {	color: #404040;}
+.whitebg .total_revenue_pools {	color: #404040;}
+.whitebg .pools_list_block.card {	background: #f4f3f8 !important;	border: 2px solid #a7a7a7;}
+.whitebg .pools_list_block.card .table tr td, .whitebg .pools_list_block.card .table tr td h3 {	color: #404040;}
+.whitebg .pools_list_block.card .form-group select {	background-color: #1d1b40;}
+.whitebg .pool_style_btn a:first-child {	margin-left: 10px;	padding: 5px;	background: #25224d;	border-radius: 5px;}
+.whitebg .poolsgrid .pools_grid_block.card {	background: #f4f3f8;	border: 2px solid #a7a7a7;}
+.whitebg .pools_grid_block_header.card h3 {	color: #404040;}
+.whitebg .pools_grid_block_header.card small {	color: #404040;}
+.whitebg .deposit_withdraw.card::before {	background: #fff;}
+.whitebg .deposit_block.card {	background: #fff;}
+.whitebg .deposit_block h2 {	background: #25224d;}
+.whitebg .deposit_bottom.card {	background-color: #000000;	}
+.whitebg .deposit_block.card form .btn.btn-primary {	background: #fff;	color: #25224d;}
+.whitebg .deposit_bottom table td {	color: #fff;}
+.whitebg .myassets.card.availableassets .table tr td, .whitebg .myassets.card.availableassets .table tr td h3 {	color: #404040;}
+.whitebg .myassets.card.availableassets .form-group select { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
+.whitebg .deposit_block form input, .whitebg .deposit_block form input:focus {	border: 1px solid #25224d;	color: #404040;}
+.whitebg .deposit_block.card form .form-label {	color: #404040;;}
+.whitebg  .max_value {	color: #404040;}
+.whitebg  .deposit_block .form-group select {border: 1px solid #25224d; color: #404040; background-image: url('./images/bluebgdown.png') !important; }
+.whitebg .connectmodal .modal-header {	background: #25224d;}
+.whitebg .connectmodal .modal-content {	background: #fff;}
+.whitebg .connectmodal .modal-body form input {	background-color: #f3f3f3;	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);}
+.whitebg .connectmodal .modalwarning.card p {	color: rgba(64, 64, 64, 0.7);}
+.whitebg .connectmodal .modalbutton.card .btn.btn-primary {	background: #25224d;}
+.whitebg .connectmodal .modalbutton.card .btn.btn-secondary {	border: 1px solid #25224d;	color: #25224d;}
+.whitebg .connectmodal .modal-body form input#formBasicMetamask { background-image: url('./images/metawhite.png') !important;}
+.whitebg .connectmodal .modal-body form input#formBasicWalletconnect { background-image: url('./images/walletwhite.png') !important;}
+.showonlight {display: none;}
+.whitebg .showondark {display: none;}
+.whitebg .showonlight {display: inline-block;}
+.whitebg .connectmodal.create_new_modal .modal-body form input {	box-shadow: none;	background: none;	border-color: #25224d;}
+.whitebg .connectmodal.create_new_modal .form-group select {border: 1px solid #25224d; color: #404040; background-image: url('./images/bluebgdown.png') !important; }
+.whitebg .create_new_modal .form-group .form-label {	color: #404040;	}
+.header-notification-icon.dropdown {	display: inline-block;}
+.header-notification-icon #dropdown-basic {	background: none;	border: none;	padding: 0;}
+.header-notification-icon #dropdown-basic::after {	display: none;}
+.header-notification-icon .dropdown-menu { scrollbar-width: thin;	left: auto;	right: 0;	margin-top: 10px !important;	width: 280px;	padding: 0px;	height: 300px;		background: #333333;	border: none;	border-radius: 8px;	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);}
+.header-notification-icon .dropdown-menu h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;  opacity: 0.7;}
+.header-notification-icon .dropdown-menu .dropdown-item {	white-space: break-spaces;	background: #707070;	border-radius: 6px;	padding: 10px;	margin: 10px 0;	font-size: 16px;	line-height: 20px;	font-weight: 600;	color: #fff;	}
+.header-notification-icon .dropdown-menu .dropdown-item:hover {color: #fff; opacity: 0.7;}
+.header-notification-icon .dropdown-menu::before {	content: ".";	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAABHNCSVQICAgIfAhkiAAAAOJJREFUKFNjZCAMGI2MjPpAys6dO1cEpP7j08KIT1JFRYWdn59/MVBNKFTd6rNnz0YC2X9x6cNpoLGxMdf///+3MTIy2iNrBoptB4qFAA3+hs1QrAYaGhqKAjWBDDPBpglo6Bkg9jp//vxrdHkMA4EuUwYq2gnEIBofuAuUdAe6FETDAYqBQJeZQF0mSjiugLHz//9rqEvPwNTDDQQaZs/ExLQNKMFFjGFIar79+/cP5P2DIDGwgUBvhgJtWgx0HTuJhoGVA/X+BOqNBXp/NSiNFQDF+oACeJMQIYuAhoLSZxEAG89QEAENXosAAAAASUVORK5CYII=) !important;	position: absolute;	top: -9px;	width: 20px;	height: 9px;	display: inline-block;	right: 6px;}
+.header-notification-icon .dropdown-menu .card {	background: none;	padding: 15px;	overflow-y: auto;	height: 300px;	box-shadow: none;	border: none;	scrollbar-width: thin;}
+.transation_active_escrows .form-group select option, .connectmodal.create_new_modal .form-group select option{
+	background: #333333;
+}
+.whitebg .transation_active_escrows .form-group select option, .whitebg  .connectmodal.create_new_modal .form-group select option{
+	background: #fff;
+}
+.whitebg .myassets.card.availableassets .form-group select option:hover {
+background: #f4f4f4;
+}
+.whitebg .pools_grid_block .form-group select {	background-color: #25224d;	}
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
 .navbar-brand img {	max-width: 210px;}

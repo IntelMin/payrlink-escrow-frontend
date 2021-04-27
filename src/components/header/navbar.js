@@ -5,7 +5,7 @@ import settingicon from '../../images/settingicon.png';
 import downblue from '../../images/downblue.png';
 import walleticon from '../../images/walleticon.png';
 import notificationicon from '../../images/notificationicon.png';
-import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink} from 'react-bootstrap';
+import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dropdown, Card} from 'react-bootstrap';
 import ConnectModal from '../modal/connectwallet';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom'
@@ -70,7 +70,22 @@ function NavBar(props){
               :
               <Navbar.Text>
                 <a href="#" className="header-setting-icon" ><img src={settingicon}/></a>
-                <a href="#" className="header-notification-icon" ><img src={notificationicon}/></a>
+                <Dropdown className="header-notification-icon">
+  <Dropdown.Toggle variant="success" id="dropdown-basic">
+  <img src={notificationicon}/>
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Card>
+    <h2>Notifications</h2>
+    <Dropdown.Item href="#/action-1">Received 20 ETH from XeroNeon on 03/18/2021 at 2:30AM</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Received 20 ETH from XeroNeon on 03/18/2021 at 2:30AM</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Received 20 ETH from XeroNeon on 03/18/2021 at 2:30AM</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Received 20 ETH from XeroNeon on 03/18/2021 at 2:30AM</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Received 20 ETH from XeroNeon on 03/18/2021 at 2:30AM</Dropdown.Item>
+  </Card>
+  </Dropdown.Menu>
+</Dropdown>
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)
                 }}><img src={walleticon}/> 0X13484****79 <img src={downblue}/></Button>
