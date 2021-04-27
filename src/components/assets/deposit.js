@@ -22,7 +22,7 @@ const options = [
             <Form>                
                 <Form.Group controlId="Amount">
                 <Form.Label>Pool</Form.Label>
-                <Select                 
+                <Select                
                     options={options}
                     defaultValue = {options[0]}
                 />
@@ -31,7 +31,7 @@ const options = [
                 <Form.Group controlId="To">
                 <Form.Label>Amount</Form.Label>
                 <Form.Control type="text" />
-                <span className="max_value">Max: 2.2</span>
+                <span className="max_value">Max: 2.2 </span>
                 </Form.Group>
                 
                 <Card className="deposit_bottom" style={{ backgroundImage: `url(${depositbg})` }}>
