@@ -16,6 +16,7 @@ function App() {
   const[changenavbar,setChangeNavBar]=useState(false)
   const LoginFun=()=>{
     setChangeNavBar(true)
+    localStorage.setItem('loginState', true)
   }
   return (
     <div className="page-main">

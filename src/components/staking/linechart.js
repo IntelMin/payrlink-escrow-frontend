@@ -5,17 +5,20 @@ import { Card } from "react-bootstrap";
 
 class LineChart extends React.Component {
   state = {
+    options: {
+      responsive: true,
+      legend: {
+        display: false,
+      },
+      axisY: {
+				suffix: "%"
+			},
+    },
     dataLine: {
       labels: ["02/27/2021", "02/28/2021", "02/29/2021", "03/01/2021", "03/02/2021", "03/04/2021"],
-      options: {
-        responsive: true,
-        legend: {
-          display: false,
-        },
-      },
       datasets: [
         {
-          label: " ",
+          label:"",
           fill: true,
           lineTension: 0.3,
           backgroundColor: "rgba(68, 62, 159, .3)",
@@ -33,7 +36,7 @@ class LineChart extends React.Component {
           pointHoverBorderWidth: 1,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [19000, 8000, 16000, 13000, 16000, 10000]
+          data: ['19000', '8000', '16000', '13000', '16000', '10000']
         }
         
       ]
