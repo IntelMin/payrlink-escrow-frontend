@@ -16,12 +16,16 @@ function App() {
   const[changenavbar,setChangeNavBar]=useState(false)
   const LoginFun=()=>{
     setChangeNavBar(true)
+    localStorage.setItem('loginState', true)
+  }
+  const Disconnect=()=>{
+    setChangeNavBar(false)
   }
   return (
     <div className="page-main">
       <React.StrictMode>
        <Router>
-       <NavBar LoginFun={LoginFun} changenavbar={changenavbar}/>
+       <NavBar LoginFun={LoginFun} changenavbar={changenavbar} setChangeNavBar={Disconnect}/>
         <Switch>
           <Route exact path="/" component={IndexPage} />
           <Route exact path="/dashboard" component={DashboardPage} />
@@ -29,7 +33,7 @@ function App() {
           <Route exact path="/transaction" component={Transaction} />
           <Route exact path="/assets" component={AssetsPage} />
         </Switch>
-        <Footer LoginFun={LoginFun} changenavbar={changenavbar}/>
+        <Footer LoginFun={LoginFun} changenavbar={changenavbar} />
        </Router>
       </React.StrictMode>
       

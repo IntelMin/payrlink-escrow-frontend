@@ -17,7 +17,6 @@ export default function TotalStaked(){
                 <li><img src={asset3}/></li>
                 <li><img src={asset4}/></li>
              </ul>    
-             <span>5</span>
              </Card>
              <h3>Total Rewards</h3>   
              <p>$ 50,037</p>

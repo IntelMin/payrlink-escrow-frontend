@@ -173,10 +173,10 @@ code {
 .footerblock form .btn.btn-primary:hover {opacity: 0.5;}
 .footerblock form {	background: rgba(255, 255, 255, 0.3);	padding: 15px;	border-radius: 15px;	max-width: 300px;	width: 100%;	margin: 0 auto;}
 .footerblock.footerlist.card {	flex-direction: row;	justify-content: center;}
-.footerblock.footerlist.card .list-group-item {	background: none;	border: none;	padding: 0 25px 5px;}
+.footerblock.footerlist.card .list-group-item {	background: none;	border: none;	padding: 0 0px 5px;}
 .footerblock.footerlist.card .list-group-item a {	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: normal;}
 .footerblock.footerlist.card .list-group-item a:hover {opacity: 0.5; text-decoration: none;}
-.footerblock.footerlogo.card .card-img {	max-width: 230px;	width: 100%;	margin: 0 auto;}
+.footerblock.footerlogo.card .card-img {	max-width: 150px;	width: 100%;	margin: 0 auto;}
 .footerblock form h3 {	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: bold;}
 .footerborderight.list-group {	border-right: 1px solid #fff;	border-radius: 0 !important;}
 .testimonial-main.container-fluid {	width: 100%;	display: inline-block;	position: relative;}
@@ -208,11 +208,13 @@ body {	overflow-x: hidden;}
 .connectmodal .modal-header {	background: #403894;	color: #fff;	border: none;	padding: 5px 15px;}
 .connectmodal .modal-title.h4 {	font-size: 22px;	line-height: 26px;	font-weight: bold;	text-align: center;	width: 100%;}
 .connectmodal .modal-body {	padding: 35px 45px;}
-.connectmodal .modalwarning.card {	background: none;	border: none;	width: 100%;	border-radius: 0;	margin-bottom: 50px;}
+.connectmodal .modalwarning.card {	background: none;	border: none;	width: 100%;	border-radius: 0;	margin-bottom: 15px;}
 .connectmodal .modalwarning.card p {	display: flex;	align-items: center;	margin-bottom: 0;	color: rgba(255, 255, 255, 0.7);	font-size: 14px;	line-height: 20px;	font-weight: 600;}
 .connectmodal .modalwarning.card p img {	margin-right: 20px;}
 .connectmodal .modal-body form {	width: 100%;	max-width: 290px;	margin: 0 auto;}
 .connectmodal .modal-body form input {	background-color: #333;	border: none;	border-radius: 6px;	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);	overflow: hidden;	padding-left: 45px;	background-position: left center;	background-repeat: no-repeat;	background-size: 37px;}
+.connectmodal .modal-body form .form-group button.btn {background-color: #333;	border: none;	border-radius: 6px;	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);	overflow: hidden;	background-position: left 3px center;	background-repeat: no-repeat;	background-size: 37px;	width: 100%;	text-align: left;	padding: 12px 10px 12px 50px;	font-weight: 600;	font-size: 18px;	line-height: 20px;}
+.connectmodal .modal-body form .form-group button.btn:hover {	opacity: 0.7;}
 .connectmodal .modalbutton.card {	flex-direction: unset;	background: none;	border: none;	margin-top: 50px;}
 .connectmodal .modalbutton.card .btn.btn-primary {	width: 55%;	float: left;	margin-right: 5%;	background: #403894;	border: none;	font-size: 16px;	line-height: 18px;	font-weight: 600;	border-radius: 5px;	padding: 8px 10px;}
 .connectmodal .modalbutton.card .btn.btn-primary:hover, .connectmodal .modalbutton.card .btn.btn-primary:focus {opacity: 0.5;}
@@ -327,7 +329,7 @@ body {	overflow-x: hidden;}
 .create_new_modal .form-group {	display: flex;	align-items: center;}
 .create_new_modal .form-group .form-label { margin-bottom: 0;	width: 100%;	max-width: 100px;	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: bold;}
 .connectmodal.create_new_modal .modal-body form input {	background: none;	box-shadow: none;	border: 1px solid #fff;	color: #fff;	padding: 10px;}
-.connectmodal.create_new_modal .form-group select {	background-color: transparent;	border: 1px solid #fff;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: bold;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;	width: 100%;	max-width: 100px;	margin-right: 15px;}
+.connectmodal.create_new_modal .form-group select {	background-color: transparent;	border: 1px solid #fff;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: bold;	background-size: 27px;	background-position: right -2px center;	background-repeat: no-repeat;	width: 100%;	max-width: 100px;	margin-right: 15px;}
 .max_value {	color: #fff;	width: 100%;	display: inline-block;	text-align: right;	font-size: 16px;	line-height: 18px;	font-weight: 600;	opacity: 0.7;	position: relative;	top: -10px;}
 .connectmodal.create_new_modal .modalbutton.card {	max-width: 320px;	margin: 35px auto 0;}
 .pools_list_block.card {	margin-top: 15px;	overflow: auto;}
@@ -417,17 +419,18 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .myassets.card.availableassets .table tr td, .whitebg .myassets.card.availableassets .table tr td h3 {	color: #404040;}
 .whitebg .myassets.card.availableassets .form-group select { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
 .whitebg .deposit_block form input, .whitebg .deposit_block form input:focus {	border: 1px solid #25224d;	color: #404040;}
-.whitebg .deposit_block.card form .form-label {	color: #404040;;}
+.whitebg .deposit_block.card form .form-label {	color: #404040;}
 .whitebg  .max_value {	color: #404040;}
 .whitebg  .deposit_block .form-group select {border: 1px solid #25224d; color: #404040; background-image: url('./images/bluebgdown.png') !important; }
 .whitebg .connectmodal .modal-header {	background: #25224d;}
 .whitebg .connectmodal .modal-content {	background: #fff;}
 .whitebg .connectmodal .modal-body form input {	background-color: #f3f3f3;	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);}
+.whitebg .connectmodal .modal-body form .form-group button.btn {	background-color: #f3f3f3;	box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); color: #404040;}
 .whitebg .connectmodal .modalwarning.card p {	color: rgba(64, 64, 64, 0.7);}
 .whitebg .connectmodal .modalbutton.card .btn.btn-primary {	background: #25224d;}
 .whitebg .connectmodal .modalbutton.card .btn.btn-secondary {	border: 1px solid #25224d;	color: #25224d;}
-.whitebg .connectmodal .modal-body form input#formBasicMetamask { background-image: url('./images/metawhite.png') !important;}
-.whitebg .connectmodal .modal-body form input#formBasicWalletconnect { background-image: url('./images/walletwhite.png') !important;}
+.whitebg .connectmodal .modal-body form .form-group button.btn.formBasicMetamask { background-image: url('./images/metawhite.png') !important;}
+.whitebg .connectmodal .modal-body form .form-group button.btn.formBasicWalletconnect { background-image: url('./images/walletwhite.png') !important;}
 .showonlight {display: none;}
 .whitebg .showondark {display: none;}
 .whitebg .showonlight {display: inline-block;}
@@ -437,20 +440,47 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .header-notification-icon.dropdown {	display: inline-block;}
 .header-notification-icon #dropdown-basic {	background: none;	border: none;	padding: 0;}
 .header-notification-icon #dropdown-basic::after {	display: none;}
-.header-notification-icon .dropdown-menu { scrollbar-width: thin;	left: auto;	right: 0;	margin-top: 10px !important;	width: 280px;	padding: 0px;	height: 300px;		background: #333333;	border: none;	border-radius: 8px;	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);}
-.header-notification-icon .dropdown-menu h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;  opacity: 0.7;}
-.header-notification-icon .dropdown-menu .dropdown-item {	white-space: break-spaces;	background: #707070;	border-radius: 6px;	padding: 10px;	margin: 10px 0;	font-size: 16px;	line-height: 20px;	font-weight: 600;	color: #fff;	}
-.header-notification-icon .dropdown-menu .dropdown-item:hover {color: #fff; opacity: 0.7;}
+.header-notification-icon .dropdown-menu {	scrollbar-width: thin;	left: auto;	right: 0;	margin-top: 23px !important;	width: 340px;	padding: 0px;	height: 390px;	background: #333333;	border: none;	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);	border-bottom-left-radius: 15px;	border-bottom-right-radius: 15px;	border-top-left-radius: 0;	border-top-right-radius: 0;}
+.header-notification-icon .dropdown-menu h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: 600;	opacity: 0.7;	padding: 0 20px;	margin: 15px 0;}
+.header-notification-icon .dropdown-menu .dropdown-item {	white-space: break-spaces;	border-radius: 5px;	padding: 10px;	margin: 5px 0;	font-size: 16px;	line-height: 22px;	font-weight: 600;	color: #fff;}
+.header-notification-icon .dropdown-menu .dropdown-item:hover {	color: #fff;	background: none;	opacity: 1;}
 .header-notification-icon .dropdown-menu::before {	content: ".";	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAABHNCSVQICAgIfAhkiAAAAOJJREFUKFNjZCAMGI2MjPpAys6dO1cEpP7j08KIT1JFRYWdn59/MVBNKFTd6rNnz0YC2X9x6cNpoLGxMdf///+3MTIy2iNrBoptB4qFAA3+hs1QrAYaGhqKAjWBDDPBpglo6Bkg9jp//vxrdHkMA4EuUwYq2gnEIBofuAuUdAe6FETDAYqBQJeZQF0mSjiugLHz//9rqEvPwNTDDQQaZs/ExLQNKMFFjGFIar79+/cP5P2DIDGwgUBvhgJtWgx0HTuJhoGVA/X+BOqNBXp/NSiNFQDF+oACeJMQIYuAhoLSZxEAG89QEAENXosAAAAASUVORK5CYII=) !important;	position: absolute;	top: -9px;	width: 20px;	height: 9px;	display: inline-block;	right: 6px;}
-.header-notification-icon .dropdown-menu .card {	background: none;	padding: 15px;	overflow-y: auto;	height: 300px;	box-shadow: none;	border: none;	scrollbar-width: thin;}
-.transation_active_escrows .form-group select option, .connectmodal.create_new_modal .form-group select option{
-	background: #333333;
-}
-.whitebg .transation_active_escrows .form-group select option, .whitebg  .connectmodal.create_new_modal .form-group select option{
-	background: #fff;
-}
-
+.header-notification-icon .dropdown-menu .card {	background: none;	padding: 0px 15px 15px;	overflow-y: auto;	height: 315px;	box-shadow: none;	border: none;	scrollbar-width: thin;}
+.transation_active_escrows .form-group select option, .connectmodal.create_new_modal .form-group select option{	background: #333333;}
+.whitebg .transation_active_escrows .form-group select option, .whitebg  .connectmodal.create_new_modal .form-group select option{	background: #fff;}
 .whitebg .pools_grid_block .form-group select {	background-color: #25224d;	}
+.css-2b097c-container .css-1pahdxg-control, .css-2b097c-container .css-1pahdxg-control:focus , .css-2b097c-container .css-yk16xz-control, .css-2b097c-container .css-yk16xz-control:hover, .css-2b097c-container .css-yk16xz-control:focus {	overflow: hidden; background-repeat: no-repeat;  background-position: right center; background-color: transparent;	border: 1px solid #403894;	border-radius: .25rem; background-image: url('./images/bluedown.png') !important; }
+.css-1uccc91-singleValue {	color: #fff !important;	font-weight: bold !important;}
+.css-1hb7zxy-IndicatorsContainer {	display: none !important;}
+.whitebg .css-1uccc91-singleValue {	color: #404040 !important;}
+.whitebg .css-2b097c-container .css-1pahdxg-control, .whitebg .css-2b097c-container .css-1pahdxg-control:focus , .whitebg .css-2b097c-container .css-yk16xz-control, .whitebg .css-2b097c-container .css-yk16xz-control:hover, .whitebg .css-2b097c-container .css-yk16xz-control:focus {	background-repeat: no-repeat;  background-position: right center; border: 1px solid #25224d;	background-image: url('./images/bluebgdown.png') !important; }
+.connect-wallet::after {	display: none !important;}
+.navbar-text .dropdown {	display: inline-block;}
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {	color: #25224E !important;	background-color: #fff !important;	border: none !important;	box-shadow: none !important;}
+.WalletConnectmodal .modal-dialog {	max-width: 430px;}
+.WalletConnectmodal .modal-dialog .modal-body {	padding: 20px;}
+.connectmodal.WalletConnectmodal .close {	display: inline-block;	color: #fff;	opacity: 1;}
+.connectmodal.WalletConnectmodal .modal-title.h4 {	text-align: left;}
+.myassets.card.availableassets .form-group select option {	background: #333333;	color: #fff;}
+.whitebg .myassets.card.availableassets .form-group select option {	background: #fff;	color: #404040;}
+.css-2613qy-menu div img {margin-right: 10px !important;}
+.header-notification-icon .btn-success:not(:disabled):not(.disabled).active, .header-notification-icon .btn-success:not(:disabled):not(.disabled):active, .header-notification-icon.show > .btn-success.dropdown-toggle {	background: none !important;}
+.header-notification-icon .dropdown-menu .dropdown-item span {	opacity: 0.7;	font-weight: bold;}
+.header-notification-icon .dropdown-menu .unread.dropdown-item {	background: #3f3f3f;}
+.whitebg .header-notification-icon .dropdown-menu {background: #fff;}
+.whitebg .header-notification-icon .dropdown-menu h2 {	color: #404040;}
+.whitebg .header-notification-icon .dropdown-menu .dropdown-item {	color: #404040;}
+.whitebg .header-notification-icon .dropdown-menu .unread.dropdown-item {	background: #f4f4f4;}
+.whitebg .header-notification-icon .dropdown-menu::before { background-image: url('./images/polygon2.png') !important;}
+.footerlist .card {	background: none;	border: none;	box-shadow: none;	width: 50%; }
+.footersocial.list-group {	width: 100%;	display: inline-block;	margin-top: 30px;}
+.footersocial.list-group .list-group-item {	float: left;	margin-right: 8px;}
+.footerblock.footerlist.card .list-group-item img {	width: 20px;}
+.footerblock.footerlist.card .list-group-item .nav-item {	display: inline-block; color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: normal;}
+.footerlistleft.card {	border-right: 1px solid #fff;	border-radius: 0;}
+.footerlistright.card {	padding-left: 20px;}
+.css-1pahdxg-control, .css-yk16xz-control {	height: 39px !important;}
+.css-1uccc91-singleValue {	top: 4px !important;	transform: none !important;}
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
@@ -549,6 +579,9 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .connectmodal .modalbutton.card {	margin-top: 25px;}
 .connectmodal.create_new_modal .modalbutton.card {		margin: 25px auto 0;}
 .create_new_modal .form-group .form-label {	max-width: 75px;	font-size: 14px;	line-height: 18px;}
+.header-notification-icon .dropdown-menu {	left: -70px;	right: auto;	margin-top: 19px !important;	width: 299px;	padding: 0px;	height: 290px;}
+.header-notification-icon .dropdown-menu .card {	height: 225px;}
+.header-notification-icon .dropdown-menu::before {	right: auto;	left: 72px;}
 }
 @media screen and (max-width: 580px) {
 #basic-navbar-nav.show {	top: 110px !important;}

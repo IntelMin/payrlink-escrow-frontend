@@ -23,7 +23,7 @@ function ConnectModal(props){
     return (
         <>
           
-        <Modal show={show} onHide={handleClose} className="connectmodal">
+        <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal">
             <Modal.Header closeButton>
             <Modal.Title>Connect Wallet</Modal.Title>
             </Modal.Header>
@@ -33,20 +33,13 @@ function ConnectModal(props){
                 </Card>
                 <Form>           
                     <Form.Group controlId="formBasicMetamask">
-                        <Form.Control type="text" placeholder="Metamask" style={{ backgroundImage: `url(${metamask})` }} />
-                        </Form.Group>
-
-                        <Form.Group controlId="formBasicWalletconnect">
-                        <Form.Control type="text" placeholder="WalletConnect" style={{backgroundImage: `url(${walletconnect})`}} />
+                        <Button className="formBasicMetamask" style={{ backgroundImage: `url(${metamask})` }}>Metamask</Button>
                     </Form.Group>
-                    <Card className="modalbutton">
-                    <Button variant="primary" onClick={CloseMe}>
-                    Connect
-                    </Button>
-                    <Button variant="secondary" onClick={handleClose}>
-                    Cancel
-                    </Button>   
-                    </Card>
+
+                    <Form.Group controlId="formBasicWalletconnect">
+                        <Button className="formBasicWalletconnect" style={{backgroundImage: `url(${walletconnect})`}} onClick={CloseMe}>WalletConnect</Button>
+                    </Form.Group>
+                    
                 </Form>
             </Modal.Body>
             

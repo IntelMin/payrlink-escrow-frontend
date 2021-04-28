@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import logo from '../../logo.png';
+import footerlogo from '../../images/footerlogo.png';
 import socialicon1 from '../../images/socialicon1.png';
 import socialicon2 from '../../images/socialicon2.png';
 import socialicon3 from '../../images/socialicon3.png';
@@ -38,13 +38,39 @@ function Footer(props){
                     </Col>
                     <Col md={4}>
                     <Card className="footerblock footerlist">
+                    <Card className="footerlistleft">
+                    <ListGroup as="ul">
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>OFFICIAL SITE</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
+                                </LinkContainer></ListGroup.Item>
+                            <ListGroup.Item as="li">
+                                <LinkContainer to="#">
+                                    <NavItem eventKey={1}>VIDEO</NavItem>
+                                </LinkContainer>
+                            </ListGroup.Item>
+                        </ListGroup>
+                        <ListGroup as="ul" className="footersocial">
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon1}/></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon2}/></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon3}/></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon4}/></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon5}/></a></ListGroup.Item>
+                        </ListGroup>
+                        </Card>
+                        <Card className="footerlistright">
                     {props.changenavbar===false ?
-                    <ListGroup as="ul" className="footerborderight">
+                    <ListGroup as="ul" >
                         <ListGroup.Item as="li"><a href="#">HOME</a></ListGroup.Item>
                         <ListGroup.Item as="li"><a href="#">ARBITRATION</a></ListGroup.Item>
                         </ListGroup>
                         :
-                        <ListGroup as="ul" className="footerborderight">
+                        <ListGroup as="ul">
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/dashboard">
                                     <NavItem eventKey={1}>HOME</NavItem>
@@ -71,34 +97,13 @@ function Footer(props){
                             </ListGroup.Item>
                         </ListGroup>
                     }
-                        <ListGroup as="ul">
-                            <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>OFFICIAL SITE</NavItem>
-                                </LinkContainer>
-                            </ListGroup.Item>
-                            <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
-                                </LinkContainer></ListGroup.Item>
-                            <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>VIDEO</NavItem>
-                                </LinkContainer>
-                            </ListGroup.Item>
-                        </ListGroup>
+                      </Card>  
                     </Card>
                     </Col>
                     <Col md={4}>
                     <Card className="footerblock footerlogo">
-                    <Card.Img src={logo} />
-                    <ListGroup as="ul">
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon1}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon2}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon3}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon4}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon5}/></a></ListGroup.Item>
-                        </ListGroup>
+                    <Card.Img src={footerlogo} />
+                    
                     </Card>
                     </Col>    
                 </Row>    

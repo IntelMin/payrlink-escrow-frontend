@@ -1,7 +1,20 @@
 .App {
   text-align: center;
 }
-
+.css-yk16xz-control, .css-yk16xz-control:hover {
+	background: none;
+	color: #fff !important;
+	border: 1px solid #403894;
+}
+.css-1uccc91-singleValue {
+	color: #fff;
+}
+.css-1uccc91-singleValue img {
+	margin-right: 8px;
+}
+.css-1f43avz-a11yText-A11yText > div {
+	background: none !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
