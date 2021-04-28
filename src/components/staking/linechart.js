@@ -5,15 +5,6 @@ import { Card } from "react-bootstrap";
 
 class LineChart extends React.Component {
   state = {
-    options: {
-      responsive: true,
-      legend: {
-        display: false,
-      },
-      axisY: {
-				suffix: "%"
-			},
-    },
     dataLine: {
       labels: ["02/27/2021", "02/28/2021", "02/29/2021", "03/01/2021", "03/02/2021", "03/04/2021"],
       
@@ -40,7 +31,24 @@ class LineChart extends React.Component {
           data: ['19000', '8000', '16000', '13000', '16000', '10000']
         }
         
-      ]
+      ],
+      options: {
+        plugins: {
+            legend: {
+                display: false,
+            }
+        },
+        scales: {
+          y: {
+              ticks: {
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                      return '$' + value/1000 +'k';
+                  }
+              }
+          }
+      }
+      }
     }
   };
 
@@ -48,7 +56,7 @@ class LineChart extends React.Component {
     return (
       <Card className="myassets revenuehistory">
         <h2>Revenue History</h2>
-        <Line data={this.state.dataLine} options={{ responsive: true }} />
+        <Line data={this.state.dataLine} options={this.state.dataLine.options} />
         </Card>
     );
   }
