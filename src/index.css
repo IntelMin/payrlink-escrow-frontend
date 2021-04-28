@@ -449,10 +449,9 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .transation_active_escrows .form-group select option, .whitebg  .connectmodal.create_new_modal .form-group select option{
 	background: #fff;
 }
-.whitebg .myassets.card.availableassets .form-group select option:hover {
-background: #f4f4f4;
-}
+
 .whitebg .pools_grid_block .form-group select {	background-color: #25224d;	}
+
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
 .navbar-brand img {	max-width: 210px;}
