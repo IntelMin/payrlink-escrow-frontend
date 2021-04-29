@@ -8,7 +8,8 @@ export default function TransactionHistory (){
   const [Data,setData]=useState([]);
   // Get Length of Data that coming from dataset.js file
   const TotalData=HistoryData.length;
-  const ItemPerPage=3
+  const ItemPerPage=3;
+  const [currentpage,setCurrentPage]=useState(1);
   const CreatePage=TotalData/3;
   const Pages = Math.ceil(CreatePage)// Total Pages
   const [range,setRange]=useState({
@@ -16,6 +17,7 @@ export default function TransactionHistory (){
     EndPoint:3
   })
 
+  const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
   const [statepaginationbtn,setStatePaginationBtn]=useState({
     disableNxt:false,
@@ -28,55 +30,55 @@ export default function TransactionHistory (){
   },[])
  
   const nextPageData=()=>{
-    if(range.EndPoint<=TotalData){
+    if(range.EndPoint<TotalData){
       const strt = range.EndPoint;
       const end = range.EndPoint + ItemPerPage;
       setRange({StartPoint: strt, EndPoint: end})
-      console.log(strt,end)
       setData(HistoryData.slice(strt,end));
-      // console.log(Data[0])
+      setCurrentPage(currentpage+1)
     }
     else{
-      setStatePaginationBtn({...statepaginationbtn, disableNxt:true})
+      setRange({...range, StartPoint: TotalData-TotalData%ItemPerPage, EndPoint: TotalData})
+      setData(HistoryData.slice(TotalData-TotalData%ItemPerPage,TotalData));
+      setCurrentPage(Pages)
     }
   }
   const previousPageData=()=>{
-      const strt = range.StartPoint-ItemPerPage;
-      const end = range.EndPoint-ItemPerPage;
-      setRange({...range, StartPoint: strt, EndPoint: end})
-      setData(HistoryData.slice(strt,end));
       console.log(range)
-      if(range.StartPoint <= 0){
-        setRange({...range, StartPoint: 0, EndPoint: 3})
-      //  setStatePaginationBtn({...statepaginationbtn, disablePre:true, disabelNxt:false})
-      }
-      else{
-      //  setStatePaginationBtn({...statepaginationbtn, disablePre:true, disabelNxt:false})
+
+      if(LastPageState===true){
+        const end = TotalData-TotalData%ItemPerPage;
+        const strt = end - ItemPerPage;
+        setRange({...range, StartPoint: strt, EndPoint: end})
+        setData(HistoryData.slice(strt,end));
+        setLastPageState(false);
+      
+      }else{
+        const strt = range.StartPoint-ItemPerPage;
+        const end = range.EndPoint-ItemPerPage;;
+        if(range.StartPoint <= 0){
+          setRange({...range, StartPoint: 0, EndPoint: ItemPerPage})
+          setData(HistoryData.slice(0,ItemPerPage));
+        }
+        else{
+          setRange({...range, StartPoint: strt, EndPoint: end})
+          setData(HistoryData.slice(strt,end));
+          setCurrentPage(currentpage-1)
+        }
       }
   }
-
   const firstPage=()=>{
-      setRange({...range, StartPoint: 0, EndPoint: 3})
-      setData(HistoryData.slice(0,3));
-      console.log(range)
-      if(range.StartPoint <= 0){
-        setRange({...range, StartPoint: 0, EndPoint: 3})
-      }
-      else{
-      //  setStatePaginationBtn({...statepaginationbtn, disablePre:true, disabelNxt:false})
-      }
+      setLastPageState(false);
+      setRange({...range, StartPoint: 0, EndPoint: ItemPerPage})
+      setData(HistoryData.slice(0,ItemPerPage));
+      setCurrentPage(1)
   }
 
   const lastPage=()=>{
-    setRange({...range, StartPoint: TotalData-3, EndPoint: TotalData})
-    setData(HistoryData.slice(TotalData-3,TotalData));
-    console.log(range)
-    if(range.StartPoint <= 0){
-      setRange({...range, StartPoint: TotalData-3, EndPoint: TotalData})
-    }
-    else{
-    //  setStatePaginationBtn({...statepaginationbtn, disablePre:true, disabelNxt:false})
-    }
+    setRange({...range, StartPoint: TotalData-TotalData%ItemPerPage, EndPoint: TotalData})
+    setData(HistoryData.slice(TotalData-TotalData%ItemPerPage,TotalData));
+    setCurrentPage(Pages)
+    setLastPageState(true)
 }
 
 return(
@@ -150,10 +152,10 @@ return(
         </Tab.Pane>
         <Tab.Pane eventKey="active">
           <Card className="transation_history_table">
-            <Table>
+          <Table>
               <thead>
                   <tr>
-                  <th>No</th>
+                  <th>No.</th>
                   <th>Name</th>
                   <th>Amount</th>
                   <th></th>
@@ -163,24 +165,22 @@ return(
                   </tr>
               </thead>
               <tbody>
-                  <tr>
-                  <td>1</td>    
-                  <td>BuyCat</td>
-                  <td>80 ETH</td>
-                  <td><span class="buy">Buy</span></td>
-                  <td>0x178*****35</td>
-                  <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                  <td><span class="status_active">Active</span></td>
-                  </tr>
-                  <tr>
-                  <td>2</td>    
-                  <td>NeonXero</td>
-                  <td>30 ETH</td>
-                  <td><span class="buy">Buy</span></td>
-                  <td>0x178*****35</td>
-                  <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                  <td><span class="status_active">Active</span></td>
-                  </tr>  
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span class="buy">Buy</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span class="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
               </tbody>
             </Table>
           </Card>
@@ -188,10 +188,10 @@ return(
 
         <Tab.Pane eventKey="pending">
           <Card className="transation_history_table">
-            <Table>
+          <Table>
               <thead>
                   <tr>
-                  <th>No</th>
+                  <th>No.</th>
                   <th>Name</th>
                   <th>Amount</th>
                   <th></th>
@@ -201,27 +201,22 @@ return(
                   </tr>
               </thead>
               <tbody>
-                  <tr>
-                  <td>1</td>    
-                  <td>BuyCat</td>
-                  <td>80 ETH</td>
-                  <td><span class="buy">Buy</span></td>
-                  <td>0x178*****35</td>
-                  <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                  <td><span class="status_active">Active</span></td>
-
-                  </tr>
-
-                  <tr>
-                  <td>2</td>    
-                  <td>NeonXero</td>
-                  <td>30 ETH</td>
-                  <td><span class="buy">Buy</span></td>
-                  <td>0x178*****35</td>
-                  <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                  <td><span class="status_dispute">On-Dispute</span></td>
-
-                  </tr>     
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span class="buy">Buy</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span class="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
               </tbody>
             </Table>
           </Card>
@@ -229,133 +224,109 @@ return(
 
           <Tab.Pane eventKey="dispute">
             <Card className="transation_history_table">
-              <Table>
-                  <thead>
-
-                    <tr>
-                      <th>No</th>
-                      <th>Name</th>
-                      <th>Amount</th>
-                      <th></th>
-                      <th>To/From</th>
-                      <th>Created At</th>
-                      <th>Status</th>
-                    </tr>
-
-                  </thead>
-                  <tbody>
-
-                    <tr>
-                      <td>1</td>    
-                      <td>BuyCat</td>
-                      <td>80 ETH</td>
-                      <td><span class="buy">Buy</span></td>
-                      <td>0x178*****35</td>
-                      <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                      <td><span class="status_dispute">On-Dispute</span></td>
-    
-                    </tr>
-
-                    <tr>
-                      <td>2</td>    
-                      <td>NeonXero</td>
-                      <td>30 ETH</td>
-                      <td><span class="buy">Buy</span></td>
-                      <td>0x178*****35</td>
-                      <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                      <td><span class="status_dispute">On-Dispute</span></td>
-
-                    </tr>
-
-                  </tbody> 
-
-              </Table>
+            <Table>
+              <thead>
+                  <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th></th>
+                  <th>To/From</th>
+                  <th>Created At</th>
+                  <th>Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span class="buy">Buy</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span class="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
+              </tbody>
+            </Table>
             </Card>
           </Tab.Pane>
 
           <Tab.Pane eventKey="canceled">
             <Card className="transation_history_table">
-              <Table>
-                <thead>
+            <Table>
+              <thead>
                   <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th></th>
-                    <th>To/From</th>
-                    <th>Created At</th>
-                    <th>Status</th>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th></th>
+                  <th>To/From</th>
+                  <th>Created At</th>
+                  <th>Status</th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>    
-                    <td>BuyCat</td>
-                    <td>80 ETH</td>
-                    <td><span class="buy">Buy</span></td>
-                    <td>0x178*****35</td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_active">Active</span></td>
-
-                  </tr>
-
-                    <tr>
-                    <td>2</td>    
-                    <td>NeonXero</td>
-                    <td>30 ETH</td>
-                    <td><span class="buy">Buy</span></td>
-                    <td>0x178*****35</td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_dispute">On-Dispute</span></td>
-
-                  </tr>
-
-                    
-                    
-                </tbody>
-              </Table>
+              </thead>
+              <tbody>
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span class="buy">Buy</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span class="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
+              </tbody>
+            </Table>
             </Card>
           </Tab.Pane>
 
           <Tab.Pane eventKey="completed">
             <Card className="transation_history_table">
-              <Table>
-                <thead>
+            <Table>
+              <thead>
                   <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th></th>
-                    <th>To/From</th>
-                    <th>Created At</th>
-                    <th>Status</th>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th></th>
+                  <th>To/From</th>
+                  <th>Created At</th>
+                  <th>Status</th>
                   </tr>
-                </thead>
-                <tbody>
-                  <tr>
-
-                    <td>1</td>    
-                    <td>BuyCat</td>
-                    <td>80 ETH</td>
-                    <td><span class="buy">Buy</span></td>
-                    <td>0x178*****35</td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_active">Active</span></td>
-
-                  </tr>
-
-                  <tr>
-                    <td>2</td>    
-                    <td>NeonXero</td>
-                    <td>30 ETH</td>
-                    <td><span class="buy">Buy</span></td>
-                    <td>0x178*****35</td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_dispute">On-Dispute</span></td>
-
-                  </tr>    
-                </tbody>
-              </Table>
+              </thead>
+              <tbody>
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span class="buy">Buy</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span class="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
+              </tbody>
+            </Table>
             </Card>
           </Tab.Pane>
         </Tab.Content>
@@ -364,7 +335,7 @@ return(
       <Pagination>
         <Pagination.First onClick={firstPage} />
         <Pagination.Prev onClick={previousPageData}/>
-        <Pagination.Item>{1}</Pagination.Item>
+        <Pagination.Item>{currentpage}</Pagination.Item>
         of
         <Pagination.Item>{Pages}</Pagination.Item>
         <Pagination.Next onClick={nextPageData} />
