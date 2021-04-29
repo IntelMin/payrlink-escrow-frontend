@@ -481,6 +481,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .footerlistright.card {	padding-left: 20px;}
 .css-1pahdxg-control, .css-yk16xz-control {	height: 39px !important;}
 .css-1uccc91-singleValue {	top: 4px !important;	transform: none !important;}
+.doughchart.card canvas {	width: 300px !important;	height: 300px !important;	margin: 0 auto;}
+
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}

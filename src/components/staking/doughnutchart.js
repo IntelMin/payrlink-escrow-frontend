@@ -16,18 +16,11 @@ const data = {
     }
   ],
 };
-// Set Position of the labels but it is not working
-const options = {
-  datalabels: {
-    display: true,
-    align: "bottom"
-  }
-};
 
 function DoughnutChart() {
   return (
     <Card className="doughchart">
-      <Doughnut data={data} options={options}/>
+      <Doughnut data={data}/>
         <Table>
         <tbody>
             <tr>
