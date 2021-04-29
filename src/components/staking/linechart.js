@@ -38,14 +38,15 @@ class LineChart extends React.Component {
                 display: false,
             }
         },
+        
         scales: {
-          y: {
+          yAxes: {
               ticks: {
                   // Include a dollar sign in the ticks
                   callback: function(value, index, values) {
                       return '$' + value/1000 +'k';
-                  }
-              }
+                  },                
+              },  
           }
       }
       }
