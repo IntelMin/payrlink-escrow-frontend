@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from  'react';
 import { Card, Form, Table, Button, } from 'react-bootstrap';
 import Select from 'react-select';
 import bluedown from '../../images/bluedown.png';
@@ -15,6 +15,16 @@ export default function WithDraw(){
         { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> },
         { value: 'USD', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
       ];
+      const [Amount,setAmount]=useState({
+          Pool:'',
+          Amt:0
+      })
+      const ChangeAmt=(e)=>{
+          e.target.value===''?
+          setAmount({...Amount,Amt:0})
+          :
+          setAmount({...Amount,Amt:e.target.value})
+      }
     return(
         <Card className="deposit_block">
             <h2>Withdraw</h2>
@@ -31,8 +41,8 @@ export default function WithDraw(){
 
                 <Form.Group controlId="To">
                 <Form.Label>Amount</Form.Label>
-                <Form.Control type="text" />
-                <span className="max_value">Max: 2.2</span>
+                <Form.Control type="text" onChange={ChangeAmt} />
+                <span className="max_value">Max: {Amount.Amt}</span>
                 </Form.Group>
                 
                 <Card className="deposit_bottom" style={{ backgroundImage: `url(${depositbg})` }}>

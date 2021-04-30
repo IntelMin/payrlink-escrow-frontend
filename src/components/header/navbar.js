@@ -10,8 +10,8 @@ import ConnectModal from '../modal/connectwallet';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom'
 function NavBar(props){
-  const[status,setStatus]=useState(false)
-  const[bodyClass, setBodyClass] = useState(false)
+  const[status,setStatus]=useState(false);
+  const[bodyClass, setBodyClass] = useState(false);
   const toggleClass = () =>{
       if(!bodyClass){
         document.body.classList.add('whitebg');
@@ -21,11 +21,14 @@ function NavBar(props){
       setBodyClass(!bodyClass);
   }
   
+  // const hideToggle=()=>{
+  //   const element = document.getElementsByClassName('navbar-collapse')
+  //   element.classList.remove("show")
+  // }
   const Disconnect=()=>{
     props.setChangeNavBar()
     setStatus(false);
   }
- 
     return(
         <Container fluid className="header">
           <Container>
@@ -34,7 +37,7 @@ function NavBar(props){
               <Navbar.Collapse id="basic-navbar-nav">
               {props.changenavbar===false ?
                 <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">HOME</Nav.Link>
                     <Nav.Link href="#">ARBITRATION</Nav.Link>
                 </Nav>
                 :

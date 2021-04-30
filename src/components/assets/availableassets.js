@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Table, Form  } from 'react-bootstrap';
+import { Card, Table, Form, Dropdown  } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
@@ -69,12 +69,23 @@ export default function AvailableAssets() {
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${downwhite})` }}>
+                            {/* <Form.Control as="select" custom style={{ backgroundImage: `url(${downwhite})` }}>
                             <option>Deposit</option>
                             <option>Withdraw</option>
                             <option>Stake</option>
                             <option>Pool Detail</option>
-                            </Form.Control>
+                            </Form.Control> */}
+                            <Dropdown>
+                                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                    Dropdown Button
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item >Action</Dropdown.Item>
+                                    <Dropdown.Item >Another action</Dropdown.Item>
+                                    <Dropdown.Item> Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </Form.Group>
                     </Form>
                      </td>   
