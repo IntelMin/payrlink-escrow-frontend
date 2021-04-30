@@ -433,8 +433,9 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .connectmodal .modal-body form .form-group button.btn.formBasicWalletconnect { background-image: url('./images/walletwhite.png') !important;}
 .showonlight {display: none;}
 .whitebg .showondark {display: none;}
+.whitebg .pagination {	color: #404040;}
 .whitebg .showonlight {display: inline-block;}
-.whitebg .connectmodal.create_new_modal .modal-body form input {	box-shadow: none;	background: none;	border-color: #25224d;}
+.whitebg .connectmodal.create_new_modal .modal-body form input {	box-shadow: none;	background: none;	border-color: #25224d; color: #404040;}
 .whitebg .connectmodal.create_new_modal .form-group select {border: 1px solid #25224d; color: #404040; background-image: url('./images/bluebgdown.png') !important; }
 .whitebg .create_new_modal .form-group .form-label {	color: #404040;	}
 .header-notification-icon.dropdown {	display: inline-block;}
@@ -486,6 +487,14 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .notification_dot {	width: 10px;	height: 10px;	display: inline-block;	background: #FF2A2D;	border-radius: 100%;	border: 1px solid #25224e;	position: absolute;	right: 0;	top: 4px;}
 .pools_list_block.card .form-group select option, .pools_grid_block .form-group select option {	background: #484848;}
 .whitebg .pools_list_block.card .form-group select option, .whitebg .pools_grid_block .form-group select option {	background: #fff; color:#484848;}
+.single_banner.container-fluid {	width: 100%;	display: inline-block;	padding: 250px 0 150px;	background-size: contain;	background-position: center center;}
+.single_banner_detail.card {	width: 100%;	max-width: 700px;	margin: 0 auto;	text-align: center;	box-shadow: none;	background: none;	border: none;}
+.single_banner_detail.card h2 {	font-size: 40px;	line-height: 44px;	color: #fff;	font-weight: 500;	margin-bottom: 10px;}
+.single_banner_detail.card p {	font-size: 26px;	line-height: 30px;	color: #fff;	margin-bottom: 40px;}
+.single_banner_detail.card .connect_wallet_btn.btn.btn-primary, .single_banner_detail.card .connect_wallet_btn.btn.btn-primary:focus {	box-shadow: none;	text-decoration: none !important;	font-size: 18px;	line-height: 20px;	background: #fff;	padding: 10px;	border-radius: 8px;	border: none;	color: #25224E;	width: 100%;	max-width: 190px;	margin: 0 auto;	font-weight: bold;}
+.single_banner_detail.card .connect_wallet_btn.btn.btn-primary:hover {opacity: 0.7;}
+.single_banner_detail.card span {	color: #fff;	margin-top: 130px;	font-size: 16px;	line-height: 20px;}
+.single_banner_detail.card span img {	margin-right: 10px;}
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
@@ -502,6 +511,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .pools_grid_block table td {	font-size: 16px;	line-height: 18px;}
 .deposit_block.card form .form-group:first-child {	width: 37%;}
 .deposit_block.card form .form-group {	width: 60%;}
+.single_banner.container-fluid {	padding: 150px 0 100px;	background-repeat: no-repeat; background-size: cover;}
+.single_banner_detail.card span {	margin-top: 110px;}
 
 }
 
@@ -623,5 +634,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .deposit_block.card form .form-group:first-child {	width: 100%;	margin-right: 0;}
 .deposit_block.card form .form-group {	width: 100%;}
 .deposit_bottom table td {	font-size: 14px;	line-height: 16px;}
-
+.single_banner_detail.card h2 {	font-size: 28px;	line-height: 30px;	margin-bottom: 5px;}
+.single_banner_detail.card p {	font-size: 16px;	line-height: 20px;	margin-bottom: 25px;}
+.single_banner_detail.card span {	margin-top: 50px;	font-size: 12px;	line-height: 14px;}
+.single_banner.container-fluid {	padding: 105px 0 60px;}
 }

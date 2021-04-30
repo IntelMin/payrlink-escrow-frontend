@@ -6,16 +6,12 @@ import Features from '../components/home/features';
 import SimpleSlider from '../components/home/testimonial';
 import ConnectModal from '../components/modal/connectwallet';
 import Footer from '../components/footer/footer';
+import SingleBanner from '../components/banner/singlebanner';
 
 function IndexPage() {
   return (
     <div className="page-main">
-     
-      <Banner/>
-      <About/>
-      <Features/>
-      <SimpleSlider/>
-      
+      <SingleBanner/>
     </div>
   );
 }
