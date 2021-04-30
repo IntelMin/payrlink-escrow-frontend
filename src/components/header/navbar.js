@@ -78,7 +78,7 @@ function NavBar(props){
                 <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass} ><img src={settingicon}/></a>
                 <Dropdown className="header-notification-icon">
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-  <img src={notificationicon}/>
+  <img src={notificationicon}/> <span className="notification_dot"></span>
   </Dropdown.Toggle>
 
   <Dropdown.Menu>

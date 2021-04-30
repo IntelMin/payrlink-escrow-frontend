@@ -53,7 +53,7 @@ class DoughnutChart extends React.Component {
             legend:'none',
             pieHole: 0.4,
             colors:[{color:'#6297A4'},{color:'#F2A919'},{color:'#868DAC'}],
-            backgroundColor: '#484848',
+            backgroundColor: 'none',
             animation:{
               duration: 1000,
               startup: 'true',

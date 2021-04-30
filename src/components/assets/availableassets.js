@@ -7,7 +7,7 @@ import asset4 from '../../images/asset4.png';
 import downwhite from '../../images/downwhite.png';
 import charticon1 from '../../images/charticon1.png';
 import charticon2 from '../../images/charticon2.png';
-
+import {LineChart1,LineChart2} from './linechart'
 export default function AvailableAssets() {
     return(
         <Card className="myassets availableassets">
@@ -37,7 +37,7 @@ export default function AvailableAssets() {
                     <td>25.12</td>
                     <td><h4>03/08/2021</h4><small>03:45PM</small></td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td class="chart_icon"><img src={charticon1}/></td>
+                    <td class="chart_icon"><LineChart1/></td>
                     <td>$ 50,000</td>
                     <td>
                     <Form>
@@ -64,7 +64,7 @@ export default function AvailableAssets() {
                     <td>25.12</td>
                     <td><h4>03/08/2021</h4><small>03:45PM</small></td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td class="chart_icon"><img src={charticon2}/></td>
+                    <td class="chart_icon"><LineChart2/></td>
                     <td>$ 50,000</td>
                     <td>
                     <Form>

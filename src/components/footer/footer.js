@@ -73,7 +73,7 @@ function Footer(props){
                         <ListGroup as="ul">
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/dashboard">
-                                    <NavItem eventKey={1}>HOME</NavItem>
+                                    <NavItem eventKey={1}>DASHBOARD</NavItem>
                                 </LinkContainer></ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/assets">

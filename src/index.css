@@ -142,8 +142,8 @@ code {
 .banner-main .carousel-caption p {	font-size: 18px;	line-height: 22px;	margin-bottom: 0;	font-weight: normal;	color: #fff;}
 .banner-main .carousel-caption a {	display: inline-block;	margin-top: 30px;	background: #1E1B40;	color: #fff;	font-size: 16px;	line-height: 18px;	padding: 10px 30px;	border-radius: 8px;	font-weight: 600;}
 .banner-main .carousel-caption a:hover {opacity: 0.8; text-decoration: none;}
-.banner-slider .carousel-control-prev {	z-index: 9999; left: -65px;	transform: rotate(180deg); opacity: 1; background: url('./images/arrowicon.png');	background-repeat: no-repeat;	margin: auto;	height: 35px;	background-size: 40px;}
-.banner-slider .carousel-control-next {	z-index: 9999; right: -65px;	opacity: 1;	background: url('./images/arrowicon.png');	background-repeat: no-repeat;	margin: auto;	height: 35px;	background-size: 40px;}
+.banner-slider .carousel-control-prev {	z-index: 9; left: -65px;	transform: rotate(180deg); opacity: 1; background: url('./images/arrowicon.png');	background-repeat: no-repeat;	margin: auto;	height: 35px;	background-size: 40px;}
+.banner-slider .carousel-control-next {	z-index: 9; right: -65px;	opacity: 1;	background: url('./images/arrowicon.png');	background-repeat: no-repeat;	margin: auto;	height: 35px;	background-size: 40px;}
 .banner-slider .carousel-indicators li {	width: 10px;	height: 10px;	border-radius: 100%;	margin: 0 6px;}
 .banner-slider .carousel-caption img {	width: 100%;	max-width: 200px;	margin-bottom: 20px;	position: relative;	left: -9px;}
 .banner-image img {	width: 100%;}
@@ -290,7 +290,7 @@ body {	overflow-x: hidden;}
 .pools_grid_block table td {	border: none;	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: 600;}
 .myassets.card .pools_grid_block .table tr td:last-child {	text-align: left;}
 .pools_grid_block .form-group {	margin-bottom: 0;}
-.pools_grid_block .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative; background-position: right 10px center;  background-size: 15px;}
+.pools_grid_block .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 7px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 10px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px;}
 .darkbg table td {	color: #fff; border: none ;}
 .darkbg table th {white-space: pre; color: rgba(255, 255, 255, 0.7) !important; vertical-align: bottom;  border-bottom: none !important;  border-top: none;  font-size: 16px;  line-height: 18px;  font-weight: 600;}
 .pools_list_block.card {	padding: 15px; background: #484848 !important;	border-radius: 12px;	overflow: hidden;	border: 2px solid #707070;}
@@ -342,7 +342,7 @@ body {	overflow-x: hidden;}
 .deposit_block.card form .form-group:first-child {	width: 32%;	float: left;	margin-right: 3%;}
 .deposit_block.card form .form-group {	width: 65%;	float: left;}
 .deposit_block .form-group select {	background-color: transparent;	border: 1px solid #403894;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;  width: 100%;}
-.deposit_block  form input, .deposit_block  form input:focus {	background: none;	box-shadow: none;	border:  1px solid #403894;	color: #fff;	padding: 10px;}
+.deposit_block  form input, .deposit_block  form input:focus {	background: none;	box-shadow: none;	border:  1px solid #403894;	color: #fff;	padding: 10px; border-radius: 6px;}
 .deposit_block  .max_value{top: 0;}
 .deposit_bottom.card {	background-color: transparent;	background-repeat: no-repeat;	border: none;	width: 100%;	background-size: cover;	padding: 15px 5px;	border-radius: 12px;}
 .deposit_bottom table td {	font-size: 18px;	line-height: 20px;	padding: 10px;	font-weight: normal;}
@@ -438,7 +438,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .connectmodal.create_new_modal .form-group select {border: 1px solid #25224d; color: #404040; background-image: url('./images/bluebgdown.png') !important; }
 .whitebg .create_new_modal .form-group .form-label {	color: #404040;	}
 .header-notification-icon.dropdown {	display: inline-block;}
-.header-notification-icon #dropdown-basic {	background: none;	border: none;	padding: 0;}
+.header-notification-icon #dropdown-basic {	background: none;	border: none;	padding: 0; position: relative;}
 .header-notification-icon #dropdown-basic::after {	display: none;}
 .header-notification-icon .dropdown-menu {	scrollbar-width: thin;	left: auto;	right: 0;	margin-top: 23px !important;	width: 340px;	padding: 0px;	height: 390px;	background: #333333;	border: none;	box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);	border-bottom-left-radius: 15px;	border-bottom-right-radius: 15px;	border-top-left-radius: 0;	border-top-right-radius: 0;}
 .header-notification-icon .dropdown-menu h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: 600;	opacity: 0.7;	padding: 0 20px;	margin: 15px 0;}
@@ -449,7 +449,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .transation_active_escrows .form-group select option, .connectmodal.create_new_modal .form-group select option{	background: #333333;}
 .whitebg .transation_active_escrows .form-group select option, .whitebg  .connectmodal.create_new_modal .form-group select option{	background: #fff;}
 .whitebg .pools_grid_block .form-group select {	background-color: #25224d;	}
-.css-2b097c-container .css-1pahdxg-control, .css-2b097c-container .css-1pahdxg-control:focus , .css-2b097c-container .css-yk16xz-control, .css-2b097c-container .css-yk16xz-control:hover, .css-2b097c-container .css-yk16xz-control:focus {	overflow: hidden; background-repeat: no-repeat;  background-position: right center; background-color: transparent;	border: 1px solid #403894;	border-radius: .25rem; background-image: url('./images/bluedown.png') !important; }
+.css-2b097c-container .css-1pahdxg-control, .css-2b097c-container .css-1pahdxg-control:focus , .css-2b097c-container .css-yk16xz-control, .css-2b097c-container .css-yk16xz-control:hover, .css-2b097c-container .css-yk16xz-control:focus {	overflow: hidden; background-repeat: no-repeat;  background-position: right center; background-color: transparent;	border: 1px solid #403894;	border-radius: 6px; background-image: url('./images/bluedown.png') !important; background-size: 30px; }
 .css-1uccc91-singleValue {	color: #fff !important;	font-weight: bold !important;}
 .css-1hb7zxy-IndicatorsContainer {	display: none !important;}
 .whitebg .css-1uccc91-singleValue {	color: #404040 !important;}
@@ -482,6 +482,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .css-1pahdxg-control, .css-yk16xz-control {	height: 39px !important;}
 .css-1uccc91-singleValue {	top: 4px !important;	transform: none !important;}
 .doughchart.card canvas {	width: 300px !important;	height: 300px !important;	margin: 0 auto;}
+#reactgooglegraph-4 rect {	fill: none !important;}
+.notification_dot {	width: 10px;	height: 10px;	display: inline-block;	background: #FF2A2D;	border-radius: 100%;	border: 1px solid #25224e;	position: absolute;	right: 0;	top: 4px;}
 
 
 @media screen and (max-width: 1200px) {
@@ -499,6 +501,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .pools_grid_block table td {	font-size: 16px;	line-height: 18px;}
 .banner-slider .carousel-control-prev {	left: -52px !important;}
 .banner-slider .carousel-control-next {	right: -52px !important;}
+.deposit_block.card form .form-group:first-child {	width: 37%;}
+.deposit_block.card form .form-group {	width: 60%;}
 
 }
 
@@ -537,6 +541,9 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .pools_grid_block table td {	font-size: 11px;	line-height: 13px;}
 .card-header-tabs .nav-link {	font-size: 12px;	line-height: 16px;	padding: 4px 6px !important;}
 .modal {	z-index: 9999 !important;}
+.deposit_block.card form .form-group:first-child {	width: 40%;}
+.deposit_block.card form .form-group {	width: 57%;}
+
 }
 /* Anil*/
 @media screen and (max-width: 767px) {
@@ -614,7 +621,10 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .header-notification-icon {	margin-right: 10px;}
 .navbar-text .connect-wallet {	padding: 9px 12px;}
 .create_new {	padding: 10px 10px !important;	font-size: 14px !important;	line-height: 16px !important;}
-.banner-slider .carousel-control-prev {	left: -37px !important;}
-.banner-slider .carousel-control-next {	right: -37px !important;}
+.banner-slider .carousel-control-prev {	left: -43px !important;background-size: 30px;}
+.banner-slider .carousel-control-next {	right: -43px !important;	background-size: 30px;}
+.deposit_block.card form .form-group:first-child {	width: 100%;	margin-right: 0;}
+.deposit_block.card form .form-group {	width: 100%;}
+.deposit_bottom table td {	font-size: 14px;	line-height: 16px;}
 
 }
