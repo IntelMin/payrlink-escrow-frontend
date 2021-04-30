@@ -457,7 +457,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .connect-wallet::after {	display: none !important;}
 .navbar-text .dropdown {	display: inline-block;}
 .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {	color: #25224E !important;	background-color: #fff !important;	border: none !important;	box-shadow: none !important;}
-.WalletConnectmodal .modal-dialog {	max-width: 430px;}
+.WalletConnectmodal .modal-dialog {	max-width: 430px;	margin: 0 auto;	width: 85%;}
 .WalletConnectmodal .modal-dialog .modal-body {	padding: 20px;}
 .connectmodal.WalletConnectmodal .close {	display: inline-block;	color: #fff;	opacity: 1;}
 .connectmodal.WalletConnectmodal .modal-title.h4 {	text-align: left;}
@@ -484,7 +484,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .doughchart.card canvas {	width: 300px !important;	height: 300px !important;	margin: 0 auto;}
 #reactgooglegraph-4 rect {	fill: none !important;}
 .notification_dot {	width: 10px;	height: 10px;	display: inline-block;	background: #FF2A2D;	border-radius: 100%;	border: 1px solid #25224e;	position: absolute;	right: 0;	top: 4px;}
-
+.pools_list_block.card .form-group select option, .pools_grid_block .form-group select option {	background: #484848;}
+.whitebg .pools_list_block.card .form-group select option, .whitebg .pools_grid_block .form-group select option {	background: #fff; color:#484848;}
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
@@ -621,8 +622,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .header-notification-icon {	margin-right: 10px;}
 .navbar-text .connect-wallet {	padding: 9px 12px;}
 .create_new {	padding: 10px 10px !important;	font-size: 14px !important;	line-height: 16px !important;}
-.banner-slider .carousel-control-prev {	left: -43px !important;background-size: 30px;}
-.banner-slider .carousel-control-next {	right: -43px !important;	background-size: 30px;}
+.banner-slider .carousel-control-prev {	left: -50px !important;background-size: 30px; height: 24px;}
+.banner-slider .carousel-control-next {	right: -50px !important;	background-size: 30px; height: 24px;}
 .deposit_block.card form .form-group:first-child {	width: 100%;	margin-right: 0;}
 .deposit_block.card form .form-group {	width: 100%;}
 .deposit_bottom table td {	font-size: 14px;	line-height: 16px;}
