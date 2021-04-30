@@ -25,7 +25,7 @@ function App() {
     <div className="page-main">
       <React.StrictMode>
        <Router>
-       <NavBar LoginFun={LoginFun} changenavbar={changenavbar} setChangeNavBar={Disconnect}/>
+       <NavBar LoginFun={LoginFun} changenavbar={changenavbar} setChangeNavBar={Disconnect} />
         <Switch>
           <Route exact path="/" component={IndexPage} />
           <Route exact path="/dashboard" component={DashboardPage} />

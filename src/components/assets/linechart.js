@@ -28,17 +28,15 @@ class LineChart1 extends React.Component {
   ]}
   options={{
     hAxis: { 
-      textPosition: 'none',
-      gridlines: {
-        color: 'transparent'
-    },
+      baselineColor: 'none',
+      gridlineColor: 'none',
+      textPosition: 'none'
 
   },
     vAxis: {
-      textPosition: 'none',
-      gridlines: {
-        color: 'transparent'
-    }
+      baselineColor: 'none',
+      gridlineColor: 'none',
+      textPosition: 'none'
     },
     backgroundColor:'none',
     showAxisLine: false,
@@ -75,17 +73,24 @@ class LineChart2 extends React.Component {
   ]}
   options={{
     hAxis: { 
-      textPosition: 'none',
-      gridlines: {
-        color: 'transparent'
-    },
+      // textPosition: 'none',
+      // gridlines: {
+      //   color: 'transparent'
+    // },
+        baselineColor: 'none',
+        gridlineColor: 'none',
+        textPosition: 'none'
+
 
   },
     vAxis: {
-      textPosition: 'none',
-      gridlines: {
-        color: 'transparent'
-    }
+    //   textPosition: 'none',
+    //   gridlines: {
+    //     color: 'transparent'
+    // }
+        baselineColor: 'none',
+        gridlineColor: 'none',
+        textPosition: 'none'
     },
     backgroundColor:'none',
     showAxisLine: false,

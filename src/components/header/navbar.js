@@ -23,7 +23,7 @@ function NavBar(props){
   
   const Disconnect=()=>{
     props.setChangeNavBar()
-    setStatus(false)
+    setStatus(false);
   }
  
     return(
@@ -31,7 +31,6 @@ function NavBar(props){
           <Container>
             <Navbar>
               <Navbar.Brand href="/"><img src={logo}/></Navbar.Brand>
-              
               <Navbar.Collapse id="basic-navbar-nav">
               {props.changenavbar===false ?
                 <Nav className="mr-auto">
@@ -64,7 +63,8 @@ function NavBar(props){
                 </Nav>
               }
               </Navbar.Collapse>
-              {props.changenavbar===false ?
+              {
+              props.changenavbar===false ?
               <Navbar.Text>
                 <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass}><img src={settingicon}/></a>
            
@@ -77,38 +77,36 @@ function NavBar(props){
               <Navbar.Text>
                 <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass} ><img src={settingicon}/></a>
                 <Dropdown className="header-notification-icon">
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-  <img src={notificationicon}/> <span className="notification_dot"></span>
-  </Dropdown.Toggle>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <img src={notificationicon}/> <span className="notification_dot"></span>
+                </Dropdown.Toggle>
 
-  <Dropdown.Menu>
+                <Dropdown.Menu>
     
-    <h2>Notifications</h2>
-    <Card>
-    <Dropdown.Item href="#/action-1" className="unread">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-2" className="unread">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
-  
-  </Card>
-  </Dropdown.Menu>
-</Dropdown>
-                
+                <h2>Notifications</h2>
+                <Card>
+                <Dropdown.Item href="#/action-1" className="unread">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-2" className="unread">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Received <strong>20 ETH</strong> from <strong>XeroNeon</strong> on <span>03/18/2021</span> at <span>2:30AM</span></Dropdown.Item>
+              
+              </Card>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic" className="connect-wallet">
+                <img src={walleticon}/> 0X13484****79 <img src={downblue}/>
+              </Dropdown.Toggle>
 
-<Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic" className="connect-wallet">
-    <img src={walleticon}/> 0X13484****79 <img src={downblue}/>
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1" onClick={Disconnect} >Disconnect</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
-                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Dropdown.Menu>
+                <Dropdown.Item href="/" onClick={Disconnect} >Disconnect</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
               </Navbar.Text>
               }
              

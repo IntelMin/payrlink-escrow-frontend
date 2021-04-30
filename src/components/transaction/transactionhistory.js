@@ -19,16 +19,19 @@ export default function TransactionHistory (){
 
   const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
-  const [statepaginationbtn,setStatePaginationBtn]=useState({
-    disableNxt:false,
-    disablePre:true
-  }) 
+
   useEffect(()=>{
     setData(HistoryData.slice(range.StartPoint,range.EndPoint));
     // setRange({...range, StartPoint: range.EndPoint, EndPoint: range.EndPoint+ItemPerPage })
     console.log(Data)
   },[])
  
+  const ResetRange=()=>{
+    // setLastPageState(false);
+    setRange({...range, StartPoint: 0, EndPoint: ItemPerPage})
+    setData(HistoryData.slice(0,ItemPerPage));
+    setCurrentPage(1)
+  }
   const nextPageData=()=>{
     if(range.EndPoint<TotalData){
       const strt = range.EndPoint;
@@ -93,22 +96,22 @@ return(
         <Col md={7}>
           <Nav variant="tabs" defaultActiveKey="all">
             <Nav.Item>
-              <Nav.Link eventKey="all">All</Nav.Link>
+              <Nav.Link eventKey="all" onClick={ResetRange}>All</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="active">Active</Nav.Link>
+              <Nav.Link eventKey="active" onClick={ResetRange}>Active</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="pending">Pending</Nav.Link>
+              <Nav.Link eventKey="pending" onClick={ResetRange}>Pending</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="dispute">On Dispute</Nav.Link>
+              <Nav.Link eventKey="dispute" onClick={ResetRange}>On Dispute</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="canceled">Canceled</Nav.Link>
+              <Nav.Link eventKey="canceled" onClick={ResetRange}>Canceled</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="completed">Completed</Nav.Link>
+              <Nav.Link eventKey="completed" onClick={ResetRange}>Completed</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>   
