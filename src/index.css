@@ -421,7 +421,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .whitebg .deposit_block.card form .btn.btn-primary {	background: #fff;	color: #25224d;}
 .whitebg .deposit_bottom table td {	color: #fff;}
 .whitebg .myassets.card.availableassets .table tr td, .whitebg .myassets.card.availableassets .table tr td h3 {	color: #404040;}
-.whitebg .myassets.card.availableassets .form-group select { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
+
 .whitebg .deposit_block form input, .whitebg .deposit_block form input:focus {	border: 1px solid #25224d;	color: #404040;}
 .whitebg .deposit_block.card form .form-label {	color: #404040;}
 .whitebg  .max_value {	color: #404040;}
@@ -500,6 +500,13 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .single_banner_detail.card span {	color: #fff;	margin-top: 130px;	font-size: 16px;	line-height: 20px;}
 .single_banner_detail.card span img {	margin-right: 10px;}
 .myassets.card.availableassets .form-group button.dropdown-toggle::after {	display: none;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item {	color: #fff;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	color: #404040;}
+.whitebg .myassets.card.availableassets .form-group button.dropdown-toggle { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item {	color: #404040;}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	color: #404040;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #333;	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #fff;	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
 
 
 @media screen and (max-width: 1200px) {
