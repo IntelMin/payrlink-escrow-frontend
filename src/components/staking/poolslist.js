@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Row, Form, Table } from 'react-bootstrap';
+import { Card, Col, Row, Form, Table, Dropdown, DropdownButton  } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
@@ -7,7 +7,7 @@ import asset4 from '../../images/asset4.png';
 import arrowdown from '../../images/arrowdown.png';
 
 
-export default function PoolsList(){
+export default function PoolsList(props){
     return(
         <Card className="pools_list_block">
             <Table>
@@ -38,13 +38,18 @@ export default function PoolsList(){
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${arrowdown})` }}>
-                            <option>Stake</option>
-                            <option>Stake 1</option>
-                            <option>Stake 2</option>
-                            <option>Stake 3</option>
-                            <option>Stake 4</option>
-                            </Form.Control>
+                        <DropdownButton
+                            alignRight
+                            title={props.stacks.Eth}
+                            id="dropdown-menu-align-right"
+                            onSelect={props.SetStackEth}
+                        >
+                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                        </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   
@@ -65,13 +70,18 @@ export default function PoolsList(){
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${arrowdown})` }}>
-                            <option>Stake</option>
-                            <option>Stake 1</option>
-                            <option>Stake 2</option>
-                            <option>Stake 3</option>
-                            <option>Stake 4</option>
-                            </Form.Control>
+                        <DropdownButton
+                            alignRight
+                            title={props.stacks.Usdt}
+                            id="dropdown-menu-align-right"
+                            onSelect={props.SetStackUsdt}
+                        >
+                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                        </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   
@@ -92,13 +102,18 @@ export default function PoolsList(){
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${arrowdown})` }}>
-                            <option>Stake</option>
-                            <option>Stake 1</option>
-                            <option>Stake 2</option>
-                            <option>Stake 3</option>
-                            <option>Stake 4</option>
-                            </Form.Control>
+                        <DropdownButton
+                            alignRight
+                            title={props.stacks.Payr}
+                            id="dropdown-menu-align-right"
+                            onSelect={props.SetStackPayr}
+                        >
+                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                        </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   
@@ -119,13 +134,18 @@ export default function PoolsList(){
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${arrowdown})` }}>
-                            <option>Stake</option>
-                            <option>Stake 1</option>
-                            <option>Stake 2</option>
-                            <option>Stake 3</option>
-                            <option>Stake 4</option>
-                            </Form.Control>
+                        <DropdownButton
+                            alignRight
+                            title={props.stacks.Btc}
+                            id="dropdown-menu-align-right"
+                            onSelect={props.SetStackBtc}
+                        >
+                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                        </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   

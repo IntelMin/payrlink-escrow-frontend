@@ -19,6 +19,29 @@ export default function Pools(){
         }
     }
     
+    const [stacks,setStacks]= useState({
+        Eth:"Stack",
+        Usdt:"Stack",
+        Payr:"Stack",
+        Btc:'Stack'
+      })
+      // set Stack of Eth
+      const SetStackEth=(e)=>{
+        setStacks({...stacks,Eth:e})
+      }
+    
+      const SetStackUsdt=(e)=>{
+        setStacks({...stacks,Usdt:e})
+      }
+    
+      const SetStackPayr=(e)=>{
+        setStacks({...stacks,Payr:e})
+      }
+    
+      const SetStackBtc=(e)=>{
+        setStacks({...stacks,Btc:e})
+      }
+
 return (
     <Card className="myassets pools_main">
         <Row className="pools_header">
@@ -33,9 +56,23 @@ return (
          </Col>   
         </Row>    
         { showGrid ? 
-        <PoolsGrid/>
+        <PoolsGrid 
+            stacks={stacks} 
+            setStacks={setStacks} 
+            SetStackEth={SetStackEth}
+            SetStackUsdt={SetStackUsdt}
+            SetStackBtc={SetStackBtc}
+            SetStackPayr={SetStackPayr}
+        />
         : 
-        <PoolsList/>}
+        <PoolsList
+            stacks={stacks} 
+            setStacks={setStacks} 
+            SetStackEth={SetStackEth}
+            SetStackUsdt={SetStackUsdt}
+            SetStackBtc={SetStackBtc}
+            SetStackPayr={SetStackPayr}
+        />}
     </Card>
 )
 
