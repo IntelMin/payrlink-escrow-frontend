@@ -21,10 +21,6 @@ function NavBar(props){
       setBodyClass(!bodyClass);
   }
   
-  // const hideToggle=()=>{
-  //   const element = document.getElementsByClassName('navbar-collapse')
-  //   element.classList.remove("show")
-  // }
   const Disconnect=()=>{
     props.setChangeNavBar()
     setStatus(false);

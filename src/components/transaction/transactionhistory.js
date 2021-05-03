@@ -1,11 +1,23 @@
 import React, { useEffect , useState} from 'react';
-import { Card, Col, Row, Form, Table, Tab, Nav, Pagination } from 'react-bootstrap';
+import { Card, Col, Row, Form, Table, Tab, Nav, Pagination, Button } from 'react-bootstrap';
 import plusicon from '../../images/plusicon.png';
 import downwhite from '../../images/downwhite.png';
-import {HistoryData} from '../../dataset'
+import {AllHistoryData} from '../../dataset'
 export default function TransactionHistory (){
   // Data for Transaction History
   const [Data,setData]=useState([]);
+  // Buy Sell Button Function
+  const HistoryDataArray=[];
+  const [buysell,setBuySell]=useState("BUY")
+  const[HistoryData,setHistoryData]=useState([]);
+  //Buy Function
+  const buyFun=()=>{
+    setBuySell("BUY")
+  } 
+  //  Sell Funtion
+  const sellFun=()=>{
+    setBuySell("SELL")
+  }
   // Get Length of Data that coming from dataset.js file
   const TotalData=HistoryData.length;
   const ItemPerPage=3;
@@ -20,11 +32,17 @@ export default function TransactionHistory (){
   const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
 
-  useEffect(()=>{
-    setData(HistoryData.slice(range.StartPoint,range.EndPoint));
+  useEffect(async()=>{
+    AllHistoryData.map((value)=>{
+      if(value.status===buysell)
+      {
+        HistoryDataArray.push(value)
+        setHistoryData(HistoryDataArray)
+      }
+    })
+    await setData(HistoryData.slice(range.StartPoint,range.EndPoint));
     // setRange({...range, StartPoint: range.EndPoint, EndPoint: range.EndPoint+ItemPerPage })
-    console.log(Data)
-  },[])
+  })
  
   const ResetRange=()=>{
     // setLastPageState(false);
@@ -90,8 +108,8 @@ return(
     <Tab.Container id="left-tabs-example" defaultActiveKey="all">
       <Row>
         <Col md={5}>
-            <span class="buy">BUY</span>
-            <span class="sell">SELL</span>
+            <Button class="buy" onClick={buyFun}>BUY</Button>
+            <Button class="sell" onClick={sellFun}>SELL</Button>
         </Col>  
         <Col md={7}>
           <Nav variant="tabs" defaultActiveKey="all">
@@ -134,14 +152,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -169,14 +187,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -205,14 +223,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -241,14 +259,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -277,14 +295,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -313,14 +331,14 @@ return(
               </thead>
               <tbody>
                 {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime},index)=>{
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
                     // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">Buy</span></td>
+                        <td><span class="buy">{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>

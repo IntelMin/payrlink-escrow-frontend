@@ -8,7 +8,7 @@ import notificationicon from '../../images/notificationicon.png';
 import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dropdown, Card} from 'react-bootstrap';
 import ConnectModal from '../modal/connectwallet';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 function NavBar(props){
   const[status,setStatus]=useState(false);
   const[bodyClass, setBodyClass] = useState(false);
