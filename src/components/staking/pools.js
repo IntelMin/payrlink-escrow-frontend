@@ -7,14 +7,18 @@ import PoolsList from './poolslist';
 
 export default function Pools(){
     const [showGrid, setShowGrid] = useState(true);
+    // const [ActivePools,setActivePools]=useState(1)
     const showhide = (ev, value) =>{
         console.log(value);
         if(value == 1){
             setShowGrid(true)
+            // setActivePools(0)
         } else {
             setShowGrid(false)
+            // setActivePools(1)
         }
     }
+    
 return (
     <Card className="myassets pools_main">
         <Row className="pools_header">
@@ -22,9 +26,9 @@ return (
             <h2>Pools</h2>
         </Col>
         <Col md={6}>
-        <Card className="pool_style_btn">
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 2))}><img src={listicon}/></a>
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 1))}><img src={gridicon}/></a>
+        <Card className="pool_style_btn" >
+            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 2))} className={showGrid===false?"gridactive":""}><img src={listicon}/></a>
+            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 1))} className={showGrid===true?"gridactive":""}><img src={gridicon}/></a>
         </Card>
          </Col>   
         </Row>    
