@@ -44,11 +44,11 @@ export default function PoolsList(props){
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackEth}
                         >
-                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stake 1">Stake 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -76,11 +76,11 @@ export default function PoolsList(props){
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackUsdt}
                         >
-                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
+                            <Dropdown.Item eventKey="Stake 1">Stake 1</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -108,11 +108,10 @@ export default function PoolsList(props){
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackPayr}
                         >
-                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
+Stake                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -140,11 +139,10 @@ export default function PoolsList(props){
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackBtc}
                         >
-                            <Dropdown.Item eventKey="Stack">Stack</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stack 1">Stack 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 2">Stack 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 3">Stack 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stack 4">Stack 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
+Stake                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>

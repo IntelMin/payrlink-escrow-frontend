@@ -20,10 +20,10 @@ export default function Pools(){
     }
     
     const [stacks,setStacks]= useState({
-        Eth:"Stack",
-        Usdt:"Stack",
-        Payr:"Stack",
-        Btc:'Stack'
+        Eth:"Stake",
+        Usdt:"Stake",
+        Payr:"Stake",
+        Btc:'Stake'
       })
       // set Stack of Eth
       const SetStackEth=(e)=>{
