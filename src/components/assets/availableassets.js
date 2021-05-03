@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Table, Form, Dropdown  } from 'react-bootstrap';
+import React,{useState} from 'react';
+import { Card, Table, Form, Dropdown, DropdownButton  } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
@@ -9,6 +9,27 @@ import charticon1 from '../../images/charticon1.png';
 import charticon2 from '../../images/charticon2.png';
 import {LineChart1,LineChart2} from './linechart'
 export default function AvailableAssets() {
+    const [value,setValue]=useState('');
+
+    //  Currency Status
+    const[ currencystatus,setCurrencyStatus]=useState({
+        Eth:"Deposit",
+        Usd:"Deposit"
+    })
+    // Change currenct status of ETh
+    const SetEthStatus=(e)=>{
+        console.log(e)
+        setCurrencyStatus({...currencystatus,
+            Eth: e
+        })
+    }
+    //  Change the Current Status Of USD
+    const SetUsdStatus=(e)=>{
+        console.log(e)
+        setCurrencyStatus({...currencystatus,
+            Usd: e
+        })
+    }
     return(
         <Card className="myassets availableassets">
             <h2>Available assets</h2>
@@ -42,12 +63,19 @@ export default function AvailableAssets() {
                     <td>
                     <Form>
                         <Form.Group controlId="exampleForm.SelectCustom">
-                            <Form.Control as="select" custom style={{ backgroundImage: `url(${downwhite})` }}>
-                            <option>Deposit</option>
-                            <option>Withdraw</option>
-                            <option>Stake</option>
-                            <option>Pool Detail</option>
-                            </Form.Control>
+                        <DropdownButton
+                            alignRight
+                            title={currencystatus.Eth}
+                            id="dropdown-menu-align-right"
+                            onSelect={SetEthStatus}
+                            name='Eth'
+                        >
+                                    
+                            <Dropdown.Item eventKey="Deposit">Deposit</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>
+                            <Dropdown.Item eventKey="Pool Detail">Pool Detail</Dropdown.Item>
+                        </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   
@@ -75,17 +103,19 @@ export default function AvailableAssets() {
                             <option>Stake</option>
                             <option>Pool Detail</option>
                             </Form.Control> */}
-                            <Dropdown>
-                                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                    Dropdown Button
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu>
-                                    <Dropdown.Item >Action</Dropdown.Item>
-                                    <Dropdown.Item >Another action</Dropdown.Item>
-                                    <Dropdown.Item> Something else</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
+                            <DropdownButton
+                                alignRight
+                                title={currencystatus.Usd}
+                                id="dropdown-menu-align-right"
+                                onSelect={SetUsdStatus}
+                                name="usd"
+                            >
+                                        
+                                <Dropdown.Item eventKey="Deposit">Deposit</Dropdown.Item>
+                                <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                                <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>
+                                <Dropdown.Item eventKey="Pool Detail">Pool Detail</Dropdown.Item>
+                            </DropdownButton>
                         </Form.Group>
                     </Form>
                      </td>   

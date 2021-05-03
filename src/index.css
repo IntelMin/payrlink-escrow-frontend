@@ -222,7 +222,7 @@ body {	overflow-x: hidden;}
 .connectmodal .modalbutton.card .btn.btn-secondary:hover, .connectmodal .modalbutton.card .btn.btn-secondary:focus {opacity: 0.5;}
 .connectmodal .modal-dialog {	top: 15%;}
 .dashboardpage {	width: 100%;	display: inline-block;	background: #1F1F1F;	padding: 55px 0;}
-.myassets.card {	margin-bottom: 20px; width: 100%;	display: inline-block;	background: #333;	border-radius: 8px;	padding: 20px;	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); overflow-x: auto;}
+.myassets.card {	scrollbar-width: thin; margin-bottom: 20px; width: 100%;	display: inline-block;	background: #333;	border-radius: 8px;	padding: 20px;	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); overflow-x: auto;}
 .dashboardpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;	padding-left: 10px;}
 .dashboardpage .table {	color: #fff;}
 .dashboardpage .table thead th {	vertical-align: bottom;	border-bottom: none;	border-top: none;	font-size: 16px;	line-height: 18px;	font-weight: 600;	opacity: 0.7;}
@@ -363,6 +363,7 @@ body {	overflow-x: hidden;}
 .myassets.card.availableassets .table tr td span {text-align: left;}
 .myassets.card.availableassets .table tr th {text-align: center;} 
 .myassets.card.availableassets .form-group select {	width: 145px;	max-width: 145px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff; box-shadow: none;}
+.myassets.card.availableassets .form-group button.dropdown-toggle {	width: 145px;	max-width: 145px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff; box-shadow: none; background-image: url('./images/downwhite.png') !important; background-repeat: no-repeat;}
 .myassets.card.availableassets .table td h4 {	margin-bottom: 0;	font-size: 15px;	line-height: 17px;	font-weight: bold;}
 .myassets.card.availableassets .table td small {	font-size: 13px;	line-height: 15px;	font-weight: 600;}
 .myassets.card.availableassets .table tr th:nth-child(2) {	text-align: left;}
@@ -498,6 +499,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .single_banner_detail.card .connect_wallet_btn.btn.btn-primary:hover {opacity: 0.7;}
 .single_banner_detail.card span {	color: #fff;	margin-top: 130px;	font-size: 16px;	line-height: 20px;}
 .single_banner_detail.card span img {	margin-right: 10px;}
+.myassets.card.availableassets .form-group button.dropdown-toggle::after {	display: none;}
+
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
