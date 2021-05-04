@@ -6,20 +6,20 @@ import downblue from '../../images/downblue.png';
 import walleticon from '../../images/walleticon.png';
 import notificationicon from '../../images/notificationicon.png';
 import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dropdown, Card} from 'react-bootstrap';
-import ConnectModal from '../modal/connectwallet';
+import ConnectModal from '../modal/connectwallet'
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 function NavBar(props){
   const[status,setStatus]=useState(false);
-  const[bodyClass, setBodyClass] = useState(false);
-  const toggleClass = () =>{
-      if(!bodyClass){
-        document.body.classList.add('whitebg');
-      } else {
-        document.body.classList.remove('whitebg');
-      }
-      setBodyClass(!bodyClass);
-  }
+  // const[bodyClass, setBodyClass] = useState(false);
+  // const toggleClass = () =>{
+  //     if(!bodyClass){
+  //       document.body.classList.add('whitebg');
+  //     } else {
+  //       document.body.classList.remove('whitebg');
+  //     }
+  //     setBodyClass(!bodyClass);
+  // }
   
   // const hideToggle=()=>{
   //   const element = document.getElementsByClassName('navbar-collapse')
@@ -33,15 +33,19 @@ function NavBar(props){
               <Navbar.Brand href="/"><img src={logo}/></Navbar.Brand>
               <Navbar.Collapse id="basic-navbar-nav">
 
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">HOME</Nav.Link>
-                    <Nav.Link href="#">ARBITRATION</Nav.Link>
+              <Nav className="mr-auto">
+                  <LinkContainer to="/">
+                    <Nav.Link eventKey={1}>HOME</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="#">
+                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
+                  </LinkContainer>                    
                 </Nav>
                 
               </Navbar.Collapse>
               
               <Navbar.Text>
-                <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass}><img src={settingicon}/></a>
+                <a className={props.bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass}><img src={settingicon}/></a>
            
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)

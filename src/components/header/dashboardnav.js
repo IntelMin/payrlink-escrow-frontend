@@ -6,29 +6,29 @@ import downblue from '../../images/downblue.png';
 import walleticon from '../../images/walleticon.png';
 import notificationicon from '../../images/notificationicon.png';
 import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dropdown, Card} from 'react-bootstrap';
-import ConnectModal from '../modal/connectwallet';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom'
 function DashBoardNavBar(props){
   const[status,setStatus]=useState(false);
   const[bodyClass, setBodyClass] = useState(false);
-  const toggleClass = () =>{
-      if(!bodyClass){
-        document.body.classList.add('whitebg');
-      } else {
-        document.body.classList.remove('whitebg');
-      }
-      setBodyClass(!bodyClass);
-  }
+  // const toggleClass = () =>{
+  //     if(!bodyClass){
+  //       document.body.classList.add('whitebg');
+  //     } else {
+  //       document.body.classList.remove('whitebg');
+  //     }
+  //     setBodyClass(!bodyClass);
+  // }
   
   const Disconnect=()=>{
     localStorage.removeItem('loginStatus');
+    window.location.href='/'
   }
     return(
         <Container fluid className="header">
           <Container>
             <Navbar>
-              <Navbar.Brand href="/" ><img src={logo}/></Navbar.Brand>
+              <Navbar.Brand ><img src={logo} onClick={Disconnect}/></Navbar.Brand>
               <Navbar.Collapse id="basic-navbar-nav">
             
                 <Nav className="mr-auto">
@@ -51,7 +51,7 @@ function DashBoardNavBar(props){
                 </Nav>
               </Navbar.Collapse>
               <Navbar.Text>
-                <a href="#" className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={toggleClass} ><img src={settingicon}/></a>
+                <a className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass} ><img src={settingicon}/></a>
                 <Dropdown className="header-notification-icon">
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                 <img src={notificationicon}/> <span className="notification_dot"></span>

@@ -108,8 +108,8 @@ return(
     <Tab.Container id="left-tabs-example" defaultActiveKey="all">
       <Row>
         <Col md={5}>
-            <Button class="buy" onClick={buyFun}>BUY</Button>
-            <Button class="sell" onClick={sellFun}>SELL</Button>
+            <Button className="buy" onClick={buyFun}>BUY</Button>
+            <Button className="sell" onClick={sellFun}>SELL</Button>
         </Col>  
         <Col md={7}>
           <Nav variant="tabs" defaultActiveKey="all">
@@ -159,7 +159,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -194,7 +194,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -230,7 +230,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -266,7 +266,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -302,7 +302,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
@@ -338,7 +338,7 @@ return(
                         <td>{id}</td>    
                         <td>{name}</td>
                         <td>{amount}</td>
-                        <td><span class="buy">{status}</span></td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
                         <td><span class="status_active">Active</span></td>
