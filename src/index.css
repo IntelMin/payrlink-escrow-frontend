@@ -295,6 +295,7 @@ body {	overflow-x: hidden;}
 .myassets.card .pools_grid_block .table tr td:last-child {	text-align: left;}
 .pools_grid_block .form-group {	margin-bottom: 0;}
 .pools_grid_block .form-group select {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 7px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 10px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px;}
+.pools_grid_block .form-group button.dropdown-toggle {	width: 100%;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 7px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 10px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px; background-image: url('./images/bluedown.png') !important; background-repeat: no-repeat;}
 .darkbg table td {	color: #fff; border: none ;}
 .darkbg table th {white-space: pre; color: rgba(255, 255, 255, 0.7) !important; vertical-align: bottom;  border-bottom: none !important;  border-top: none;  font-size: 16px;  line-height: 18px;  font-weight: 600;}
 .pools_list_block.card {	padding: 15px; background: #484848 !important;	border-radius: 12px;	overflow: hidden;	border: 2px solid #707070;}
@@ -303,6 +304,8 @@ body {	overflow-x: hidden;}
 .pools_list_block.card .table tr td span, .pools_list_block.card .table tr td span h3 {	text-align: left;}
 .pools_list_block.card .table tr th {text-align: center;} 
 .pools_list_block.card .form-group select {	width: 160px;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px;}
+.pools_list_block.card .form-group button.dropdown-toggle  {	width: 160px;	max-width: 160px;	text-align: center;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: #403894;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right 10px center;	background-size: 15px; background-image: url('./images/bluedown.png') !important; background-repeat: no-repeat;}
+
 .create_new {	float: right;	background: #403894 !important;	padding: 10px 20px !important;	border-radius: 8px !important;	color: #fff !important;	font-size: 16px !important;	line-height: 18px !important;	font-weight: 600 !important;}
 .tarnstionpage .table td h4 {	margin-bottom: 0;	font-size: 15px;	line-height: 17px;	font-weight: bold;}
 .tarnstionpage .table td small {	font-size: 13px;	line-height: 15px;	font-weight: 600;}
@@ -363,7 +366,7 @@ body {	overflow-x: hidden;}
 .myassets.card.availableassets .table tr td span {text-align: left;}
 .myassets.card.availableassets .table tr th {text-align: center;} 
 .myassets.card.availableassets .form-group select {	width: 145px;	max-width: 145px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff; box-shadow: none;}
-.myassets.card.availableassets .form-group button.dropdown-toggle {	width: 145px;	max-width: 145px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff; box-shadow: none; background-image: url('./images/downwhite.png') !important; background-repeat: no-repeat;}
+.myassets.card.availableassets .form-group button.dropdown-toggle {	width: 145px;	max-width: 145px;	text-align: left;	margin: 0 auto;	display: block;	padding: 8px 10px;	height: auto;	background-color: transparent;	border: none;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	cursor: pointer;	position: relative;	background-position: right -2px center;	background-size: 26px;	border: 1px solid #fff; box-shadow: none; background-image: url('./images/downwhite.png') !important; background-repeat: no-repeat; position: relative;}
 .myassets.card.availableassets .table td h4 {	margin-bottom: 0;	font-size: 15px;	line-height: 17px;	font-weight: bold;}
 .myassets.card.availableassets .table td small {	font-size: 13px;	line-height: 15px;	font-weight: 600;}
 .myassets.card.availableassets .table tr th:nth-child(2) {	text-align: left;}
@@ -500,14 +503,53 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .single_banner_detail.card span {	color: #fff;	margin-top: 130px;	font-size: 16px;	line-height: 20px;}
 .single_banner_detail.card span img {	margin-right: 10px;}
 .myassets.card.availableassets .form-group button.dropdown-toggle::after {	display: none;}
-.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item {	color: #fff;}
-.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	color: #404040;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item {	color: #fff;	border-radius: 8px;	padding: 5px 10px;	font-weight: 600;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	background: #707070;}
 .whitebg .myassets.card.availableassets .form-group button.dropdown-toggle { background-image: url('./images/blackbgdown.png') !important; border: 1px solid #404040; color: #404040;}
 .whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item {	color: #404040;}
-.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	color: #404040;}
-.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #333;	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
-.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #fff;	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right .dropdown-item:hover {	color: #404040;	background: rgba(112, 112, 112, 0.3);}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #333;	box-shadow: none;	border: 1px solid #fff;	transform: none !important;	border-top: none;	min-width: auto;	width: 145px;	margin: 36px auto 0 !important;	float: none;	right: 0 !important;	border-radius: 8px;	border-top-left-radius: 0;	border-top-right-radius: 0;}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right {	background: #fff;	border: 1px solid #404040; border-top:none; }
+.pools_grid_block .form-group button.dropdown-toggle:after{display: none;}
+.pools_grid_block .form-group .dropdown-menu .dropdown-item {	color: #fff;	border-radius: 8px;	padding: 6px 10px;}
+.pools_grid_block .form-group .dropdown-menu .dropdown-item:hover {	color: #404040;}
+.pools_grid_block .form-group .dropdown-menu.dropdown-menu-right {	background: #484848;	box-shadow: none;	border: 1px solid #403894;	transform: none !important;	border-top: none;	min-width: auto;	width: 160px;	margin: 36px auto 0 !important;	float: none;	right: 0 !important;	border-radius: 8px;	border-top-left-radius: 0;	border-top-right-radius: 0;}
 
+.whitebg .pools_grid_block .form-group .dropdown-menu .dropdown-item {	color: #404040;}
+.whitebg .pools_grid_block .form-group .dropdown-menu .dropdown-item:hover {	color: #404040;}
+.whitebg .pools_grid_block .form-group .dropdown-menu.dropdown-menu-right {	background: #fff;	border: 1px solid #25224e; border-top: none;}
+.whitebg .pools_grid_block .form-group button.dropdown-toggle {	background-position: right 10px center;  background-size: 15px;background-color: #25224e;	background-image: url('./images/bluebgdown.png') !important; background-repeat: no-repeat;}
+
+.pools_list_block.card .form-group button.dropdown-toggle:after{display: none;}
+.pools_list_block.card .form-group .dropdown-menu .dropdown-item {	color: #fff;	border-radius: 8px;	padding: 6px 10px;}
+.pools_list_block.card .form-group .dropdown-menu .dropdown-item:hover {	color: #404040;}
+.pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right {	background: #484848;	box-shadow: none;	border: 1px solid #403894;	transform: none !important;	border-top: none;	min-width: auto;	width: 160px;	margin: 36px auto 0 !important;	float: none;	right: 0 !important;	border-radius: 8px;	border-top-left-radius: 0;	border-top-right-radius: 0;}
+
+
+.whitebg .pools_list_block.card .form-group .dropdown-menu .dropdown-item {	color: #404040;}
+.whitebg .pools_list_block.card .form-group .dropdown-menu .dropdown-item:hover {	color: #404040;}
+.whitebg .pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right {	background: #fff; 	border: 1px solid #25224e; border-top: none;	}
+.whitebg .pools_list_block.card .form-group button.dropdown-toggle {	background-position: right 10px center;  background-size: 15px;background-color: #25224e;	background-image: url('./images/bluebgdown.png') !important; background-repeat: no-repeat;}
+
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right::after {	content: "";	width: 1px;	height: 6px;	position: absolute;	left: -1px;	top: -6px;	background: #fff;}
+.myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right::before {	content: "";	width: 1px;	height: 6px;	position: absolute;	right: -1px;	top: -6px;	background: #fff;}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right::after {	content: "";	width: 1px;	height: 6px;	position: absolute;	left: -1px;	top: -6px;	background: #333;}
+.whitebg .myassets.card.availableassets .form-group .dropdown-menu.dropdown-menu-right::before {	content: "";	width: 1px;	height: 6px;	position: absolute;	right: -1px;	top: -6px;	background: #333;}
+
+.pools_grid_block .form-group .dropdown-menu.dropdown-menu-right::after   {	content: "";	width: 1px;	height: 13px;	position: absolute;	left: -1px;	top: -13px;	background:  #403894;}
+.pools_grid_block .form-group .dropdown-menu.dropdown-menu-right::before   {	content: "";	width: 1px;	height: 13px;	position: absolute;	right: -1px;	top: -13px;	background:  #403894;}
+.whitebg .pools_grid_block .form-group .dropdown-menu.dropdown-menu-right::after   {	content: "";	width: 1px;	height: 13px;	position: absolute;	left: -1px;	top: -13px;	background:  #25224e;}
+.whitebg .pools_grid_block .form-group .dropdown-menu.dropdown-menu-right::before   {	content: "";	width: 1px;	height: 13px;	position: absolute;	right: -1px;	top: -13px;	background:  #25224e;}
+
+.pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right::after   {	content: "";	width: 1px;	height: 13px;	position: absolute;	left: -1px;	top: -13px;	background:  #403894;}
+.pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right::before   {	content: "";	width: 1px;	height: 13px;	position: absolute;	right: -1px;	top: -13px;	background:  #403894;}
+.whitebg .pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right::after   {	content: "";	width: 1px;	height: 13px;	position: absolute;	left: -1px;	top: -13px;	background:  #25224e;}
+.whitebg .pools_list_block.card .form-group .dropdown-menu.dropdown-menu-right::before   {	content: "";	width: 1px;	height: 13px;	position: absolute;	right: -1px;	top: -13px;	background:  #25224e;}
+
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: none !important;
+}
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
