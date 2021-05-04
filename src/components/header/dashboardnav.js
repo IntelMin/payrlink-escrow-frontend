@@ -9,8 +9,8 @@ import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dro
 import ConnectModal from '../modal/connectwallet';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom'
-function NavBar(props){
-//   const[status,setStatus]=useState(false);
+function DashBoardNavBar(props){
+  const[status,setStatus]=useState(false);
   const[bodyClass, setBodyClass] = useState(false);
   const toggleClass = () =>{
       if(!bodyClass){
@@ -22,8 +22,7 @@ function NavBar(props){
   }
   
   const Disconnect=()=>{
-    props.setChangeNavBar()
-    setStatus(false);
+    localStorage.removeItem('loginStatus');
   }
     return(
         <Container fluid className="header">
@@ -85,7 +84,7 @@ function NavBar(props){
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="/" onClick={Disconnect} >Disconnect</Dropdown.Item>
+                <Dropdown.Item href={'/'} onClick={Disconnect} >Disconnect</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -102,4 +101,4 @@ function NavBar(props){
     )
 
 }
-export default NavBar ;
+export default DashBoardNavBar ;

@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import warningicon from '../../images/warningicon.png';
 import bluesecue from '../../images/bluesecue.png';
 import metamask from '../../images/metamask.png';
@@ -17,7 +17,8 @@ function ConnectModal(props){
         props.setStatus(false)
     };
     const CloseMe = () =>{
-        props.LogInStatus()
+        localStorage.setItem('loginStatus',true);
+        window.location.href='/'
         setShow(false);
     }
     return (

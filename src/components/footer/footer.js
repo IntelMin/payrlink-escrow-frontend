@@ -64,12 +64,7 @@ function Footer(props){
                         </ListGroup>
                         </Card>
                         <Card className="footerlistright">
-                    {props.changenavbar===false ?
-                    <ListGroup as="ul" >
-                        <ListGroup.Item as="li"><a href="#">HOME</a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#">ARBITRATION</a></ListGroup.Item>
-                        </ListGroup>
-                        :
+                    { props.SessionStorage==="true" ?
                         <ListGroup as="ul">
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/dashboard">
@@ -95,6 +90,11 @@ function Footer(props){
                                     <NavItem eventKey={1}>ARBITRATION</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
+                        </ListGroup>
+                        :
+                        <ListGroup as="ul" >
+                            <ListGroup.Item as="li"><a href="#">HOME</a></ListGroup.Item>
+                            <ListGroup.Item as="li"><a href="#">ARBITRATION</a></ListGroup.Item>
                         </ListGroup>
                     }
                       </Card>  

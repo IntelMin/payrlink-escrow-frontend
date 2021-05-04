@@ -11,29 +11,23 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StakingPage from './pages/staking';
 import Transaction from './pages/transaction.js'
 import AssetsPage from './pages/assets';
+import DashBoardNavBar from './components/header/dashboardnav'
 function App() {
-  // const[changenavbar,setChangeNavBar]=useState(false)
-  const[changenavbar,setChangeNavBar]=useState(false)
-  const LoginFun=()=>{
-    setChangeNavBar(true)
-    localStorage.setItem('loginState', true)
-  }
-  const Disconnect=()=>{
-    setChangeNavBar(false)
-  }
+  const SessionStorage=localStorage.getItem('loginStatus')
   return (
     <div className="page-main">
       <React.StrictMode>
        <Router>
-       <NavBar LoginFun={LoginFun} changenavbar={changenavbar} setChangeNavBar={Disconnect} />
+         {SessionStorage === "true"?<DashBoardNavBar/> : <NavBar/>
+        }
         <Switch>
-          <Route exact path="/" component={IndexPage} />
+          <Route exact path="/" component={SessionStorage==="true" ? DashboardPage : IndexPage} />
           <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/staking" component={StakingPage} />
           <Route exact path="/transaction" component={Transaction} />
           <Route exact path="/assets" component={AssetsPage} />
         </Switch>
-        <Footer LoginFun={LoginFun} changenavbar={changenavbar} />
+        <Footer SessionStorage={SessionStorage}/>
        </Router>
       </React.StrictMode>
       
