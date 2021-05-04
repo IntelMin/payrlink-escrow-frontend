@@ -22,6 +22,7 @@ function DashBoardNavBar(props){
   
   const Disconnect=()=>{
     localStorage.removeItem('loginStatus');
+    localStorage.removeItem('changeTheme');
     window.location.href='/'
   }
     return(
