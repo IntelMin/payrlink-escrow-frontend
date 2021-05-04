@@ -320,7 +320,10 @@ body {	overflow-x: hidden;}
 .transation_active_escrows .form-group {	margin-bottom: 0;}
 .transation_active_escrows .form-group select {	background-color: transparent;	border: 1px solid #fff;	border-radius: 8px;	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: 600;	background-size: 26px;	background-position: right -2px center;	background-repeat: no-repeat;	width: 145px;}
 .transation_active_escrows .table {	margin-top: 20px;}
-.transation_history .buy, .transation_history .sell {	padding: 3px 20px;	color: #fff;	margin-right: 10px;}
+.transation_history .btn.btn-primary {	padding: 3px 20px;	color: #fff;	margin-right: 10px; border: none;}
+.transation_history .btn.btn-primary:hover {opacity: 0.5;}
+.transation_history .btn.btn-primary:first-child {	background: #2DD458;}
+.transation_history .btn.btn-primary:last-child {	background: #FE0003;}
 .transation_history_table.card {	background: #484848;	margin-top: 15px;	padding: 20px;	border-radius: 8px;	overflow-x: scroll; border: none;}
 .myassets.card .transation_history_table .table thead th:last-child {	text-align: center;}
 .myassets.card .transation_history_table .table tr td:last-child {	text-align: center;}
@@ -380,7 +383,7 @@ body {	overflow-x: hidden;}
 .myassets.card.availableassets .form-group select option {	color: #000;}
 select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  text-overflow: '';}
 .container-fluid {	padding-left: 0 !important;	padding-right: 0 !important;}
-.myassets.pools_main.card {	overflow: hidden;}
+.myassets.pools_main.card {	overflow-x: hidden;}
 .nav-item {	margin-right: 0 !important;}
 .myassets.transation_history.card {	overflow: hidden;}
 .tarnstionpage .transation_active_escrows .table th:last-child {	text-align: center !important;	width: 145px;}
