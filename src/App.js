@@ -18,10 +18,10 @@ function App() {
     <div className="page-main">
       <React.StrictMode>
        <Router>
-         {SessionStorage === "true"?<DashBoardNavBar/> : <NavBar/>
-        }
+         {SessionStorage === "true"?<DashBoardNavBar/> : <NavBar/>}
         <Switch>
-          <Route exact path="/" component={SessionStorage==="true" ? DashboardPage : IndexPage} />
+          {/* component={SessionStorage==="true" ? DashboardPage : IndexPage} */}
+          <Route exact path="/"  render={()=><IndexPage SessionStorage={SessionStorage}/> }/>
           <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/staking" component={StakingPage} />
           <Route exact path="/transaction" component={Transaction} />

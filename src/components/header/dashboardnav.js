@@ -28,7 +28,7 @@ function DashBoardNavBar(props){
         <Container fluid className="header">
           <Container>
             <Navbar>
-              <Navbar.Brand href="/"><img src={logo}/></Navbar.Brand>
+              <Navbar.Brand href="/" ><img src={logo}/></Navbar.Brand>
               <Navbar.Collapse id="basic-navbar-nav">
             
                 <Nav className="mr-auto">
@@ -47,12 +47,7 @@ function DashBoardNavBar(props){
                   <LinkContainer to="/dashboard">
                     <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
                   </LinkContainer>
-                    {/* <Nav.Link as={Link} href="/dashboard">DASHBOARD</Nav.Link> */}
-                    {/* <Nav.Link as={Link} to="/dashboard">DASHBOARD</Nav.Link>
-                    <Nav.Link href="/assets">ASSETS</Nav.Link>
-                    <Nav.Link href="/staking">STAKING</Nav.Link>
-                    <Nav.Link href="/transaction">TRANSACTION</Nav.Link>
-                    <Nav.Link href="/dashboard">ARBITRATION</Nav.Link> */}
+                    
                 </Nav>
               </Navbar.Collapse>
               <Navbar.Text>

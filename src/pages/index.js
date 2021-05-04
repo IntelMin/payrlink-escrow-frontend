@@ -8,10 +8,15 @@ import ConnectModal from '../components/modal/connectwallet';
 import Footer from '../components/footer/footer';
 import SingleBanner from '../components/banner/singlebanner';
 
-function IndexPage() {
+function IndexPage(props) {
+  
   return (
     <div className="page-main">
+      {props.SessionStorage==="true"?
+      <Banner/>
+      :
       <SingleBanner/>
+      }
     </div>
   );
 }
