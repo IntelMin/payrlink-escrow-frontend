@@ -11,34 +11,34 @@ function Banner(){
            </Col> 
            <Col className="banner-slider">
               <Container>
-              <Carousel>
-                    <Carousel.Item>
-                       <Carousel.Caption>
-                         <img src={bannericon}/>  
-                        <h3>Welcome to <i>PayrLink</i></h3>
-                        <p>Expect the innovative Escrow Experience</p>
-                        <a href="#">WHITEPAPER</a>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                         <Carousel.Caption>
-                         <img src={bannericon}/>     
-                         <h3>Welcome to <i>PayrLink</i></h3>
-                        <p>Expect the innovative Escrow Experience</p>
-                        <a href="#">WHITEPAPER</a>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                         <Carousel.Caption>
-                         <img src={bannericon}/>     
-                         <h3>Welcome to <i>PayrLink</i></h3>
-                        <p>Expect the innovative Escrow Experience</p>
-                        <a href="#">WHITEPAPER</a>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-             </Carousel>
+                <Carousel>
+                        <Carousel.Item>
+                        <Carousel.Caption>
+                            <img src={bannericon}/>  
+                            <h3>Welcome to <i>PayrLink</i></h3>
+                            <p>Expect the innovative Escrow Experience</p>
+                            <a href="#">WHITEPAPER</a>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                            <img src={bannericon}/>     
+                            <h3>Welcome to <i>PayrLink</i></h3>
+                            <p>Expect the innovative Escrow Experience</p>
+                            <a href="#">WHITEPAPER</a>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                            <img src={bannericon}/>     
+                            <h3>Welcome to <i>PayrLink</i></h3>
+                            <p>Expect the innovative Escrow Experience</p>
+                            <a href="#">WHITEPAPER</a>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
              </Container>
-           </Col>    
+           </Col>           
         </Container>
     )
 

@@ -13,7 +13,14 @@ function IndexPage(props) {
   return (
     <div className="page-main">
       {props.SessionStorage==="true"?
-      <Banner/>
+      <>
+        <Banner/>
+        <About/>
+        <Features/>
+        <SimpleSlider/>
+      </>
+
+
       :
       <SingleBanner/>
       }
