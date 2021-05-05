@@ -14,7 +14,7 @@ const options = [
     { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div>},
     { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> },
     { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> },
-    { value: 'USD', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
+    { value: 'USDT', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
   ];
   const [Amount,setAmount]=useState({
     Pool:'',

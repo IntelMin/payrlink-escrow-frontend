@@ -4,24 +4,36 @@ import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
 import asset4 from '../../images/asset4.png';
-import depositbg from '../../images/depositbg.png';
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
 import payrimg from '../../images/asset2.png';
 import usdimg from '../../images/asset4.png';
-import WithdrawEth from './modals';
+import {WithdrawModal,StakeModal} from './modals';
 
 export default function PoolsGrid(props){
-    const[status,setStatus]=useState(true);
-    const options = [
-        { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div> },
-        { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> },
-        { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> },
-        { value: 'USD', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
-      ];
+
+    // const[status,setStatus]=useState(true);
     return(
         <>
-        <WithdrawEth/>
+        {
+            props.stacks.Eth==="Stake"?<StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="ETH" img={ethimg}/>
+            :
+            props.stacks.Eth==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="ETH"/>
+            :
+            props.stacks.Usdt==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="USDT" img={usdimg}/>
+            :
+            props.stacks.Usdt==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="USDT"/>
+            :
+            props.stacks.Payr==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="PYR" img={payrimg}/>
+            :
+            props.stacks.Payr==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="PYR"/>
+            :
+            props.stacks.Btc==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="BTC" img={bitcoinimg}/>
+            :
+            props.stacks.Btc==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="BTC"/>
+            :
+            ""
+        }
         <Row className="poolsgrid">
             <Col md={4}>
                 <Card className="pools_grid_block">
@@ -57,7 +69,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Eth}
+                        title={props.stacks.Eth || "Stake"}
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackEth}
                     >
@@ -104,7 +116,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                     alignRight
-                    title={props.stacks.Usdt}
+                    title={props.stacks.Usdt || "Stake"}
                     id="dropdown-menu-align-right"
                     onSelect={props.SetStackUsdt}
                 >
@@ -151,7 +163,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Payr}
+                        title={props.stacks.Payr || "Stake"}
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackPayr}
                     >
@@ -198,7 +210,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Btc}
+                        title={props.stacks.Btc || "Stake"}
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackBtc}
                     >

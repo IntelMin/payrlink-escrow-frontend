@@ -1,14 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Card, Col, Row, Form, Table, Dropdown, DropdownButton  } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
 import asset4 from '../../images/asset4.png';
 import arrowdown from '../../images/arrowdown.png';
-
+import bitcoinimg from '../../images/asset1.png';
+import ethimg from '../../images/asset3.png';
+import payrimg from '../../images/asset2.png';
+import usdimg from '../../images/asset4.png';
+import {WithdrawModal,StakeModal} from './modals';
 
 export default function PoolsList(props){
     return(
+        <>
+        {
+            props.stacks.Eth==="Stake"?<StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="ETH" img={ethimg}/>
+            :
+            props.stacks.Eth==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="ETH"/>
+            :
+            props.stacks.Usdt==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="USDT" img={usdimg}/>
+            :
+            props.stacks.Usdt==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="USDT"/>
+            :
+            props.stacks.Payr==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="PYR" img={payrimg}/>
+            :
+            props.stacks.Payr==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="PYR"/>
+            :
+            props.stacks.Btc==="Stake"? <StakeModal title="Stake" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="BTC" img={bitcoinimg}/>
+            :
+            props.stacks.Btc==="Withdraw"? <WithdrawModal title="Withdraw" Stacks={props.stacks} setStacks={props.setStacks} CurrencyType="BTC"/>
+            :
+            ""
+        }
         <Card className="pools_list_block">
             <Table>
                 <thead>
@@ -40,15 +64,13 @@ export default function PoolsList(props){
                         <Form.Group controlId="exampleForm.SelectCustom">
                         <DropdownButton
                             alignRight
-                            title={props.stacks.Eth}
+                            title={props.stacks.Eth || "Stake"}
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackEth}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stake 1">Stake 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                            <Dropdown.Item eventKey="ETH">ETH</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -72,15 +94,13 @@ export default function PoolsList(props){
                         <Form.Group controlId="exampleForm.SelectCustom">
                         <DropdownButton
                             alignRight
-                            title={props.stacks.Usdt}
+                            title={props.stacks.Usdt || "Stake"}
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackUsdt}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stake 1">Stake 1</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                            <Dropdown.Item eventKey="USDT">USDT</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -104,14 +124,13 @@ export default function PoolsList(props){
                         <Form.Group controlId="exampleForm.SelectCustom">
                         <DropdownButton
                             alignRight
-                            title={props.stacks.Payr}
+                            title={props.stacks.Payr || "Stake"}
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackPayr}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                            <Dropdown.Item eventKey="PAYR">PAYR</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -135,14 +154,13 @@ export default function PoolsList(props){
                         <Form.Group controlId="exampleForm.SelectCustom">
                         <DropdownButton
                             alignRight
-                            title={props.stacks.Btc}
+                            title={props.stacks.Btc || "Stake"}
                             id="dropdown-menu-align-right"
                             onSelect={props.SetStackBtc}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
+                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
+                            <Dropdown.Item eventKey="BTC">BTC</Dropdown.Item>
                         </DropdownButton>
                         </Form.Group>
                     </Form>
@@ -153,5 +171,6 @@ export default function PoolsList(props){
             </Table>
 
         </Card>
+        </>
     )
 }
