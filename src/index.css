@@ -222,7 +222,7 @@ body {	overflow-x: hidden;}
 .connectmodal .modalbutton.card .btn.btn-secondary:hover, .connectmodal .modalbutton.card .btn.btn-secondary:focus {opacity: 0.5;}
 .connectmodal .modal-dialog {	top: 15%;}
 .dashboardpage {	width: 100%;	display: inline-block;	background: #1F1F1F;	padding: 55px 0;}
-.myassets.card {	scrollbar-width: thin; margin-bottom: 20px; width: 100%;	display: inline-block;	background: #333;	border-radius: 8px;	padding: 20px;	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); overflow-x: auto;}
+.myassets.card {	scrollbar-width: thin; margin-bottom: 20px; width: 100%;	display: inline-block;	background: #333;	border-radius: 8px;	padding: 20px;	box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); }
 .dashboardpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;	padding-left: 10px;}
 .dashboardpage .table {	color: #fff;}
 .dashboardpage .table thead th {	vertical-align: bottom;	border-bottom: none;	border-top: none;	font-size: 16px;	line-height: 18px;	font-weight: 600;	opacity: 0.7;}
@@ -383,7 +383,6 @@ body {	overflow-x: hidden;}
 .myassets.card.availableassets .form-group select option {	color: #000;}
 select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  text-overflow: '';}
 .container-fluid {	padding-left: 0 !important;	padding-right: 0 !important;}
-.myassets.pools_main.card {	overflow-x: hidden;}
 .nav-item {	margin-right: 0 !important;}
 .myassets.transation_history.card {	overflow: hidden;}
 .tarnstionpage .transation_active_escrows .table th:last-child {	text-align: center !important;	width: 145px;}
@@ -554,6 +553,12 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 	box-shadow: none !important;
 }
 
+.myassets.card .form-group .dropdown-menu.dropdown-menu-right {	inset: unset !important;	top: 0 !important;	left: 0 !important;	right: 0 !important;}
+.navbar-light .navbar-text a.header-setting-icon {	display: inline-block;	position: relative; cursor: pointer;}
+.navbar-light .navbar-text a.header-setting-icon::after {	content: "";	width: 14px;	height: 14px;	position: absolute;	left: 0;	right: 0;	top: 0;	bottom: 0;	margin: auto;	background: #25224e;	border-radius: 100%;}
+.whitebg .navbar-light .navbar-text a.header-setting-icon::after {display: none ;}
+
+
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
 .navbar-brand img {	max-width: 210px;}
@@ -571,7 +576,8 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .deposit_block.card form .form-group {	width: 60%;}
 .single_banner.container-fluid {	padding: 150px 0 100px;	background-repeat: no-repeat; background-size: cover;}
 .single_banner_detail.card span {	margin-top: 110px;}
-
+.myassets.card {overflow-x: auto;}
+.myassets.pools_main.card {	overflow-x: hidden;}
 }
 
 @media screen and (max-width: 992px) {
