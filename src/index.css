@@ -557,6 +557,13 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .navbar-light .navbar-text a.header-setting-icon {	display: inline-block;	position: relative; cursor: pointer;}
 .navbar-light .navbar-text a.header-setting-icon::after {	content: "";	width: 14px;	height: 14px;	position: absolute;	left: 0;	right: 0;	top: 0;	bottom: 0;	margin: auto;	background: #25224e;	border-radius: 100%;}
 .whitebg .navbar-light .navbar-text a.header-setting-icon::after {display: none ;}
+.deposit_bottom table td {	border: none;	color: #fff;}
+.modalbutton.withdraw_popup_btn.card {	margin-top: 5px;}
+.connectmodal.withdraw_popup .modalbutton.card .btn.btn-primary {	width: 48%;	margin-right: 2%;	background: #333333;}
+.whitebg .connectmodal.withdraw_popup .modalbutton.card .btn.btn-primary {	background: #fff;}
+.connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {	width: 48%;	margin-left: 2%;}
+.whitebg .connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {color:#fff; border-color: #fff;}
+.connectmodal.withdraw_popup .modalbutton.withdraw_popup_btn.card {	padding: 0 10px;}
 
 
 @media screen and (max-width: 1200px) {

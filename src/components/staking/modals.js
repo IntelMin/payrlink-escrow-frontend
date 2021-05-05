@@ -28,7 +28,7 @@ function WithdrawEth(props){
       }
   return (
     <>
-      <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal">
+      <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal withdraw_popup">
         
         <Card className="deposit_block">
             <h2>Withdraw</h2>
@@ -52,20 +52,26 @@ function WithdrawEth(props){
                 <Table>
                     <tbody>
                         <tr>
-                        <td>Withdrawal Amount</td>    
-                        <td><strong>5.747 ETH</strong></td>
+                        <td>Current Staked</td>    
+                        <td><strong>5.747 PAYR</strong></td>
                         </tr>
                         <tr>
-                        <td>Remaining Balance</td>    
-                        <td><strong>4.247 ETH</strong></td>
+                        <td>Remaining Staked</td>    
+                        <td><strong>4.247 PAYR</strong></td>
                         </tr>
                         
                     </tbody>
                 </Table>
-                <p>Withdrew amount will reflect in your bank after 2 hours.</p>
+                <p>Withdraw your staked PAYR from pools</p>
+                <Card className="modalbutton withdraw_popup_btn">
                 <Button variant="primary" type="submit">
                 Withdraw
                 </Button>
+                <Button variant="secondary" type="submit">
+                Cancel
+                </Button>
+                </Card>
+               
                 </Card>
                                 
             </Form>
