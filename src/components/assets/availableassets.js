@@ -65,7 +65,7 @@ export default function AvailableAssets() {
                         <Form.Group controlId="exampleForm.SelectCustom">
                         <DropdownButton
                             alignRight
-                            title={currencystatus.Eth}
+                            title="Deposit"
                             id="dropdown-menu-align-right"
                             onSelect={SetEthStatus}
                             name='Eth'
@@ -105,7 +105,7 @@ export default function AvailableAssets() {
                             </Form.Control> */}
                             <DropdownButton
                                 alignRight
-                                title={currencystatus.Usd}
+                                title="Deposit"
                                 id="dropdown-menu-align-right"
                                 onSelect={SetUsdStatus}
                                 name="usd"

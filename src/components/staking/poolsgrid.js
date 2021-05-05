@@ -69,7 +69,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Eth || "Stake"}
+                        title="Stake"
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackEth}
                     >
@@ -116,7 +116,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                     alignRight
-                    title={props.stacks.Usdt || "Stake"}
+                    title="Stake"
                     id="dropdown-menu-align-right"
                     onSelect={props.SetStackUsdt}
                 >
@@ -163,7 +163,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Payr || "Stake"}
+                        title="Stake"
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackPayr}
                     >
@@ -210,7 +210,7 @@ export default function PoolsGrid(props){
                 <Form.Group controlId="exampleForm.SelectCustom">
                     <DropdownButton
                         alignRight
-                        title={props.stacks.Btc || "Stake"}
+                        title="Stake"
                         id="dropdown-menu-align-right"
                         onSelect={props.SetStackBtc}
                     >
