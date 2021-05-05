@@ -8,19 +8,6 @@ import ethimg from '../../images/asset3.png';
 import payrimg from '../../images/asset2.png';
 import usdimg from '../../images/asset4.png';
 
-const colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: 'transparent' }),
-    option: (styles) => {
-      return {
-        ...styles,
-        backgroundColor:"none",
-        color: '#FFF',
-        // cursor: isDisabled ? 'not-allowed' : 'default',
-      }
-    },
-  }
-
-
 export default function Deposit(){
     
 const options = [

@@ -109,7 +109,7 @@ export default function PoolsList(props){
                             onSelect={props.SetStackPayr}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-Stake                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
                             <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
                             <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>
@@ -140,7 +140,7 @@ Stake                            <Dropdown.Item eventKey="Stake 2">Stake 2</Drop
                             onSelect={props.SetStackBtc}
                         >
                             <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>        
-Stake                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
+                            <Dropdown.Item eventKey="Stake 2">Stake 2</Dropdown.Item>
                             <Dropdown.Item eventKey="Stake 3">Stake 3</Dropdown.Item>
                             <Dropdown.Item eventKey="Stake 4">Stake 4</Dropdown.Item>
                         </DropdownButton>

@@ -1,14 +1,15 @@
-import React, {useState} from  'react';
-import { Card, Form, Table, Button, } from 'react-bootstrap';
-import Select from 'react-select';
-import bluedown from '../../images/bluedown.png';
+import React,{ useState } from 'react';
+import downwhite from '../../images/downwhite.png';
+import {Modal, props, Button, Form, Card, Table} from 'react-bootstrap';
 import depositbg from '../../images/depositbg.png';
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
 import payrimg from '../../images/asset2.png';
 import usdimg from '../../images/asset4.png';
-
-export default function WithDraw(){
+import Select from 'react-select';
+function WithdrawEth(props){
+    const [show, setShow] = useState(true);
+    const handleClose = () => setShow(false);
     const options = [
         { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div> },
         { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> },
@@ -25,13 +26,16 @@ export default function WithDraw(){
           :
           setAmount({...Amount,Amt:e.target.value})
       }
-    return(
+  return (
+    <>
+      <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal">
+        
         <Card className="deposit_block">
             <h2>Withdraw</h2>
             <Form>                                          
                 <Form.Group controlId="Amount">
                 <Form.Label>Pool</Form.Label>
-                <Select                 
+                <Select
                     options={options}
                     defaultValue = {options[0]}
                     isSearchable={false}
@@ -66,5 +70,10 @@ export default function WithDraw(){
                                 
             </Form>
         </Card>
-    )
+        
+      </Modal>
+    </>
+  );
 }
+
+export default WithdrawEth;
