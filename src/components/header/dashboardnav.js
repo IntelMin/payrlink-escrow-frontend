@@ -37,16 +37,16 @@ function DashBoardNavBar(props){
                     <Nav.Link eventKey={1}>DASHBOARD</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/assets">
-                    <Nav.Link eventKey={1}>ASSETS</Nav.Link>
+                    <Nav.Link eventKey={2}>ASSETS</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/staking">
-                    <Nav.Link eventKey={1}>STAKING</Nav.Link>
+                    <Nav.Link eventKey={3}>STAKING</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/transaction">
-                    <Nav.Link eventKey={1}>TRANSACTION</Nav.Link>
+                    <Nav.Link eventKey={4}>TRANSACTION</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="/dashboard">
-                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
+                  <LinkContainer to="#">
+                    <Nav.Link eventKey={5}>ARBITRATION</Nav.Link>
                   </LinkContainer>
                     
                 </Nav>
