@@ -236,6 +236,9 @@ body {	overflow-x: hidden;}
 .myassets.card .table thead th:last-child {	text-align: right;}
 .myassets.card .table tr td:last-child {	text-align: right;}
 .dashboardpage .table td, .dashboardpage .table th {	padding: 10px;}
+/*Anil*/
+button.tablereadmore { box-shadow: none; border: none; }
+/**/
 .tablereadmore {	font-size: 16px;	line-height: 18px;	background: #403894;	color: #fff;	font-weight: 600;	padding: 7px;	border-radius: 4px;	width: 100%;	max-width: 125px;	display: block;	text-align: center;	margin: 0 auto;}
 .tablereadmore:hover, .tablereadmore:focus {opacity: 0.5; text-decoration: none; color: #fff;} 
 .myassets.activeescrows.card .table tr td:first-child {	width: 30px;}
@@ -279,12 +282,12 @@ body {	overflow-x: hidden;}
 .total_revenue_pools ul img {	width: 24px;}
 .total_revenue_pools ul li {	float: left;	width: 17px;}
 .pool_style_btn {	flex-direction: row !important;	align-items: center;	justify-content: flex-end;	background: none !important;	border: none !important;}
-.pool_style_btn a {	margin-left: 10px;	width: 32px;	height: 32px;	display: flex;	align-items: center;	justify-content: center; border-radius: 3px;}
-.pool_style_btn a:hover img, .pool_style_btn a:focus img, .pool_style_btn a.gridactive img {	filter: invert(75%);}
-.pool_style_btn a:hover, .pool_style_btn a:focus, .pool_style_btn a.gridactive {	background: #fff;}
-.whitebg .pool_style_btn a:hover, .whitebg .pool_style_btn a:focus, .whitebg .pool_style_btn a.gridactive {	background: #25224e;}
-.whitebg .pool_style_btn a:hover img, .whitebg .pool_style_btn a:focus img, .whitebg .pool_style_btn a.gridactive img {	filter: invert(0%);}
-.whitebg .pool_style_btn a img {	filter: invert(75%);}
+.pool_style_btn span {	margin-left: 10px;	width: 32px;	height: 32px;	display: flex;	align-items: center;	justify-content: center; border-radius: 3px;}
+.pool_style_btn span:hover img, .pool_style_btn span:focus img, .pool_style_btn span.gridactive img {	filter: invert(75%);}
+.pool_style_btn span:hover, .pool_style_btn span:focus, .pool_style_btn span.gridactive {	background: #fff;}
+.whitebg .pool_style_btn span:hover, .whitebg .pool_style_btn span:focus, .whitebg .pool_style_btn span.gridactive {	background: #25224e;}
+.whitebg .pool_style_btn span:hover img, .whitebg .pool_style_btn span:focus img, .whitebg .pool_style_btn span.gridactive img {	filter: invert(0%);}
+.whitebg .pool_style_btn span img {	filter: invert(75%);}
 .poolsgrid .pools_grid_block_header.card {		padding-left: 10px; margin-bottom: 15px; flex-direction: row;	align-items: center;	background: none;	border: none;}
 .poolsgrid .pools_grid_block.card {	margin: 15px 0; width: 100%;	display: inline-block;	background: #484848;	border-radius: 10px;	border: 2px solid #707070;	padding: 15px 5px;}
 .poolsgrid .pools_grid_block_header.card img {	margin-right: 10px;}
@@ -554,9 +557,9 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 }
 
 .myassets.card .form-group .dropdown-menu.dropdown-menu-right {	inset: unset !important;	top: 0 !important;	left: 0 !important;	right: 0 !important;}
-.navbar-light .navbar-text a.header-setting-icon {	display: inline-block;	position: relative; cursor: pointer;}
-.navbar-light .navbar-text a.header-setting-icon::after {	content: "";	width: 14px;	height: 14px;	position: absolute;	left: 0;	right: 0;	top: 0;	bottom: 0;	margin: auto;	background: #25224e;	border-radius: 100%;}
-.whitebg .navbar-light .navbar-text a.header-setting-icon::after {display: none ;}
+.navbar-light .navbar-text span.header-setting-icon {	display: inline-block;	position: relative; cursor: pointer;}
+.navbar-light .navbar-text span.header-setting-icon::after {	content: "";	width: 14px;	height: 14px;	position: absolute;	left: 0;	right: 0;	top: 0;	bottom: 0;	margin: auto;	background: #25224e;	border-radius: 100%;}
+.whitebg .navbar-light .navbar-text span.header-setting-icon::after {display: none ;}
 .deposit_bottom table td {	border: none;	color: #fff;}
 .modalbutton.withdraw_popup_btn.card {	margin-top: 5px;}
 .connectmodal.withdraw_popup .modalbutton.card .btn.btn-primary {	width: 48%;	margin-right: 2%;	background: #333333;}

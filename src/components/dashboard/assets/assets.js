@@ -61,7 +61,8 @@ export default function DashboardAssets(){
                     </tr>
                 </tbody>
             </Table>
-            <a href="#" className="tablereadmore">Read More  </a>
+            <button className="tablereadmore">Read More </button>
+            {/* <a href="/#" className="tablereadmore">Read More  </a> */}
         </Card>
     )
 }

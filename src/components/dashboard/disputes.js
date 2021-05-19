@@ -34,10 +34,10 @@ export default function Disputes(){
                     <small>10:10AM</small>
                     </td>
                     </tr>
-                    
                 </tbody>
             </Table>
-            <a href="#" className="tablereadmore">Read More  </a>
+            <button className="tablereadmore">Read More </button>
+            {/* <a href="/dashboard#" className="tablereadmore">Read More  </a> */}
         </Card>
     )
 }

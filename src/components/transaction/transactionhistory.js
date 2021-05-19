@@ -1,4 +1,4 @@
-import React, { useEffect , useState} from 'react';
+import React, { useEffect , useState } from 'react';
 import { Card, Col, Row, Table, Tab, Nav, Pagination, Button } from 'react-bootstrap';
 
 import {AllHistoryData} from '../../dataset'
@@ -7,18 +7,15 @@ export default function TransactionHistory (){
   // Data for Transaction History
   const [Data,setData]=useState([]);
   // Buy Sell Button Function
-  const [buysell,setBuySell]=useState("BUY")
   const[HistoryData,setHistoryData]=useState([]);
   //Buy Function
   const buyFun=()=>{
-    setBuySell("BUY")
     const allData = AllHistoryData.filter(x => x.status ==="BUY");
     setHistoryData(allData)
     setData(allData.slice(range.StartPoint,range.EndPoint));
   } 
   //  Sell Funtion
   const sellFun=()=>{
-    setBuySell("SELL")
     const allData = AllHistoryData.filter(x => x.status ==="SELL");
     setHistoryData(allData)
     setData(allData.slice(range.StartPoint,range.EndPoint));
@@ -34,26 +31,19 @@ export default function TransactionHistory (){
     EndPoint:3
     })
     //console.log(AllHistoryData)
-    const allData = AllHistoryData.filter(x => x.status ==="BUY");
    
   const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
-    const getData = () =>{
-      setHistoryData(allData)
+  
+  
 
-      setData(allData.slice(range.StartPoint,range.EndPoint));
-    }
   useEffect(()=>{
-    getData();
-    // AllHistoryData.map((value)=>{
-    //   if(value.status===buysell)
-    //   {
-    //     HistoryDataArray.push(value)
-    //   }
-    // })
-    // setHistoryData(HistoryDataArray)
-    // await setData(HistoryData.slice(range.StartPoint,range.EndPoint));
-    // setRange({...range, StartPoint: range.EndPoint, EndPoint: range.EndPoint+ItemPerPage })
+    const getData = () =>{
+      const allData = AllHistoryData.filter(x => x.status ==="BUY");
+      setHistoryData(allData)
+      setData(allData.slice(0 ,3));
+    }
+    getData()
   }, [])
  
   const ResetRange=()=>{

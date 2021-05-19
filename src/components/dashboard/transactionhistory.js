@@ -79,7 +79,8 @@ export default function TransactionHistory(){
                     
                 </tbody>
             </Table>
-            <a href="#" className="tablereadmore">Read More  </a>
+            <button className="tablereadmore">Read More </button>
+            {/* <a href="/#" className="tablereadmore">Read More  </a> */}
         </Card>
     )
 }

@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import logo from '../../logo.png';
 import settingicon from '../../images/settingicon.png';
 import downblue from '../../images/downblue.png';
@@ -8,7 +8,7 @@ import {Container, Navbar, Nav, Dropdown, Card} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 function DashBoardNavBar(props){
   // const[status,setStatus]=useState(false);
-  const[bodyClass, setBodyClass] = useState(false);
+   const[bodyClass, setBodyClass] = useState(false);
   // const toggleClass = () =>{
   //     if(!bodyClass){
   //       document.body.classList.add('whitebg');
@@ -17,11 +17,13 @@ function DashBoardNavBar(props){
   //     }
   //     setBodyClass(!bodyClass);
   // }
-  
+  useEffect(()=>{
+    setBodyClass(false);
+  }, [])
   const Disconnect=()=>{
     localStorage.removeItem('loginStatus');
     localStorage.removeItem('changeTheme');
-    window.location.href='/'
+    window.location.href='/';
   }
     return(
         <Container fluid className="header">
@@ -32,25 +34,25 @@ function DashBoardNavBar(props){
             
                 <Nav className="mr-auto">
                   <LinkContainer to="/dashboard">
-                    <Nav.Link eventKey={1}>DASHBOARD</Nav.Link>
+                    <Nav.Link eventkey={1}>DASHBOARD</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/assets">
-                    <Nav.Link eventKey={1}>ASSETS</Nav.Link>
+                    <Nav.Link eventkey={2}>ASSETS</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/staking">
-                    <Nav.Link eventKey={1}>STAKING</Nav.Link>
+                    <Nav.Link eventkey={3}>STAKING</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/transaction">
-                    <Nav.Link eventKey={1}>TRANSACTION</Nav.Link>
+                    <Nav.Link eventkey={4}>TRANSACTION</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/dashboard">
-                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
+                    <Nav.Link eventkey={5}>ARBITRATION</Nav.Link>
                   </LinkContainer>
                     
                 </Nav>
               </Navbar.Collapse>
               <Navbar.Text>
-                <a className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass} ><img src={settingicon} alt="" /></a>
+                <span className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass} ><img src={settingicon} alt="" /></span>
                 <Dropdown className="header-notification-icon">
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                 <img src={notificationicon} alt="" /> <span className="notification_dot"></span>

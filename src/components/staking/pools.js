@@ -50,8 +50,8 @@ return (
         </Col>
         <Col md={6}>
         <Card className="pool_style_btn" >
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 2))} className={showGrid===false?"gridactive":""}><img src={listicon} alt="" /></a>
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 1))} className={showGrid===true?"gridactive":""}><img src={gridicon} alt="" /></a>
+            <span onClick={(ev => showhide(ev, 2))} className={showGrid===false?"gridactive":""}><img src={listicon} alt="" /></span>
+            <span onClick={(ev => showhide(ev, 1))} className={showGrid===true?"gridactive":""}><img src={gridicon} alt="" /></span>
         </Card>
          </Col>   
         </Row>    

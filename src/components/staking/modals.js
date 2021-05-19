@@ -66,18 +66,17 @@ function WithdrawModal(props){
                 <Form.Label>Pool</Form.Label>
                 <Select                
                     options={options}
-                    defaultValue = {options[0]}
                     isSearchable={false}
                     defaultValue={
-                        props.CurrencyType==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
+                        props.CurrencyTyp==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                         :
-                        props.CurrencyType==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
+                        props.CurrencyTyp==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
                         :
-                        props.CurrencyType==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
+                        props.CurrencyTyp==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
                         :
-                        props.CurrencyType==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
+                        props.CurrencyTyp==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
                         :
-                        ""
+                        {value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                     }
                 />
                 </Form.Group>

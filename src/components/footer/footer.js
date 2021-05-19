@@ -41,26 +41,26 @@ function Footer(props){
                     <Card className="footerlistleft">
                     <ListGroup as="ul">
                             <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
+                                <LinkContainer to="https://www.payrlink.com/Whitepaper.pdf">
+                                    <NavItem eventkey={1}>WHITEPAPER</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>VIDEO</NavItem>
+                                <LinkContainer to="https://youtu.be/qC5DbPsap-0">
+                                    <NavItem eventkey={2}>VIDEO</NavItem>
                                 </LinkContainer></ListGroup.Item>
                             <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>ARTICLES</NavItem>
+                                <LinkContainer to="https://www.payrlink.com/">
+                                    <NavItem eventkey={3}>OFFICIAL SITE</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                         </ListGroup>
                         <ListGroup as="ul" className="footersocial">
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon1} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon2} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon3} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon4} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="#"><img src={socialicon5} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon1} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon2} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon3} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon4} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon5} alt="" /></a></ListGroup.Item>
                         </ListGroup>
                         </Card>
                         <Card className="footerlistright">
@@ -68,33 +68,33 @@ function Footer(props){
                         <ListGroup as="ul">
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/dashboard">
-                                    <NavItem eventKey={1}>DASHBOARD</NavItem>
+                                    <NavItem eventkey={1}>DASHBOARD</NavItem>
                                 </LinkContainer></ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/assets">
-                                    <NavItem eventKey={1}>ASSETS</NavItem>
+                                    <NavItem eventkey={1}>ASSETS</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/staking">
-                                    <NavItem eventKey={1}>STAKING</NavItem>
+                                    <NavItem eventkey={1}>STAKING</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="/transaction">
-                                    <NavItem eventKey={1}>TRANSACTION</NavItem>
+                                    <NavItem eventkey={1}>TRANSACTION</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
-                                <LinkContainer to="#">
-                                    <NavItem eventKey={1}>ARBITRATION</NavItem>
+                                <LinkContainer to="/#">
+                                    <NavItem eventkey={1}>ARBITRATION</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                         </ListGroup>
                         :
                         <ListGroup as="ul" >
-                            <ListGroup.Item as="li"><a href="#">HOME</a></ListGroup.Item>
-                            <ListGroup.Item as="li"><a href="#">ARBITRATION</a></ListGroup.Item>
+                            <ListGroup.Item as="li"><a href="/#">HOME</a></ListGroup.Item>
+                            <ListGroup.Item as="li"><a href="/#">ARBITRATION</a></ListGroup.Item>
                         </ListGroup>
                     }
                       </Card>  

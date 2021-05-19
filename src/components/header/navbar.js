@@ -31,17 +31,17 @@ function NavBar(props){
 
               <Nav className="mr-auto">
                   <LinkContainer to="/">
-                    <Nav.Link eventKey={1}>HOME</Nav.Link>
+                    <Nav.Link eventkey={1}>HOME</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
-                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
+                    <Nav.Link eventkey={2}>ARBITRATION</Nav.Link>
                   </LinkContainer>                    
                 </Nav>
                 
               </Navbar.Collapse>
               
               <Navbar.Text>
-                <a className={props.bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass}><img alt="" src={settingicon}/></a>
+                <span className={props.bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass}><img alt="" src={settingicon}/></span>
            
                 <Button className="connect-wallet" onClick={()=>{
                   setStatus(true)

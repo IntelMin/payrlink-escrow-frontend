@@ -20,7 +20,8 @@ export default function TotalStaked(){
              </Card>
              <h3>Total Rewards</h3>   
              <p>$ 50,037</p>
-            <a href="#" className="tablereadmore">Read More </a>
+             <button className="tablereadmore">Read More </button>
+            {/* <a href="/#" className="tablereadmore">Read More </a> */}
         </Card>
     )
 }

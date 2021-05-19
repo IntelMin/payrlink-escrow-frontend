@@ -15,10 +15,10 @@ export default function TotalRevenue() {
             <h3>$ 73803.27</h3>
             <h2>Total Staked</h2>
             <h3>89000 PAYR</h3>
-            <span class="total_revenue_date">
+            <span className="total_revenue_date">
                 <label>Since</label> 02/27/2021
             </span>
-            <span class="total_revenue_pools">
+            <span className="total_revenue_pools">
                 <label>Pools Staked</label> 3
                 <ul>
                 <li><img src={asset1} alt="" /></li>

@@ -54,7 +54,7 @@ export default function AvailableAssets() {
                     <td>25.12</td>
                     <td><h4>03/08/2021</h4><small>03:45PM</small></td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td class="chart_icon"><LineChart1/></td>
+                    <td className="chart_icon"><LineChart1/></td>
                     <td>$ 50,000</td>
                     <td>
                     <Form>
@@ -88,7 +88,7 @@ export default function AvailableAssets() {
                     <td>25.12</td>
                     <td><h4>03/08/2021</h4><small>03:45PM</small></td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td class="chart_icon"><LineChart2/></td>
+                    <td className="chart_icon"><LineChart2/></td>
                     <td>$ 50,000</td>
                     <td>
                     <Form>

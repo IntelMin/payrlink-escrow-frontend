@@ -13,7 +13,7 @@ import AssetsPage from './pages/assets';
 import DashBoardNavBar from './components/header/dashboardnav'
 function App() {
   const SessionStorage=localStorage.getItem('loginStatus')
-  const SessionStorageTheme=localStorage.getItem('changeTheme')
+  const SessionTheme=localStorage.getItem('changeTheme')
   const[bodyClass, setBodyClass] = useState(false);
   // Change Theame
   const toggleClass = () =>{
@@ -27,8 +27,12 @@ function App() {
       setBodyClass(!bodyClass);
   }
   useEffect(()=>{
-    {SessionStorageTheme === "true"? document.body.classList.add('whitebg'): document.body.classList.remove('whitebg')}
-  },[SessionStorageTheme])
+    if(SessionTheme === "true"){
+      document.body.classList.add('whitebg')
+    }else {
+      document.body.classList.remove('whitebg')
+    }
+  },[SessionTheme])
   return (
     <div className="page-main">
       <React.StrictMode>
