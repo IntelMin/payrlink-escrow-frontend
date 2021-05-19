@@ -87,11 +87,6 @@ function DashBoardNavBar(props){
               </Navbar.Text>
              
             </Navbar> 
-            {/* {status===true?
-            <ConnectModal status={status} setStatus={setStatus} LogInStatus={props.LoginFun}/>
-            :
-            ""
-            } */}
         </Container>
       </Container>  
     )

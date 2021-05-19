@@ -39,7 +39,6 @@ function App() {
        <Router>
          {SessionStorage === "true"?<DashBoardNavBar bodyClass={bodyClass} toggleClass={toggleClass}/> : <NavBar toggleClass={toggleClass} bodyClass={bodyClass}/>}
         <Switch>
-          {/* component={SessionStorage==="true" ? DashboardPage : IndexPage} */}
           <Route exact path="/"  component={SessionStorage==='true'? DashboardPage : IndexPage}/>
           <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/staking" component={StakingPage} />

@@ -7,15 +7,12 @@ import PoolsList from './poolslist';
 
 export default function Pools(){
     const [showGrid, setShowGrid] = useState(true);
-    // const [ActivePools,setActivePools]=useState(1)
     const showhide = (ev, value) =>{
         console.log(value);
         if(value === 1){
             setShowGrid(true)
-            // setActivePools(0)
         } else {
             setShowGrid(false)
-            // setActivePools(1)
         }
     }
     
