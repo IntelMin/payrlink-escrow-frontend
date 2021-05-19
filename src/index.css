@@ -176,7 +176,7 @@ code {
 .footerblock.footerlist.card .list-group-item {	background: none;	border: none;	padding: 0 0px 5px;}
 .footerblock.footerlist.card .list-group-item a {	color: #fff;	font-size: 16px;	line-height: 18px;	font-weight: normal;}
 .footerblock.footerlist.card .list-group-item a:hover {opacity: 0.5; text-decoration: none;}
-.footerblock.footerlogo.card .card-img {	max-width: 150px;	width: 100%;	margin: auto;}
+.footerblock.footerlogo.card .card-img {	max-width: 150px;	width: 100%;	margin: 0 auto;}
 .footerblock form h3 {	color: #fff;	font-size: 18px;	line-height: 20px;	font-weight: bold;}
 .footerborderight.list-group {	border-right: 1px solid #fff;	border-radius: 0 !important;}
 .testimonial-main.container-fluid {	width: 100%;	display: inline-block;	position: relative;}
@@ -271,8 +271,8 @@ body {	overflow-x: hidden;}
 .doughchart .table {	max-width: 290px;	margin: 20px auto 0;}
 .doughchart.card {	width: 100%;	display: inline-block;	background: #484848;	border: none;	padding: 20px;	border-radius: 12px;}
 .stakingpage h2, .tarnstionpage h2, .assetpage h2 {	font-size: 20px;	line-height: 26px;	color: #fff;	font-weight: bold;}
-.total_revenue_detail h3 {	font-size: 32px;	line-height: 40px;	margin-top: 12px;	margin-bottom: 15px;	color: #fff;	font-weight: bold;}
-.total_revenue_date {	width: 100%;	display: inline-block;margin-top: 30px;	color: #fff;	font-size: 22px;	line-height: 24px;	font-weight: bold;}
+.total_revenue_detail h3 {	font-size: 32px;	line-height: 40px;	margin-top: 12px;	margin-bottom: 30px;	color: #fff;	font-weight: bold;}
+.total_revenue_date {	width: 100%;	display: inline-block;margin-top: 70px;	color: #fff;	font-size: 22px;	line-height: 24px;	font-weight: bold;}
 .total_revenue_pools {	width: 100%;	display: flex;	align-items: center;	font-size: 28px;	line-height: 30px;	color: #fff;	font-weight: bold;	margin-top: 20px;}
 .total_revenue_detail label {	font-size: 18px;	line-height: 22px;	margin-right: 25px;	font-weight: 600;	margin-bottom: 0;}
 .total_revenue_pools ul {	list-style: none;	padding-left: 0;	margin-bottom: 0;	margin-left: 15px;	margin-top: -6px;}
@@ -564,15 +564,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {	width: 48%;	margin-left: 2%;}
 .whitebg .connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {color:#fff; border-color: #fff;}
 .connectmodal.withdraw_popup .modalbutton.withdraw_popup_btn.card {	padding: 0 10px;}
-.WalletConnectmodal.withdraw_popup .modal-dialog {	max-width: 480px;}
-.withdraw_popup #basic-addon1 {	width: 100%;	background: none;	border: 1px solid #403894; color: #fff; font-weight: bold;}
-.withdraw_popup #basic-addon1 img {	width: 25px !important;	margin-right: 10px;}
-.whitebg .withdraw_popup #basic-addon1 {		border: 1px solid #25224E; color: #25224E;}
-.withdraw_popup .deposit_block.card form {	padding: 20px 50px;}
-.active.nav-link {	font-weight: bold;	text-decoration: underline !important;}
-.footermain .row {	display: flex;}
-.footerblock.footerlogo.card {	height: 100%;	width: 100%;}
-.doughchart.card > div {	height: 240px !important;	margin-top: -50px;}
+
 
 @media screen and (max-width: 1200px) {
 .nav-item {	font-size: 14px;	line-height: 16px; padding: 0 3px;}
@@ -634,7 +626,6 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 }
 /* Anil*/
 @media screen and (max-width: 767px) {
-  .withdraw_popup .deposit_block.card form {	padding: 20px ;}
   #basic-navbar-nav.show {    top: 110px !important;   }
   .banner-main .carousel.slide {	width: 100%;	min-height: auto;}
 .banner-main .carousel-caption {	text-align: center !important;}

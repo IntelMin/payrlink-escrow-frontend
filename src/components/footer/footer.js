@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React from 'react';
 import footerlogo from '../../images/footerlogo.png';
 import socialicon1 from '../../images/socialicon1.png';
 import socialicon2 from '../../images/socialicon2.png';
@@ -42,25 +42,25 @@ function Footer(props){
                     <ListGroup as="ul">
                             <ListGroup.Item as="li">
                                 <LinkContainer to="#">
-                                    <NavItem eventKey={1}>OFFICIAL SITE</NavItem>
+                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="#">
-                                    <NavItem eventKey={1}>WHITEPAPER</NavItem>
+                                    <NavItem eventKey={1}>VIDEO</NavItem>
                                 </LinkContainer></ListGroup.Item>
                             <ListGroup.Item as="li">
                                 <LinkContainer to="#">
-                                    <NavItem eventKey={1}>VIDEO</NavItem>
+                                    <NavItem eventKey={1}>ARTICLES</NavItem>
                                 </LinkContainer>
                             </ListGroup.Item>
                         </ListGroup>
                         <ListGroup as="ul" className="footersocial">
-                        <ListGroup.Item as="li"><a href="/" target="_blank"><img src={socialicon1}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="https://t.me/payrlink" target="_blank"><img src={socialicon2}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a  href="https://medium.com/@payrlink_official/" target="_blank"><img src={socialicon3}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="https://youtu.be/qC5DbPsap-0" target="_blank"><img src={socialicon4}/></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="/" target="_blank"><img src={socialicon5}/></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon1} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon2} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon3} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon4} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="#"><img src={socialicon5} alt="" /></a></ListGroup.Item>
                         </ListGroup>
                         </Card>
                         <Card className="footerlistright">

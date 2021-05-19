@@ -1,15 +1,13 @@
 import React,{ useState } from 'react';
-import { Route, RouteHandler } from 'react-router';
 import logo from '../../logo.png';
 import settingicon from '../../images/settingicon.png';
 import downblue from '../../images/downblue.png';
 import walleticon from '../../images/walleticon.png';
 import notificationicon from '../../images/notificationicon.png';
-import {Container, Navbar, Nav, NavItem, Form, FormControl, Button, NavLink, Dropdown, Card} from 'react-bootstrap';
+import {Container, Navbar, Nav, Dropdown, Card} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Link } from 'react-router-dom'
 function DashBoardNavBar(props){
-  const[status,setStatus]=useState(false);
+  // const[status,setStatus]=useState(false);
   const[bodyClass, setBodyClass] = useState(false);
   // const toggleClass = () =>{
   //     if(!bodyClass){
@@ -29,7 +27,7 @@ function DashBoardNavBar(props){
         <Container fluid className="header">
           <Container>
             <Navbar>
-              <Navbar.Brand ><img src={logo} onClick={Disconnect}/></Navbar.Brand>
+              <Navbar.Brand ><img src={logo} onClick={Disconnect} alt="" /></Navbar.Brand>
               <Navbar.Collapse id="basic-navbar-nav">
             
                 <Nav className="mr-auto">
@@ -37,25 +35,25 @@ function DashBoardNavBar(props){
                     <Nav.Link eventKey={1}>DASHBOARD</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/assets">
-                    <Nav.Link eventKey={2}>ASSETS</Nav.Link>
+                    <Nav.Link eventKey={1}>ASSETS</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/staking">
-                    <Nav.Link eventKey={3}>STAKING</Nav.Link>
+                    <Nav.Link eventKey={1}>STAKING</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="/transaction">
-                    <Nav.Link eventKey={4}>TRANSACTION</Nav.Link>
+                    <Nav.Link eventKey={1}>TRANSACTION</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link eventKey={5}>ARBITRATION</Nav.Link>
+                  <LinkContainer to="/dashboard">
+                    <Nav.Link eventKey={1}>ARBITRATION</Nav.Link>
                   </LinkContainer>
                     
                 </Nav>
               </Navbar.Collapse>
               <Navbar.Text>
-                <a className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass} ><img src={settingicon}/></a>
+                <a className={bodyClass? 'header-setting-icon whiteBg': 'header-setting-icon'} onClick={props.toggleClass} ><img src={settingicon} alt="" /></a>
                 <Dropdown className="header-notification-icon">
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                <img src={notificationicon}/> <span className="notification_dot"></span>
+                <img src={notificationicon} alt="" /> <span className="notification_dot"></span>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
@@ -76,7 +74,7 @@ function DashBoardNavBar(props){
             </Dropdown>
             <Dropdown>
               <Dropdown.Toggle variant="success" id="dropdown-basic" className="connect-wallet">
-                <img src={walleticon}/> 0X13484****79 <img src={downblue}/>
+                <img src={walleticon} alt="" /> 0X13484****79 <img src={downblue} alt="" />
               </Dropdown.Toggle>
 
               <Dropdown.Menu>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { Card, Form, Table, Button, Image } from 'react-bootstrap';
+import { Card, Form, Table, Button } from 'react-bootstrap';
 import Select from 'react-select';
-import bluedown from '../../images/bluedown.png';
 import depositbg from '../../images/depositbg.png';
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
@@ -11,10 +10,10 @@ import usdimg from '../../images/asset4.png';
 export default function Deposit(){
     
 const options = [
-    { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div>},
-    { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> },
-    { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> },
-    { value: 'USDT', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
+    { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px" alt="BTC"/> BTC </div>},
+    { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px" alt="ETH"/> ETH </div> },
+    { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px" alt="PYR"/> PYR</div> },
+    { value: 'USDT', label:<div><img src={usdimg} height="30px" width="30px" alt="USD"/> USD</div> },
   ];
   const [Amount,setAmount]=useState({
     Pool:'',

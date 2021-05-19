@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Table } from 'react-bootstrap';
 import asset3 from '../../images/asset3.png';
-import asset4 from '../../images/asset4.png';
 export default function ActiveEscrows(){
     return(
         <Card className="myassets activeescrows">
@@ -18,7 +17,7 @@ export default function ActiveEscrows(){
                 <tbody>
                     <tr>
                     <td><h3>1</h3></td>    
-                    <td className="amounticon"><img src={asset3}/>
+                    <td className="amounticon"><img src={asset3} alt="Amt Icon"/>
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>
@@ -29,7 +28,7 @@ export default function ActiveEscrows(){
                     </tr>
                     <tr>
                     <td><h3>2</h3></td>    
-                    <td className="amounticon"><img src={asset3}/>
+                    <td className="amounticon"><img src={asset3} alt="Amt Icon"/>
                     <span>
                     <h3>15.2 USDT</h3>
                     <small>US Dollar</small>

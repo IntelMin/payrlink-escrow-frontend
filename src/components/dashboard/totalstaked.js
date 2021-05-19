@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Table } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
@@ -12,10 +12,10 @@ export default function TotalStaked(){
             <h3>Staked Pools</h3>
             <Card className="stakedicon">
              <ul>
-                <li><img src={asset1}/></li>
-                <li><img src={asset2}/></li>
-                <li><img src={asset3}/></li>
-                <li><img src={asset4}/></li>
+                <li><img src={asset1} alt="" /></li>
+                <li><img src={asset2} alt="" /></li>
+                <li><img src={asset3} alt="" /></li>
+                <li><img src={asset4} alt="" /></li>
              </ul>    
              </Card>
              <h3>Total Rewards</h3>   

@@ -1,15 +1,11 @@
 import React,{useState} from 'react';
 import { Card, Table, Form, Dropdown, DropdownButton  } from 'react-bootstrap';
-import asset1 from '../../images/asset1.png';
-import asset2 from '../../images/asset2.png';
+
 import asset3 from '../../images/asset3.png';
 import asset4 from '../../images/asset4.png';
-import downwhite from '../../images/downwhite.png';
-import charticon1 from '../../images/charticon1.png';
-import charticon2 from '../../images/charticon2.png';
 import {LineChart1,LineChart2} from './linechart'
 export default function AvailableAssets() {
-    const [value,setValue]=useState('');
+    
 
     //  Currency Status
     const[ currencystatus,setCurrencyStatus]=useState({
@@ -49,7 +45,7 @@ export default function AvailableAssets() {
                 <tbody>
                     <tr>
                     <td>1</td>    
-                    <td className="amounticon"><img src={asset3}/>
+                    <td className="amounticon"><img src={asset3} alt="ETH"/>
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>
@@ -83,7 +79,7 @@ export default function AvailableAssets() {
 
                     <tr>
                     <td>2</td>    
-                    <td className="amounticon"><img src={asset4}/>
+                    <td className="amounticon"><img src={asset4} alt="ETH"/>
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>

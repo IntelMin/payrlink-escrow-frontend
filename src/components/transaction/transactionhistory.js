@@ -1,22 +1,27 @@
 import React, { useEffect , useState} from 'react';
-import { Card, Col, Row, Form, Table, Tab, Nav, Pagination, Button } from 'react-bootstrap';
-import plusicon from '../../images/plusicon.png';
-import downwhite from '../../images/downwhite.png';
+import { Card, Col, Row, Table, Tab, Nav, Pagination, Button } from 'react-bootstrap';
+
 import {AllHistoryData} from '../../dataset'
+
 export default function TransactionHistory (){
   // Data for Transaction History
   const [Data,setData]=useState([]);
   // Buy Sell Button Function
-  const HistoryDataArray=[];
   const [buysell,setBuySell]=useState("BUY")
   const[HistoryData,setHistoryData]=useState([]);
   //Buy Function
   const buyFun=()=>{
     setBuySell("BUY")
+    const allData = AllHistoryData.filter(x => x.status ==="BUY");
+    setHistoryData(allData)
+    setData(allData.slice(range.StartPoint,range.EndPoint));
   } 
   //  Sell Funtion
   const sellFun=()=>{
     setBuySell("SELL")
+    const allData = AllHistoryData.filter(x => x.status ==="SELL");
+    setHistoryData(allData)
+    setData(allData.slice(range.StartPoint,range.EndPoint));
   }
   // Get Length of Data that coming from dataset.js file
   const TotalData=HistoryData.length;
@@ -27,22 +32,29 @@ export default function TransactionHistory (){
   const [range,setRange]=useState({
     StartPoint:0,
     EndPoint:3
-  })
-
+    })
+    //console.log(AllHistoryData)
+    const allData = AllHistoryData.filter(x => x.status ==="BUY");
+   
   const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
+    const getData = () =>{
+      setHistoryData(allData)
 
-  useEffect(async()=>{
-    AllHistoryData.map((value)=>{
-      if(value.status===buysell)
-      {
-        HistoryDataArray.push(value)
-        setHistoryData(HistoryDataArray)
-      }
-    })
-    await setData(HistoryData.slice(range.StartPoint,range.EndPoint));
+      setData(allData.slice(range.StartPoint,range.EndPoint));
+    }
+  useEffect(()=>{
+    getData();
+    // AllHistoryData.map((value)=>{
+    //   if(value.status===buysell)
+    //   {
+    //     HistoryDataArray.push(value)
+    //   }
+    // })
+    // setHistoryData(HistoryDataArray)
+    // await setData(HistoryData.slice(range.StartPoint,range.EndPoint));
     // setRange({...range, StartPoint: range.EndPoint, EndPoint: range.EndPoint+ItemPerPage })
-  })
+  }, [])
  
   const ResetRange=()=>{
     // setLastPageState(false);
@@ -73,7 +85,7 @@ export default function TransactionHistory (){
         setRange({...range, StartPoint: strt, EndPoint: end})
         setData(HistoryData.slice(strt,end));
         setLastPageState(false);
-      
+        setCurrentPage(currentpage-1);
       }else{
         const strt = range.StartPoint-ItemPerPage;
         const end = range.EndPoint-ItemPerPage;;
@@ -136,7 +148,7 @@ return(
       </Row>
               
       <Tab.Content>
-        <Tab.Pane eventKey="all">
+        <Tab.Pane eventKey="all" >
           <Card className="transation_history_table">
             <Table>
               <thead>
@@ -162,7 +174,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })
@@ -197,7 +209,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })
@@ -233,7 +245,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })
@@ -269,7 +281,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })
@@ -305,7 +317,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })
@@ -341,7 +353,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span class="status_active">Active</span></td>
+                        <td><span className="status_active">Active</span></td>
                       </tr>
                     )
                   })

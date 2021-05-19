@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import { Card, Col, Row, Form, Table, Dropdown, DropdownButton  } from 'react-bootstrap';
+import React from 'react';
+import { Card, Form, Table, Dropdown, DropdownButton  } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
 import asset3 from '../../images/asset3.png';
 import asset4 from '../../images/asset4.png';
-import arrowdown from '../../images/arrowdown.png';
+
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
 import payrimg from '../../images/asset2.png';
@@ -49,7 +49,7 @@ export default function PoolsList(props){
                 <tbody>
                     <tr>
                     <td><h3>1</h3></td>    
-                    <td className="amounticon"><img src={asset3}/>
+                    <td className="amounticon"><img src={asset3} alt="" />
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>
@@ -79,7 +79,7 @@ export default function PoolsList(props){
 
                     <tr>
                     <td><h3>2</h3></td>    
-                    <td className="amounticon"><img src={asset4}/>
+                    <td className="amounticon"><img src={asset4} alt="" />
                     <span>
                     <h3>USDT</h3>
                     <small>US Dollar</small>
@@ -109,7 +109,7 @@ export default function PoolsList(props){
 
                     <tr>
                     <td><h3>3</h3></td>    
-                    <td className="amounticon"><img src={asset2}/>
+                    <td className="amounticon"><img src={asset2} alt="" />
                     <span>
                     <h3>PAYR</h3>
                     <small>Payrlink</small>
@@ -139,7 +139,7 @@ export default function PoolsList(props){
 
                     <tr>
                     <td><h3>4</h3></td>    
-                    <td className="amounticon"><img src={asset1}/>
+                    <td className="amounticon"><img src={asset1} alt="" />
                     <span>
                     <h3>BTC</h3>
                     <small>Bitcoin</small>

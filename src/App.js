@@ -1,5 +1,4 @@
 import React,{useEffect, useState} from 'react'
-import logo from './logo.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/header/navbar';
@@ -29,7 +28,7 @@ function App() {
   }
   useEffect(()=>{
     {SessionStorageTheme === "true"? document.body.classList.add('whitebg'): document.body.classList.remove('whitebg')}
-  },[])
+  },[SessionStorageTheme])
   return (
     <div className="page-main">
       <React.StrictMode>

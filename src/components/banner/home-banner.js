@@ -7,14 +7,14 @@ function Banner(){
     return(
         <Container fluid className="banner-main">
             <Col className="banner-image">
-               <img src={bannerbg}/>
+               <img src={bannerbg} alt="PayrLink"/>
            </Col> 
            <Col className="banner-slider">
               <Container>
                 <Carousel>
                         <Carousel.Item>
                         <Carousel.Caption>
-                            <img src={bannericon}/>  
+                            <img src={bannericon} alt="PayrLink"/>  
                             <h3>Welcome to <i>PayrLink</i></h3>
                             <p>Expect the innovative Escrow Experience</p>
                             <a href="#">WHITEPAPER</a>
@@ -22,7 +22,7 @@ function Banner(){
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
-                            <img src={bannericon}/>     
+                            <img src={bannericon} alt="PayrLink"/>     
                             <h3>Welcome to <i>PayrLink</i></h3>
                             <p>Expect the innovative Escrow Experience</p>
                             <a href="#">WHITEPAPER</a>
@@ -30,7 +30,7 @@ function Banner(){
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
-                            <img src={bannericon}/>     
+                            <img src={bannericon} alt="PayrLink"/>     
                             <h3>Welcome to <i>PayrLink</i></h3>
                             <p>Expect the innovative Escrow Experience</p>
                             <a href="#">WHITEPAPER</a>

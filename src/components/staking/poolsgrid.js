@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Card, Col, Row, Form, Table, Dropdown, DropdownButton } from 'react-bootstrap';
 import asset1 from '../../images/asset1.png';
 import asset2 from '../../images/asset2.png';
@@ -38,7 +38,7 @@ export default function PoolsGrid(props){
             <Col md={4}>
                 <Card className="pools_grid_block">
                 <Card className="pools_grid_block_header">
-                <img src={asset3}/>
+                <img src={asset3} alt="" />
                 <span>
                 <h3>ETH</h3>
                 <small>Ethereum</small>
@@ -85,7 +85,7 @@ export default function PoolsGrid(props){
             <Col md={4}>
                 <Card className="pools_grid_block">
                 <Card className="pools_grid_block_header">
-                <img src={asset4}/>
+                <img src={asset4} alt="" />
                 <span>
                 <h3>USDT</h3>
                 <small>US Dollar</small>
@@ -132,7 +132,7 @@ export default function PoolsGrid(props){
             <Col md={4}>
                 <Card className="pools_grid_block">
                 <Card className="pools_grid_block_header">
-                <img src={asset2}/>
+                <img src={asset2} alt="" />
                 <span>
                 <h3>PAYR</h3>
                 <small>Payrlink</small>
@@ -179,7 +179,7 @@ export default function PoolsGrid(props){
             <Col md={4}>
                 <Card className="pools_grid_block">
                 <Card className="pools_grid_block_header">
-                <img src={asset1}/>
+                <img src={asset1} alt="" />
                 <span>
                 <h3>BTC</h3>
                 <small>Bitcoin</small>

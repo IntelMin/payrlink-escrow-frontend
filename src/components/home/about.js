@@ -19,7 +19,7 @@ function About(){
                     <Col md={4}>
                             <card>
                             <span className="aboutsecure" style={{ backgroundImage: `url(${securebg})` }}>
-                                <img src={secure}/>
+                                <img src={secure} alt=""/>
                                 <h3>Highly Secure</h3>
                             </span>
                             </card>

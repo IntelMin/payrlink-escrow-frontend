@@ -1,8 +1,6 @@
 import React from 'react';
 import { Card, Table } from "react-bootstrap"
-import {Doughnut} from 'react-chartjs-2';
 import { Chart } from "react-google-charts";
-import { NonceProvider } from 'react-select';
 
 class DoughnutChart extends React.Component {
   // state={

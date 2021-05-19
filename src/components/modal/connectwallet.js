@@ -1,19 +1,15 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useState } from 'react';
 import warningicon from '../../images/warningicon.png';
 import bluesecue from '../../images/bluesecue.png';
 import metamask from '../../images/metamask.png';
 import walletconnect from '../../images/walletconnect.png';
-import {Modal, props, Button, Form, Card} from 'react-bootstrap';
+import {Modal, Button, Form, Card} from 'react-bootstrap';
 
 function ConnectModal(props){
     const [show, setShow] = useState(props.status);
 
     const handleClose = () => {
         setShow(false);
-        props.setStatus(false)
-    };
-    const handleShow = () => {
-        setShow(true)
         props.setStatus(false)
     };
     const CloseMe = () =>{
@@ -24,13 +20,13 @@ function ConnectModal(props){
     return (
         <>
           
-        <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal">
+        <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal" animation={false}>
             <Modal.Header closeButton>
             <Modal.Title>Connect Wallet</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Card className="modalwarning">
-                <p><img src={warningicon} className="showondark"/><img src={bluesecue} className="showonlight"/>You are about to input highly sensitive information, please DO NOT expose to strangers.</p>
+                <p><img src={warningicon} className="showondark" alt=""/><img src={bluesecue} alt="" className="showonlight"/>You are about to input highly sensitive information, please DO NOT expose to strangers.</p>
                 </Card>
                 <Form>           
                     <Form.Group controlId="formBasicMetamask">

@@ -1,6 +1,5 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { MDBContainer } from "mdbreact";
 import { Card } from "react-bootstrap";
 
 class LineChart extends React.Component {

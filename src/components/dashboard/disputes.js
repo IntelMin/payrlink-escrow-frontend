@@ -19,7 +19,7 @@ export default function Disputes(){
                 <tbody>
                     <tr>
                     <td><h3>1</h3></td>    
-                    <td className="amounticon"><img src={asset3}/>
+                    <td className="amounticon"><img src={asset3} alt="amt icon" />
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>

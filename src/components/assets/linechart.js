@@ -1,7 +1,4 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
-import { MDBContainer } from "mdbreact";
-import { Card } from "react-bootstrap";
 import { Chart } from "react-google-charts";
 class LineChart1 extends React.Component {
   

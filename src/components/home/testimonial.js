@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import authoricon from '../../images/authoricon.png';
 import testimonialbg from '../../images/testimonialbg.png';
-import {Container, Col, Card, Row} from 'react-bootstrap';
+import {Container, Col, Card} from 'react-bootstrap';
 /* Anil Test */
 
 export default class SimpleSlider extends Component {
@@ -34,7 +34,7 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <Col>
           <Card className="testimonial-top">
-                         <img src={authoricon}/>
+                         <img src={authoricon} alt="" />
                          <span>
                          <h3>Tarun Thusu</h3> 
                          <h5>verified user</h5>
@@ -45,7 +45,7 @@ export default class SimpleSlider extends Component {
           </Col>
           <Col>
           <Card className="testimonial-top">
-                         <img src={authoricon}/>
+                         <img src={authoricon} alt="" />
                          <span>
                          <h3>Tarun Thusu</h3> 
                          <h5>verified user</h5>
@@ -56,7 +56,7 @@ export default class SimpleSlider extends Component {
           </Col>
           <Col>
           <Card className="testimonial-top">
-                         <img src={authoricon}/>
+                         <img src={authoricon} alt="" />
                          <span>
                          <h3>Tarun Thusu</h3> 
                          <h5>verified user</h5>
@@ -67,7 +67,7 @@ export default class SimpleSlider extends Component {
           </Col>
           <Col>
           <Card className="testimonial-top">
-                         <img src={authoricon}/>
+                         <img src={authoricon} alt="" />
                          <span>
                          <h3>Tarun Thusu</h3> 
                          <h5>verified user</h5>
@@ -78,7 +78,7 @@ export default class SimpleSlider extends Component {
           </Col>
           <Col>
           <Card className="testimonial-top">
-                         <img src={authoricon}/>
+                         <img src={authoricon} alt="" />
                          <span>
                          <h3>Tarun Thusu</h3> 
                          <h5>verified user</h5>

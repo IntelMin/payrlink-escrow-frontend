@@ -21,7 +21,7 @@ export default function ActiveEscrows (){
                 <h2>Active Escrows</h2>
             </Col>
             <Col md={6}>
-                <Button className="create_new" onClick={func1}>Create New <img src={plusicon}/></Button>
+                <Button className="create_new" onClick={func1}>Create New <img src={plusicon} alt="" /></Button>
             </Col>
               
             </Row>
@@ -44,10 +44,10 @@ export default function ActiveEscrows (){
                     <td>1</td>    
                     <td>BuyCat</td>
                     <td>80 ETH</td>
-                    <td><span class="buy">Buy</span></td>
+                    <td><span className="buy">Buy</span></td>
                     <td>0x178*****35</td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_active">Active</span></td>
+                    <td><span className="status_active">Active</span></td>
 
                     <td>
                     <Form>
@@ -68,10 +68,10 @@ export default function ActiveEscrows (){
                     <td>2</td>    
                     <td>NeonXero</td>
                     <td>30 ETH</td>
-                    <td><span class="buy">Buy</span></td>
+                    <td><span className="buy">Buy</span></td>
                     <td>0x178*****35</td>
                     <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td><span class="status_dispute">On-Dispute</span></td>
+                    <td><span className="status_dispute">On-Dispute</span></td>
 
                     <td>
                     <Form>

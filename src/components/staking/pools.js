@@ -10,7 +10,7 @@ export default function Pools(){
     // const [ActivePools,setActivePools]=useState(1)
     const showhide = (ev, value) =>{
         console.log(value);
-        if(value == 1){
+        if(value === 1){
             setShowGrid(true)
             // setActivePools(0)
         } else {
@@ -50,8 +50,8 @@ return (
         </Col>
         <Col md={6}>
         <Card className="pool_style_btn" >
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 2))} className={showGrid===false?"gridactive":""}><img src={listicon}/></a>
-            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 1))} className={showGrid===true?"gridactive":""}><img src={gridicon}/></a>
+            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 2))} className={showGrid===false?"gridactive":""}><img src={listicon} alt="" /></a>
+            <a href="javascript:void(0)" onClick={(ev => showhide(ev, 1))} className={showGrid===true?"gridactive":""}><img src={gridicon} alt="" /></a>
         </Card>
          </Col>   
         </Row>    

@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
-import downwhite from '../../images/downwhite.png';
-import {Modal, props, Button, Form, Card, Table, InputGroup} from 'react-bootstrap';
+
+import {Modal, Button, Form, Card, Table, InputGroup} from 'react-bootstrap';
 import depositbg from '../../images/depositbg.png';
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
@@ -13,10 +13,10 @@ import Select from 'react-select';
 function WithdrawModal(props){
     const [show, setShow] = useState(true);
     const options = [
-        { value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> },
-        { value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div> },
-        { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> },
-        { value: 'USDT', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> },
+        { value: 'ETH', label:<div><img src={ethimg} alt="ETH" height="30px" width="30px"/> ETH </div> },
+        { value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC" height="30px" width="30px"/> BTC </div> },
+        { value: 'PYR', label:<div><img src={payrimg} alt="PYR" height="30px" width="30px"/> PYR</div> },
+        { value: 'USDT', label:<div><img src={usdimg} alt="USDT" height="30px" width="30px"/> USD</div> },
       ];
 
     const handleClose = () => {
@@ -57,7 +57,7 @@ function WithdrawModal(props){
     }
   return (
     <>
-      <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal withdraw_popup">
+      <Modal show={show} onHide={handleClose} className="connectmodal WalletConnectmodal withdraw_popup" animation={false}>
         
         <Card className="deposit_block">
             <h2>{props.title}</h2>
@@ -69,13 +69,13 @@ function WithdrawModal(props){
                     defaultValue = {options[0]}
                     isSearchable={false}
                     defaultValue={
-                        props.CurrencyType==='ETH'?{value: 'ETH', label:<div><img src={ethimg} height="30px" width="30px"/> ETH </div> }
+                        props.CurrencyType==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                         :
-                        props.CurrencyType==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} height="30px" width="30px"/> BTC </div> }
+                        props.CurrencyType==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
                         :
-                        props.CurrencyType==='PYR'? { value: 'PYR', label:<div><img src={payrimg} height="30px" width="30px"/> PYR</div> }
+                        props.CurrencyType==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
                         :
-                        props.CurrencyType==='USDT'? { value: 'USDT', label:<div><img src={usdimg} height="30px" width="30px"/> USD</div> }
+                        props.CurrencyType==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
                         :
                         ""
                     }
@@ -175,7 +175,7 @@ function StakeModal(props){
                 <Form.Group controlId="Amount">
                 <Form.Label>Pool</Form.Label>
                 <InputGroup.Prepend>
-                    <InputGroup.Text id="basic-addon1"><img src={props.img} height="25px" width="30px"/> {props.CurrencyType} </InputGroup.Text>
+                    <InputGroup.Text id="basic-addon1"><img src={props.img} height="25px" width="30px" alt=""/> {props.CurrencyType} </InputGroup.Text>
                 </InputGroup.Prepend>
                 </Form.Group>
 

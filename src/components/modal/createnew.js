@@ -1,20 +1,12 @@
 import React,{ useState } from 'react';
-import asset1 from '../../images/asset1.png';
-import asset2 from '../../images/asset2.png';
-import asset3 from '../../images/asset3.png';
-import asset4 from '../../images/asset4.png';
 import downwhite from '../../images/downwhite.png';
-import {Modal, props, Button, Form, Card} from 'react-bootstrap';
+import {Modal, Button, Form, Card} from 'react-bootstrap';
 
 function CreateNew(props){
     const [show, setShow] = useState(props.status);
 
     const handleClose = () => {
         setShow(false);
-        props.setStatus(false)
-    };
-    const handleShow = () => {
-        setShow(true)
         props.setStatus(false)
     };
     

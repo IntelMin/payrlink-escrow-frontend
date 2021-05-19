@@ -21,9 +21,9 @@ export default function TotalRevenue() {
             <span class="total_revenue_pools">
                 <label>Pools Staked</label> 3
                 <ul>
-                <li><img src={asset1}/></li>
-                <li><img src={asset3}/></li>
-                <li><img src={asset4}/></li>
+                <li><img src={asset1} alt="" /></li>
+                <li><img src={asset3} alt="" /></li>
+                <li><img src={asset4} alt="" /></li>
              </ul>     
             </span>   
             </Card>    

@@ -15,7 +15,7 @@ import ConnectModal from '../modal/connectwallet';
                     <Button className="connect_wallet_btn" onClick={()=>{
                         setStatus(true)
                     }}>Connect Wallet</Button>
-                    <span><img src={circlewarning}/>Connect your wallet in  order to use our platform</span>
+                    <span><img src={circlewarning} alt="Connect Wallet"/>Connect your wallet in  order to use our platform</span>
                     </Card>
                     {status===true?
                     <ConnectModal status={status} setStatus={setStatus}/>

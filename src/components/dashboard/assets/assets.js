@@ -20,7 +20,7 @@ export default function DashboardAssets(){
                 </thead>
                 <tbody>
                     <tr>
-                    <td><img src={asset1}/></td>
+                    <td><img src={asset1} alt=""/></td>
                     <td>
                     <h3>BTC</h3>
                     <small>Bitcoin</small>
@@ -30,7 +30,7 @@ export default function DashboardAssets(){
                     <td><h3>$ 611,690</h3></td>
                     </tr>
                     <tr>
-                    <td><img src={asset2}/></td>
+                    <td><img src={asset2} alt=""/></td>
                     <td>
                     <h3>PAYR</h3>
                     <small>Payrlink</small>
@@ -40,7 +40,7 @@ export default function DashboardAssets(){
                     <td><h3>$ 2,500</h3></td>
                     </tr>
                     <tr>
-                    <td><img src={asset3}/></td>
+                    <td><img src={asset3} alt=""/></td>
                     <td>
                     <h3>ETH</h3>
                     <small>Ethereum</small>
@@ -50,7 +50,7 @@ export default function DashboardAssets(){
                     <td><h3>$ 60,000</h3></td>
                     </tr>
                     <tr>
-                    <td><img src={asset4}/></td>
+                    <td><img src={asset4} alt=""/></td>
                     <td>
                     <h3>USDT</h3>
                     <small>US Dollar</small>
