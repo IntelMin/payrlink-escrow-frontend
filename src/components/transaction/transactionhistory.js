@@ -138,7 +138,7 @@ return(
       </Row>
               
       <Tab.Content>
-        <Tab.Pane eventKey="all" >
+        <Tab.Pane eventKey="all" transition={false}>
           <Card className="transation_history_table">
             <Table>
               <thead>
@@ -173,43 +173,7 @@ return(
             </Table>
           </Card>
         </Tab.Pane>
-        <Tab.Pane eventKey="active">
-          <Card className="transation_history_table">
-          <Table>
-              <thead>
-                  <tr>
-                  <th>No.</th>
-                  <th>Name</th>
-                  <th>Amount</th>
-                  <th></th>
-                  <th>To/From</th>
-                  <th>Created At</th>
-                  <th>Status</th>
-                  </tr>
-              </thead>
-              <tbody>
-                {
-                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
-                    return(
-                      <tr key={index}>
-                        <td>{id}</td>    
-                        <td>{name}</td>
-                        <td>{amount}</td>
-                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
-                        <td>{tofrom}</td>
-                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
-                      </tr>
-                    )
-                  })
-                } 
-              </tbody>
-            </Table>
-          </Card>
-        </Tab.Pane>
-
-        <Tab.Pane eventKey="pending">
+        <Tab.Pane eventKey="active" transition={false}>
           <Card className="transation_history_table">
           <Table>
               <thead>
@@ -245,7 +209,43 @@ return(
           </Card>
         </Tab.Pane>
 
-          <Tab.Pane eventKey="dispute">
+        <Tab.Pane eventKey="pending" transition={false}>
+          <Card className="transation_history_table">
+          <Table>
+              <thead>
+                  <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th></th>
+                  <th>To/From</th>
+                  <th>Created At</th>
+                  <th>Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                {
+                  Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
+                    // console.log(Data[0]);
+                    return(
+                      <tr key={index}>
+                        <td>{id}</td>    
+                        <td>{name}</td>
+                        <td>{amount}</td>
+                        <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
+                        <td>{tofrom}</td>
+                        <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
+                        <td><span className="status_active">Active</span></td>
+                      </tr>
+                    )
+                  })
+                } 
+              </tbody>
+            </Table>
+          </Card>
+        </Tab.Pane>
+
+          <Tab.Pane eventKey="dispute" transition={false}>
             <Card className="transation_history_table">
             <Table>
               <thead>
@@ -281,7 +281,7 @@ return(
             </Card>
           </Tab.Pane>
 
-          <Tab.Pane eventKey="canceled">
+          <Tab.Pane eventKey="canceled" transition={false}>
             <Card className="transation_history_table">
             <Table>
               <thead>
@@ -317,7 +317,7 @@ return(
             </Card>
           </Tab.Pane>
 
-          <Tab.Pane eventKey="completed">
+          <Tab.Pane eventKey="completed" transition={false}>
             <Card className="transation_history_table">
             <Table>
               <thead>
