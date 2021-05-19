@@ -41,18 +41,22 @@ function Footer(props){
                     <Card className="footerlistleft">
                     <ListGroup as="ul">
                             <ListGroup.Item as="li">
-                                <LinkContainer to="https://www.payrlink.com/Whitepaper.pdf">
-                                    <NavItem eventkey={1}>WHITEPAPER</NavItem>
-                                </LinkContainer>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.payrlink.com/Whitepaper.pdf" >WHITEPAPER</a>
+                                {/* <LinkContainer to="https://www.payrlink.com/Whitepaper.pdf">
+                                    <NavItem target="_blank" eventkey={1}>WHITEPAPER</NavItem>
+                                </LinkContainer> */}
                             </ListGroup.Item>
                             <ListGroup.Item as="li">
-                                <LinkContainer to="https://youtu.be/qC5DbPsap-0">
-                                    <NavItem eventkey={2}>VIDEO</NavItem>
-                                </LinkContainer></ListGroup.Item>
+                                <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/qC5DbPsap-0" >VIDEO</a>
+                                {/* <LinkContainer to="https://youtu.be/qC5DbPsap-0">
+                                    <NavItem target="_blank" eventkey={2}>VIDEO</NavItem>
+                                </LinkContainer>*/}
+                                </ListGroup.Item> 
                             <ListGroup.Item as="li">
-                                <LinkContainer to="https://www.payrlink.com/">
-                                    <NavItem eventkey={3}>OFFICIAL SITE</NavItem>
-                                </LinkContainer>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.payrlink.com" >OFFICIAL SITE</a>
+                                {/* <LinkContainer to="https://www.payrlink.com/">
+                                    <NavItem target="_blank" eventkey={3}>OFFICIAL SITE</NavItem>
+                                </LinkContainer> */}
                             </ListGroup.Item>
                         </ListGroup>
                         <ListGroup as="ul" className="footersocial">
