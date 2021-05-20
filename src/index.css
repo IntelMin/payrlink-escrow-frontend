@@ -567,6 +567,7 @@ select {  -webkit-appearance: none;  -moz-appearance: none;  text-indent: 1px;  
 .connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {	width: 48%;	margin-left: 2%;}
 .whitebg .connectmodal.withdraw_popup .modalbutton.card .btn.btn-secondary {color:#fff; border-color: #fff;}
 .connectmodal.withdraw_popup .modalbutton.withdraw_popup_btn.card {	padding: 0 10px;}
+.active.nav-link {	text-decoration: none !important;	font-weight: bold;}
 
 
 @media screen and (max-width: 1200px) {
