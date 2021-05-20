@@ -127,7 +127,12 @@ function WithdrawModal(props){
 function StakeModal(props){
     console.log(props)
     const [show, setShow] = useState(true);
-    
+    const options = [
+        { value: 'ETH', label:<div><img src={ethimg} alt="ETH" height="30px" width="30px"/> ETH </div> },
+        { value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC" height="30px" width="30px"/> BTC </div> },
+        { value: 'PYR', label:<div><img src={payrimg} alt="PYR" height="30px" width="30px"/> PYR</div> },
+        { value: 'USDT', label:<div><img src={usdimg} alt="USDT" height="30px" width="30px"/> USD</div> },
+      ];
     const handleClose = () => {
         setShow(false);
         // if(props.Stacks.Eth==="Withdraw"){
@@ -173,9 +178,21 @@ function StakeModal(props){
             <Form>                                          
                 <Form.Group controlId="Amount">
                 <Form.Label>Pool</Form.Label>
-                <InputGroup.Prepend>
-                    <InputGroup.Text id="basic-addon1"><img src={props.img} height="25px" width="30px" alt=""/> {props.CurrencyType} </InputGroup.Text>
-                </InputGroup.Prepend>
+                <Select                
+                    options={options}
+                    isSearchable={false}
+                    defaultValue={
+                        props.CurrencyTyp==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
+                        :
+                        props.CurrencyTyp==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
+                        :
+                        props.CurrencyTyp==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
+                        :
+                        props.CurrencyTyp==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
+                        :
+                        {value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
+                    }
+                />
                 </Form.Group>
 
                 <Form.Group controlId="To">
@@ -198,10 +215,10 @@ function StakeModal(props){
                         
                     </tbody>
                 </Table>
-                <p>Stake your staked {props.CurrencyType} from pools</p>
+                <p>Withdraw your staked {props.CurrencyType} from pools</p>
                 <Card className="modalbutton withdraw_popup_btn">
                 <Button variant="primary">
-                Stake
+                Withdraw
                 </Button>
                 <Button variant="secondary" onClick={handleClose}>
                 Cancel

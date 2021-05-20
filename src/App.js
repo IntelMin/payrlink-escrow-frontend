@@ -27,6 +27,7 @@ function App() {
       setBodyClass(!bodyClass);
   }
   useEffect(()=>{
+    console.log(React.version)
     if(SessionTheme === "true"){
       document.body.classList.add('whitebg')
     }else {
