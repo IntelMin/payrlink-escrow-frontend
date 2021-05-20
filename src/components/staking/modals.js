@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 
-import {Modal, Button, Form, Card, Table, InputGroup} from 'react-bootstrap';
+import {Modal, Button, Form, Card, Table} from 'react-bootstrap';
 import depositbg from '../../images/depositbg.png';
 import bitcoinimg from '../../images/asset1.png';
 import ethimg from '../../images/asset3.png';
