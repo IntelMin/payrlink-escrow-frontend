@@ -45,7 +45,7 @@ function DashBoardNavBar(props){
                   <LinkContainer to="/transaction">
                     <Nav.Link eventkey={4}>TRANSACTION</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="/dashboard">
+                  <LinkContainer to="/#">
                     <Nav.Link eventkey={5}>ARBITRATION</Nav.Link>
                   </LinkContainer>
                     

@@ -68,13 +68,13 @@ function WithdrawModal(props){
                     options={options}
                     isSearchable={false}
                     defaultValue={
-                        props.CurrencyTyp==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
+                        props.CurrencyType==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                         :
-                        props.CurrencyTyp==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
+                        props.CurrencyType==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
                         :
-                        props.CurrencyTyp==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
+                        props.CurrencyType==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
                         :
-                        props.CurrencyTyp==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
+                        props.CurrencyType==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
                         :
                         {value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                     }
@@ -182,13 +182,13 @@ function StakeModal(props){
                     options={options}
                     isSearchable={false}
                     defaultValue={
-                        props.CurrencyTyp==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
+                        props.CurrencyType==='ETH'?{value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                         :
-                        props.CurrencyTyp==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
+                        props.CurrencyType==='BTC'?{ value: 'BTC', label:<div><img src={bitcoinimg} alt="BTC"  height="30px" width="30px"/> BTC </div> }
                         :
-                        props.CurrencyTyp==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
+                        props.CurrencyType==='PYR'? { value: 'PYR', label:<div><img src={payrimg} alt="PYR"  height="30px" width="30px"/> PYR</div> }
                         :
-                        props.CurrencyTyp==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
+                        props.CurrencyType==='USDT'? { value: 'USDT', label:<div><img src={usdimg} alt="USDT"  height="30px" width="30px"/> USD</div> }
                         :
                         {value: 'ETH', label:<div><img src={ethimg}  alt="ETH" height="30px" width="30px"/> ETH </div> }
                     }
@@ -209,13 +209,13 @@ function StakeModal(props){
                         <td><strong>5.747 {props.CurrencyType}</strong></td>
                         </tr>
                         <tr>
-                        <td>Remaining Staked</td>    
+                        <td>Total Staked</td>    
                         <td><strong>4.247 {props.CurrencyType}</strong></td>
                         </tr>
                         
                     </tbody>
                 </Table>
-                <p>Stake your staked {props.CurrencyType} from pools</p>
+                <p>Stake your {props.CurrencyType} into pools</p>
                 <Card className="modalbutton withdraw_popup_btn">
                 <Button variant="primary">
                 Stake

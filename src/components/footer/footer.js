@@ -60,11 +60,11 @@ function Footer(props){
                             </ListGroup.Item>
                         </ListGroup>
                         <ListGroup as="ul" className="footersocial">
-                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon1} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon2} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon3} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon4} alt="" /></a></ListGroup.Item>
-                        <ListGroup.Item as="li"><a href="/#"><img src={socialicon5} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="https://twitter.com/PayrOfficial" target="_blank" rel="noopener noreferrer"><img src={socialicon1} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="https://t.me/payrlink" target="_blank" rel="noopener noreferrer"><img src={socialicon2} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="https://medium.com/@payrlink_official/" target="_blank" rel="noopener noreferrer"><img src={socialicon3} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="https://youtu.be/qC5DbPsap-0" target="_blank" rel="noopener noreferrer"><img src={socialicon4} alt="" /></a></ListGroup.Item>
+                        <ListGroup.Item as="li"><a href="/#" target="_blank" rel="noopener noreferrer"><img src={socialicon5} alt="" /></a></ListGroup.Item>
                         </ListGroup>
                         </Card>
                         <Card className="footerlistright">
@@ -112,7 +112,7 @@ function Footer(props){
                     </Col>    
                 </Row>    
                 <Row className="footercopyright">
-            <p>Copyright © 2021 designed by Tarun Thusu  |  All rights reserved.</p>
+            <p>Copyright © 2021 PayrLink | All rights reserved.</p>
                     </Row>
             </Container>        
     </Container>

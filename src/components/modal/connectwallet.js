@@ -30,7 +30,7 @@ function ConnectModal(props){
                 </Card>
                 <Form>           
                     <Form.Group controlId="formBasicMetamask">
-                        <Button className="formBasicMetamask" style={{ backgroundImage: `url(${metamask})` }}>Metamask</Button>
+                        <Button className="formBasicMetamask" style={{ backgroundImage: `url(${metamask})` }} onClick={CloseMe}>Metamask</Button>
                     </Form.Group>
 
                     <Form.Group controlId="formBasicWalletconnect">
