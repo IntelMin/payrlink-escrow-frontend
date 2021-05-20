@@ -215,10 +215,10 @@ function StakeModal(props){
                         
                     </tbody>
                 </Table>
-                <p>Withdraw your staked {props.CurrencyType} from pools</p>
+                <p>Stake your staked {props.CurrencyType} from pools</p>
                 <Card className="modalbutton withdraw_popup_btn">
                 <Button variant="primary">
-                Withdraw
+                Stake
                 </Button>
                 <Button variant="secondary" onClick={handleClose}>
                 Cancel
