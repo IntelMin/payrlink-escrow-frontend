@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Table } from 'react-bootstrap';
-import asset3 from '../../images/asset3.png';
+import asset3 from '../../assets/image/asset3.png';
 export default function Disputes(){
     return(
         <Card className="myassets activeescrows disputes">
@@ -19,7 +19,7 @@ export default function Disputes(){
                 <tbody>
                     <tr>
                     <td><h3>1</h3></td>    
-                    <td className="amounticon"><img src={asset3} alt="amt icon" />
+                    <td className="asset-coin"><img src={asset3} alt="amt icon" />
                     <span>
                     <h3>10.5 ETH</h3>
                     <small>Ethereum</small>
@@ -36,8 +36,8 @@ export default function Disputes(){
                     </tr>
                 </tbody>
             </Table>
-            <button className="tablereadmore">Read More </button>
-            {/* <a href="/dashboard#" className="tablereadmore">Read More  </a> */}
+            <button className="tablereadmore">View All </button>
+            {/* <a href="/dashboard#" className="tablereadmore">View All  </a> */}
         </Card>
     )
 }

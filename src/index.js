@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './custom.scss';
+import 'react-notifications/lib/notifications.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

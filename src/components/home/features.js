@@ -1,11 +1,11 @@
 import React from 'react';
 import {Container, Card, Row, Col} from 'react-bootstrap';
-import featureimg1 from '../../images/featureimg1.png';
-import featureimg2 from '../../images/featureimg2.png';
-import featureimg3 from '../../images/featureimg3.png';
-import featureicon1 from '../../images/featureicon1.png';
-import featureicon2 from '../../images/featureicon2.png';
-import featureicon3 from '../../images/featureicon3.png';
+import featureimg1 from '../../assets/image/featureimg1.png';
+import featureimg2 from '../../assets/image/featureimg2.png';
+import featureimg3 from '../../assets/image/featureimg3.png';
+import featureicon1 from '../../assets/image/featureicon1.png';
+import featureicon2 from '../../assets/image/featureicon2.png';
+import featureicon3 from '../../assets/image/featureicon3.png';
 function Features(){
     return(
         <Container fluid className="homefeatures" >

@@ -1,0 +1,264 @@
+
+.App {
+  text-align: center;
+}
+.css-yk16xz-control, .css-yk16xz-control:hover {
+	background: none;
+	color: #fff !important;
+	border: 1px solid #403894;
+}
+.css-1uccc91-singleValue {
+	color: #fff;
+}
+.css-1uccc91-singleValue img {
+	margin-right: 8px;
+}
+.css-1f43avz-a11yText-A11yText > div {
+	background: none !important;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.nav-item{
+  color: #ecf0f4;
+  margin-right: 7px;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
+  padding: 20px 0;
+}
+
+.main-content {
+  min-height: calc(100vh - 300px);
+  background-color: #1F1F1F;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-content {
+    min-height: calc(100vh - 500px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    min-height: calc(100vh - 700px);
+  }
+}
+
+.whitebg .main-content {
+  background-color: #efefef;
+}
+
+.not-found {
+  background-color: #1F1F1F;
+  height: calc(100vh - 500px);
+  padding: 30px;
+  color: white;
+}
+
+.whitebg .not-found {
+  background-color: white;
+  color: black;
+}
+
+.page-loading-bg {
+  min-height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+}
+
+.page-loading {
+  margin: auto;
+  padding: 20px 50px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.loading-text {
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.whitebg .loading-text {
+  color: #1F1F1F;
+}
+
+.notification-container {
+  top: 80px !important;
+}
+
+.z-1000 {
+  z-index: 1000;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.pool-select.self-width {
+  min-width: 140px;
+}
+
+.form-valid-error {
+  margin: -15px 15px 15px 120px;
+  color: #ff5050;
+  text-align: right;
+  font-size: 14px;
+}
+
+.whitebg .form-valid-error {
+  color: red;
+}
+
+.trans-status.pending {
+  color: #2dbbd4;
+  background: rgba(#2dbbd4, 0.04)
+}
+
+.trans-status.available {
+  color: #bfeb20;
+  background: rgba(#bfeb20, 0.04)
+}
+
+.trans-status.completed {
+  color: #2DD458;
+  background: rgba(#2DD458, 0.04)
+}
+
+.trans-status.canceled {
+  color: #a06565;
+  background: rgba(#a06565, 0.04)
+}
+
+.event-date h4 {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: bold;
+}
+
+.event-date h4 {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 600;
+}
+
+.dropdown-button-custom {
+  button {
+    background-color: #403894 !important;
+    border-color: transparent !important;
+    color: white;
+  }
+  button:hover {
+    color: gray;
+  }
+}
+
+.dropdown-button-custom {
+  .dropdown-menu {
+    background-color: #403894 !important;
+    border: solid 1px rgb(82, 82, 82);
+    a {
+      color: white;
+    }
+    a:hover {
+      //background: rgba($color: white, $alpha: 0.1);
+      background: transparent;
+      color: gray;
+    }
+  }
+}
+
+.whitebg .dropdown-button-custom {
+  button {
+    background-color: #1d1b40 !important;
+  }
+  .dropdown-menu {
+    background-color: #1d1b40 !important;
+    border: solid 1px rgb(187, 187, 187);
+  }
+}
+
+.tran-button {
+  background-color: #403894 !important;
+  border-color: transparent !important;
+  color: white;
+  border-radius: .25rem;
+  width: 7rem;
+}
+
+.whitebg .tran-button {
+  background-color: #1d1b40 !important;
+}
+
+.confirm-dlg .MuiDialog-paper {
+  background: #2e2e2e;
+  .dlg-title {
+    color: white;
+  }
+  .dlg-text {
+    color: rgb(196, 196, 196);
+  }
+  .dlg-button-submit {
+    color: rgb(121, 141, 255) !important;
+    text-transform: none;
+  }
+  .dlg-button-close {
+    color: rgb(187, 187, 187) !important;
+    text-transform: none;
+  }
+}
+
+.whitebg .confirm-dlg .MuiDialog-paper {
+  background: #ebebeb;
+  .dlg-title {
+    color: rgb(22, 22, 22);
+  }
+  .dlg-text {
+    color: rgb(88, 88, 88);
+  }
+  .dlg-button-submit {
+    color: rgb(57, 86, 250) !important;
+    text-transform: none;
+  }
+  .dlg-button-close {
+    color: rgb(92, 92, 92) !important;
+    text-transform: none;
+  }
+}

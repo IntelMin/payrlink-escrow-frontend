@@ -1,126 +1,64 @@
-import React,{useState} from 'react';
-import { Card, Table, Form, Dropdown, DropdownButton  } from 'react-bootstrap';
+import React from 'react';
+import { Card, Table } from 'react-bootstrap';
 
-import asset3 from '../../images/asset3.png';
-import asset4 from '../../images/asset4.png';
-import {LineChart1,LineChart2} from './linechart'
+import { pools } from '../../blockchain/constants';
+import useAssets from '../../hooks/useAssets';
+import usePrices from '../../hooks/usePrices';
+import * as commHelper from '../../helpers/common';
+import useAssetDetails from '../../hooks/useAssetDetails';
+import DataLoading from '../common/DataLoading';
+
 export default function AvailableAssets() {
-    
-
-    //  Currency Status
-    const[ currencystatus,setCurrencyStatus]=useState({
-        Eth:"Deposit",
-        Usd:"Deposit"
-    })
-    // Change currenct status of ETh
-    const SetEthStatus=(e)=>{
-        console.log(e)
-        setCurrencyStatus({...currencystatus,
-            Eth: e
-        })
-    }
-    //  Change the Current Status Of USD
-    const SetUsdStatus=(e)=>{
-        console.log(e)
-        setCurrencyStatus({...currencystatus,
-            Usd: e
-        })
-    }
-    return(
-        <Card className="myassets availableassets">
-            <h2>Available assets</h2>
-            <Table>
-                <thead>
-                    <tr>
-                    <th>No</th>
-                    <th>Pools</th>
-                    <th>Amount</th>
-                    <th>Last Deposit</th>
-                    <th>Last Withdraw</th>
-                    <th>Chart (24hr)</th>
-                    <th>Value</th>
-                    <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>1</td>    
-                    <td className="amounticon"><img src={asset3} alt="ETH"/>
+  const prices = usePrices();
+  const assets = useAssets();
+  const assetDeatils = useAssetDetails();
+  return(
+    <Card className="myassets availableassets">
+      <h2>Available assets</h2>
+      <Table>
+        <thead>
+          <tr>
+          <th>No</th>
+          <th>Pool</th>
+          <th>Balance</th>
+          <th>Transactions</th>
+          <th>Last Deposit</th>
+          <th>Last Withdraw</th>
+          <th>Transaction Fee</th>
+          {/* <th>Price (24hr)</th> */}
+          <th>Net Worth</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            assets && Object.keys(assets).map((id, index) => {
+              const asset = assets[id];
+              const pool = pools[id];
+              return (
+                <tr key={`asset-${id}`}>
+                  <td>{index + 1}</td>
+                  <td className="asset-coin">
+                    <img src={pool.icon} alt={pool.symbol}/>
                     <span>
-                    <h3>10.5 ETH</h3>
-                    <small>Ethereum</small>
+                      <h3>{pool.symbol}</h3>
+                      <small>{pool.name}</small>
                     </span>    
-                    </td>
-                    <td>25.12</td>
-                    <td><h4>03/08/2021</h4><small>03:45PM</small></td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td className="chart_icon"><LineChart1/></td>
-                    <td>$ 50,000</td>
-                    <td>
-                    <Form>
-                        <Form.Group controlId="exampleForm.SelectCustom">
-                        <DropdownButton
-                            alignRight
-                            title="Deposit"
-                            id="dropdown-menu-align-right"
-                            onSelect={SetEthStatus}
-                            name='Eth'
-                        >
-                                    
-                            <Dropdown.Item eventKey="Deposit">Deposit</Dropdown.Item>
-                            <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
-                            <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>
-                            <Dropdown.Item eventKey="Pool Detail">Pool Detail</Dropdown.Item>
-                        </DropdownButton>
-                        </Form.Group>
-                    </Form>
-                     </td>   
-                    </tr>
+                  </td>
+                  <td>{commHelper.toFixed(asset.balance)}</td>
+                  <td>2</td>
+                  <td>{assetDeatils?commHelper.generateDateFormat(assetDeatils[id].lastDeposit):<DataLoading/>}</td>
+                  <td>{assetDeatils?commHelper.generateDateFormat(assetDeatils[id].lastWithdraw):<DataLoading/>}</td>
+                  <td>{pool.fee} %</td>
+                  {/* <td className="chart_icon"><LineChart1/></td> */}
+                  <td>$ {commHelper.toFixed(prices?prices[pool.cgId].usd * asset.balance:0)} </td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
+      </Table>
+    </Card>
 
-                    <tr>
-                    <td>2</td>    
-                    <td className="amounticon"><img src={asset4} alt="ETH"/>
-                    <span>
-                    <h3>10.5 ETH</h3>
-                    <small>Ethereum</small>
-                    </span>    
-                    </td>
-                    <td>25.12</td>
-                    <td><h4>03/08/2021</h4><small>03:45PM</small></td>
-                    <td><h4>03/27/2021</h4><small>03:45PM</small></td>
-                    <td className="chart_icon"><LineChart2/></td>
-                    <td>$ 50,000</td>
-                    <td>
-                    <Form>
-                        <Form.Group controlId="exampleForm.SelectCustom">
-                            {/* <Form.Control as="select" custom style={{ backgroundImage: `url(${downwhite})` }}>
-                            <option>Deposit</option>
-                            <option>Withdraw</option>
-                            <option>Stake</option>
-                            <option>Pool Detail</option>
-                            </Form.Control> */}
-                            <DropdownButton
-                                alignRight
-                                title="Deposit"
-                                id="dropdown-menu-align-right"
-                                onSelect={SetUsdStatus}
-                                name="usd"
-                            >
-                                        
-                                <Dropdown.Item eventKey="Deposit">Deposit</Dropdown.Item>
-                                <Dropdown.Item eventKey="Withdraw">Withdraw</Dropdown.Item>
-                                <Dropdown.Item eventKey="Stake">Stake</Dropdown.Item>
-                                <Dropdown.Item eventKey="Pool Detail">Pool Detail</Dropdown.Item>
-                            </DropdownButton>
-                        </Form.Group>
-                    </Form>
-                     </td>   
-                    </tr>
-                    
-                </tbody>
-            </Table>
-        </Card>
-
-    )
+  )
 
 }

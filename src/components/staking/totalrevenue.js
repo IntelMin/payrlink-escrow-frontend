@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 import DoughnutChart from './doughnutchart';
-import asset1 from '../../images/asset1.png';
-import asset3 from '../../images/asset3.png';
-import asset4 from '../../images/asset4.png';
+import asset1 from '../../assets/image/asset1.png';
+import asset3 from '../../assets/image/asset3.png';
+import asset4 from '../../assets/image/asset4.png';
 
 export default function TotalRevenue() {
     return(

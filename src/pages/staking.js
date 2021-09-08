@@ -6,14 +6,14 @@ import TotalRevenue from '../components/staking/totalrevenue'
 
 
 export default function StakingPage(){
-    return(
-        <Container fluid className="darkbg stakingpage">
-            <Container>
-            <TotalRevenue/>
-            <LineChart/>
-            <Pools/>
-            </Container>
-        </Container>
-    )
+  return(
+    <Container fluid className="darkbg stakingpage">
+      <Container>
+      <TotalRevenue/>
+      <LineChart/>
+      <Pools/>
+      </Container>
+    </Container>
+  )
 
 }

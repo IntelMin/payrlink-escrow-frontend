@@ -30,7 +30,6 @@ export default function TransactionHistory (){
     StartPoint:0,
     EndPoint:3
     })
-    //console.log(AllHistoryData)
    
   const [LastPageState,setLastPageState]=useState(false)
   //Disable Pagination Button when last page active
@@ -67,7 +66,6 @@ export default function TransactionHistory (){
     }
   }
   const previousPageData=()=>{
-      console.log(range)
 
       if(LastPageState===true){
         const end = TotalData-TotalData%ItemPerPage;
@@ -155,7 +153,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -164,7 +161,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })
@@ -190,7 +187,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -199,7 +195,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })
@@ -226,7 +222,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -235,7 +230,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })
@@ -262,7 +257,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -271,7 +265,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })
@@ -298,7 +292,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -307,7 +300,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })
@@ -334,7 +327,6 @@ return(
               <tbody>
                 {
                   Data.map(({id,name,amount,tofrom,createdatdate, createdattime, status},index)=>{
-                    // console.log(Data[0]);
                     return(
                       <tr key={index}>
                         <td>{id}</td>    
@@ -343,7 +335,7 @@ return(
                         <td><span className={status==="BUY"? "buy":"sell"}>{status}</span></td>
                         <td>{tofrom}</td>
                         <td><h4>{createdatdate}</h4><small>{createdattime}</small></td>
-                        <td><span className="status_active">Active</span></td>
+                        <td><span className="trans-status">Active</span></td>
                       </tr>
                     )
                   })

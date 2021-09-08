@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import authoricon from '../../images/authoricon.png';
-import testimonialbg from '../../images/testimonialbg.png';
+import authoricon from '../../assets/image/authoricon.png';
+import testimonialbg from '../../assets/image/testimonialbg.png';
 import {Container, Col, Card} from 'react-bootstrap';
 /* Anil Test */
 

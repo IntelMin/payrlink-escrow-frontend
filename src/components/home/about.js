@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container, Row, Col, card} from 'react-bootstrap';
-import aboutbg from '../../images/aboutbg.png';
-import securebg from '../../images/securebg.png';
-import secure from '../../images/secure.png';
+import aboutbg from '../../assets/image/aboutbg.png';
+import securebg from '../../assets/image/securebg.png';
+import secure from '../../assets/image/secure.png';
 function About(){
     return(
         <Container fluid className="homeabout"  style={{ backgroundImage: `url(${aboutbg})` }}>
